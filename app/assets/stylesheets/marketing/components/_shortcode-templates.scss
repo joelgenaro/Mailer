@@ -1,0 +1,61 @@
+@import "../utils/variables";
+
+a.shortcode__cta-button {
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  box-shadow: 0 1px 1px 0 rgba(60, 66, 87, 0.1);
+
+  font-size: 14px;
+  line-height: 20px;
+  padding: 14px 20px;
+  font-weight: 500;
+
+  color: #ffffff;
+  background-color: $color_primary_500;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $color_primary_700;
+  }
+
+  &--block {
+    width: 100%;
+  }
+}
+
+.shortcode__subscription-button {
+  border-radius: 6px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  box-shadow: 0 1px 1px 0 rgba(60, 66, 87, 0.1);
+  margin-bottom: 0.5rem;
+
+  font-size: 14px;
+  line-height: 20px;
+  padding: 14px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #004752;
+
+  &:hover {
+    color: #ffffff;
+    background-color: $color_primary_700;
+  }
+
+  &--block {
+    width: 100%;
+  }
+}
+.subscription-button:not(:last-child) {
+  margin-bottom: 0.5rem;
+}

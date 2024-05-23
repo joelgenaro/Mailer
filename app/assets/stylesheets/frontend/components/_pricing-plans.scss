@@ -1,0 +1,63 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.pricing-plans {
+  &__tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    margin: 60px 0 0 0;
+  }
+  &__tab {
+    padding: 24px;
+    border-radius: 4px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: flex;
+    cursor: pointer;
+    &--active {
+      border-color: $color__secondary;
+      &.pricing-plans__tab--assistant {
+        border-color: $color__primary !important;
+      }
+    }
+    &__title {
+      @include title;
+    }
+    &__subtitle {
+      @include subtitle;
+    }
+    &__left {
+      flex-grow: 0;
+      flex-shrink: 0;
+      width: 50px;
+      margin-right: 24px;
+    }
+    &__right {
+      flex-grow: 1;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    &__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &--assistant {
+        background-color: #e6f5f2;
+      }
+      &--mail {
+        background-color: #ffeeec;
+      }
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<%
+  content_for(:meta_title) { 'Bilingual, virtual assistants immediately available in Japan | MailMate' }
+  content_for(:meta_description) { 'Your own bilingual personal virtual assistant, immediately available in Japan. Everything from Planning to Booking to Bookkeeping to Research to Translation.' }
+  @layout_header_logo = 'assistant'
+  @layout_footer_transparent_bg = true
+%>
+
+<div class="page__assistant">
+  <%= render 'marketing/pages/assistant/hero' %>
+
+  <%= render 'marketing/pages/assistant/steps' %>
+
+  <%= render 'marketing/pages/assistant/examples' %>
+
+  <%= render 'marketing/pages/assistant/ready' %>
+
+  <%= render 'marketing/pages/assistant/why' %>
+
+  <%= render 'marketing/pages/assistant/testimonials' %>
+
+  <%= render 'marketing/pages/assistant/combo' %>
+</div>

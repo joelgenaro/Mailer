@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <%= render 'marketing/shared/head' %>
+  
+  <body>
+    <%= render 'marketing/shared/alerts' %>
+    <%= render 'marketing/shared/referrer_banner' %>
+
+    <div class="viewport">    
+      <%= render 'marketing/shared/header' %>
+    
+      <div class="viewport__main" id="main">
+        <%= yield %>
+      </div>
+
+      <%= render 'marketing/shared/footer' unless @skip_footer%>
+    </div>
+
+    <% if content_for?(:footer_scripts) %>
+      <%= yield(:footer_scripts) %>
+    <% end %>
+
+    <!-- Blog Newsletter Sign Up Modal -->
+    <% if params[:show_newsletter_modal] || @layout_show_newsletter_modal %>
+    <% end %>
+  </body>
+</html>

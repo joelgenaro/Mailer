@@ -1,0 +1,26 @@
+<%
+  content_for(:meta_title) { t('marketing.shared.meta_title.pricing') }
+  content_for(:meta_description) { t('marketing.shared.meta_description.pricing') }
+%>
+<div class="pricing pricing--mail">
+  <%= render 'marketing/pages/pricing/mail/plans', pricing_plans: @pricing_plans, subscription_type: 'mail' %>
+  <%= render 'marketing/pages/pricing/mail/why_us', items: mail_why_choose_us %>
+  <%= render 'marketing/pages/pricing/mail/comparison', pricing_plans: @pricing_plans, subscription_type: 'mail', comparisons: mail_comparisons %>
+  <%= render 'marketing/pages/pricing/mail/additional_details' %>
+  <%= render 'marketing/pages/pricing/mail/testimonials' %>
+  <%#= render 'marketing/pages/pricing/mail/cta' %>
+</div>
+
+<script>
+  // Analytics
+  window.Analytics.track(
+    'Viewed Pricing', 
+    { 
+      page: 'marketing-mail', 
+      path: window.location.pathname 
+    },
+    {
+      gtagSendto: window.Analytics.adwordsActionIds.viewedPricing
+    }
+  )
+</script>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="229px" height="167px" viewBox="0 0 229 167" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>why-squiggle-2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="230" height="167"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="why-squiggle-2" transform="translate(-1.000000, 0.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Rectangle-path"></g>
+            <path d="M139.579,153.677 C219.398,198.211 273,101.365 273,36.8387 C273,-27.6911 213.268,-80 139.579,-80 C65.8945,-80 29.1995,-46.3468 6.1573,36.8387 C-16.8834,120.029 59.7591,109.147 139.579,153.677 Z" id="Shape" stroke="#E16259" stroke-width="2" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

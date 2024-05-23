@@ -1,0 +1,18 @@
+<!-- Meta -->
+<%
+  content_for(:meta_title) { t('marketing.shared.meta_title.service_directory') }
+  content_for(:meta_description) { t('marketing.shared.meta_description.service_directory') }
+%>
+
+<div class="service-directory-container">
+  <%= render 'marketing/service_directory/service_directory_categories'%>
+  <div class="service-directory-header">
+    <h1>MailMate Service Directory</h1>
+    <p>Curated list of select services that make working and living in Japan as easy as possible.</p>
+  </div>
+  &nbsp
+  <div class="service-listings-container">
+    <h2>Featured Listings</h2>
+    <%= render 'marketing/service_directory/service_directory_listings', service_listings: @service_listings %>
+  </div>
+</div>

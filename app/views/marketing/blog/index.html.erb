@@ -1,0 +1,21 @@
+<!-- Meta -->
+<%
+  content_for(:meta_title) { t('marketing.shared.meta_title.blog') }
+  content_for(:meta_description) { t('marketing.shared.meta_description.blog') }
+%>
+
+<!-- RSS -->
+<% content_for :rss do %>
+  <%= auto_discovery_link_tag :rss, marketing_blog_url(:format => :rss) %>
+<% end %>
+
+<div class="blog-posts">
+  <div class="blog-posts__posts">
+    <% @posts.each do |post| %>
+      <%= render 'post', post: post %>
+    <% end %>
+    <% if contentful_needs_pagination?(@posts) %>
+      <%= render 'pagination', posts: @posts %>
+    <% end %>
+  </div>
+</div>

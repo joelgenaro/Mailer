@@ -1,0 +1,83 @@
+<div class="pricing__container">
+  <div class="comparison">
+    <h1 class="comparison__title"><%= t('marketing.pages.pricing.feature_list_comparison') %></h1>
+    <table class="comparison__table">
+      <thead>
+        <th></th>
+        <% pricing_plans.each do |plan_name, plan| %>
+          <th class="comparison__plan-name comparison__plan-name--<%= pricing_comparison_color(plan, 'mail') %>">
+            <%= plan[I18n.locale == :ja ? :title_jp : :title] %>
+          </th>
+        <% end %>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <% pricing_plans.each do |plan_name, plan| %>
+            <td class="comparison__plan-price comparison__plan-price--<%= pricing_comparison_color(plan, 'mail') %>">
+              <%= humanized_money_with_symbol(plan[:price]) %>
+            </td>
+          <% end %>
+        </tr>
+
+      <!-- Comparisions -->
+      <% comparisons.each do |group| %>
+          <tr>
+            <td class="comparison__features-lead"><%= group[I18n.locale == :ja ? :label_jp : :label] %></td>
+            <% pricing_plans.each do |plan_name, plan| %>
+              <td class="comparison__feature comparison__feature--<%= pricing_comparison_color(plan, 'mail') %>"></td>
+            <% end %>
+          </tr>
+          <!-- Feature Row -->
+          <% group[:features].each do |feature| %>
+            <tr>
+              <td class="comparison__features-title"><%= feature[I18n.locale == :ja ? :label_jp : :label] %></td>
+              <% pricing_plans.each do |plan_name, plan| %>
+                <td class="comparison__feature comparison__feature--<%= pricing_comparison_color(plan, 'mail') %>">
+                  <% if plan[:content][:comparison_features][feature[:key]] == true %>
+                    <%= inline_svg_tag 'marketing/shared/tick.svg', class: 'comparison__tick' %>
+                  <% elsif plan[:content][:comparison_features][feature[:key]] == false %>
+                    <%= inline_svg_tag 'marketing/shared/close.svg', class: 'comparison__close' %>
+                  <% else %>
+                    <%= plan[:content][:comparison_features][feature[:key]].is_a?(String) ? plan[:content][:comparison_features][feature[:key]].gsub(' p/mo', I18n.locale == :ja ? '件' : ' p/mo') : plan[:content][:comparison_features][feature[:key]] %>
+                  <% end %>
+                </td>
+              <% end %>
+            </tr>
+          <% end %>
+        <% end %>
+        <tr>
+          <td class="comparison__processing-fee"><!-- Used for spacing--></td>
+          <% pricing_plans.each do |plan_name, plan| %>
+            <td class="comparison__action comparison__action--<%= pricing_comparison_color(plan, 'mail') %>">
+             <% if !plan[:require_consultation] %>
+             <%= button_to t('marketing.pages.pricing.get_started'), new_register_url, method: :post, params: {subscriptionName: plan_name,subscriptionType: subscription_type}, class: "plan__btn marketing-btn marketing-btn--block" %>
+              <% else %>
+                <%= button_to 'Request Consultation', marketing_request_consultation_path, method: :get, class: "plan__btn marketing-btn marketing-btn--block" %>
+              <% end %>
+            </td>
+          <% end %>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Asterisks -->
+    <div class="comparison__asterisks-section">
+      <% if I18n.locale != :ja %>
+        <ul>
+          <li>* Mail forwarding: Cost + Processing fee (¥500 + 3% of the Cost)</li>
+          <li>** ¥180 per mail for content scans</li>
+          <li>*** ¥300 per mail for Translation summary of scanned content</li>
+          <li>**** Processing fee for bills below ¥50,000 is ¥500 + 3% of the amount, for bills over ¥50,000 is ¥500 + 4% of the amount.</li>
+        </ul>
+      <% else %>
+        <ul>
+          <li>* 郵便物の転送：一律500円＋転送実費の3%の料金が発生</li>
+          <li>** 開封スキャン：1件あたり180円で追加の開封スキャンを依頼可能</li>
+          <li>*** 日英翻訳サマリー：1件あたり300円で追加の日英翻訳サマリーを依頼可能</li>
+          <li>**** 支払い代行：支払額が5万円未満の場合は500円＋支払額の3％、5万円以上は一律で支払額の4％の料金が発生</li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

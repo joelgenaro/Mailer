@@ -1,0 +1,40 @@
+<%
+  content_for(:meta_title) { t('marketing.shared.meta_title.home') }
+  content_for(:meta_description) { t('marketing.shared.meta_description.home') }
+  @layout_header_logo = 'mail'
+  @layout_footer_transparent_bg = true
+%>
+
+<div class="page__mail">
+  <% if I18n.locale == :ja %>
+    <%= render 'marketing/pages/mail/ja_landing/hero' %>
+
+    <%= render 'marketing/pages/mail/ja_landing/mailmate_is' %>
+
+    <%= render 'marketing/pages/mail/ja_landing/steps' %>
+
+    <%= render 'marketing/pages/mail/ja_landing/how_helps' %>
+
+    <%= render 'marketing/pages/mail/ja_landing/why' %>
+
+    <%= render 'marketing/pages/mail/ja_landing/plans' %>
+
+    <%= render 'marketing/pages/mail/ja_landing/comparison' %>
+
+    <%= render 'marketing/pages/mail/ja_landing/testimonials' %>
+
+    <%= render 'marketing/pages/mail/combo' %>
+  <% else %>
+    <%= render 'marketing/pages/mail/hero' %>
+
+    <%= render 'marketing/pages/mail/how_helps' %>
+
+    <%= render 'marketing/pages/mail/steps' %>
+
+    <%= render 'marketing/pages/mail/why' %>
+
+    <%= render 'marketing/pages/mail/testimonials' %>
+
+    <%= render 'marketing/pages/mail/combo' %>
+  <% end %>
+</div>

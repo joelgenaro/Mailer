@@ -1,0 +1,34 @@
+###
+# Dockerfile for web service, which is just our Rails app
+#
+# Based on: https://docs.docker.com/compose/rails/#define-the-project
+
+# Use Ruby 2.6.3 Image
+FROM ruby:2.7.6
+
+# Install essentials
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev imagemagick file ghostscript
+
+# Install NodeJS
+# https://github.com/nodesource/distributions#installation-instructions
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs
+
+# Copy contents into
+RUN mkdir /mailmate-web
+WORKDIR /mailmate-web
+COPY ./ /app
+
+# Set entrypoint script, required for caching gems (so not to have redownload & rebuild every build)
+# See https://medium.com/@cristian_rivera/cache-rails-bundle-w-docker-compose-45512d952c2d
+COPY ./docker/docker-entrypoint.web.sh /
+RUN chmod +x /docker-entrypoint.web.sh
+ENTRYPOINT ["/docker-entrypoint.web.sh"]
+
+# Set env variables for caching gems
+ENV BUNDLE_PATH=/bundle
+ENV BUNDLE_BIN=/bundle/bin
+ENV GEM_HOME=/bundle
+ENV PATH="${BUNDLE_BIN}:${PATH}"
+
+# Install Bundler
+RUN gem install bundler -v 2.0.2

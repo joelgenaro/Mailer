@@ -1,0 +1,27 @@
+<div class="page page--narrow">
+  <div class="page__container">
+    <div class="page__request-consultation-thanks">
+      <h1 class="page__request-consultation-thanks__title">Thanks!</h1>
+      <p class="page__request-consultation-thanks__subtitle">Thanks for requesting a consultation! One of our assistants will contact you soon.</p>
+    </div>
+  </div>
+</div>
+
+<% if ENV['FACEBOOK_PIXEL'] %>
+  <script>
+    fbq('track', 'Lead', { email: '<%= params[:consultation_request][:email] %>' });
+  </script>
+<% end %>
+
+<!-- Tracking -->
+<script>
+  window.Analytics.track(
+    'Consultation Requested', 
+    { 
+      email: '<%= params[:consultation_request][:email] %>',
+    },
+    {
+      gtagSendto: window.Analytics.adwordsActionIds.consultationRequested
+    }
+  )
+</script>

@@ -1,0 +1,51 @@
+<div class="page__mail__how-helps__container">
+
+  <h2 class="page__mail__how-helps__heading"> 
+    <%= t('marketing.pages.mail.how_helps_heading') %>
+  </h2>
+  <h3 class="page__mail__how-helps__subheading"> 
+    <%= t('marketing.pages.mail.how_helps_subheading') %>
+  </h3>
+  
+  <div class="page__mail__how-helps__units">
+    <% 
+      [
+        { title: 'marketing.pages.mail.how_helps_no_more_clutter_title', detail: 'marketing.pages.mail.how_helps_no_more_clutter_detail', icon: 'marketing/pages/mail/how-helps-clutter.png' },
+        { title: 'marketing.pages.mail.how_helps_search_title', detail: 'marketing.pages.mail.how_helps_search_detail', icon: 'marketing/pages/mail/how-helps-advanced.png' },
+        { title: 'marketing.pages.mail.how_helps_right_info_title', detail: 'marketing.pages.mail.how_helps_right_info_detail', icon: 'marketing/pages/mail/how-helps-right-info.png' },
+      ].each do |item|
+    %>
+      <div class="page__mail__how-helps__units__unit">
+        <div class="page__mail__how-helps__units__unit__icon">
+          <%= image_tag(item[:icon]) %>
+        </div>
+        <p class="page__mail__how-helps__units__unit__title"><%= t(item[:title]) %></p>
+        <p class="page__mail__how-helps__units__unit__detail"><%= t(item[:detail]) %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="page__mail__how-helps__units">
+    <% 
+      [
+        { title: 'marketing.pages.mail.how_helps_pay_bills_title', detail: 'marketing.pages.mail.how_helps_pay_bills_detail', icon: 'marketing/pages/mail/how-helps-bills.png' },
+        { title: 'marketing.pages.mail.how_helps_everything_safe_title', detail: 'marketing.pages.mail.how_helps_everything_safe_detail', icon: 'marketing/pages/mail/how-helps-safe.png' },
+        { title: 'marketing.pages.mail.how_helps_onboarding_title', detail: 'marketing.pages.mail.how_helps_onboarding_detail', icon: 'marketing/pages/mail/how-helps-onboard.png' },
+      ].each do |item|
+    %>
+      <div class="page__mail__how-helps__units__unit">
+        <div class="page__mail__how-helps__units__unit__icon">
+          <%= image_tag(item[:icon]) %>
+        </div>
+        <p class="page__mail__how-helps__units__unit__title"><%= t(item[:title]) %></p>
+        <p class="page__mail__how-helps__units__unit__detail"><%= t(item[:detail]) %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to marketing_pricing_path('mail'), class: "marketing-btn marketing-btn--secondary marketing-btn--medium marketing-btn--icon--right", style: "margin: 30px 0px 40px" do %>
+    <%= t('marketing.pages.mail.how_helps_view_pricing') %>
+    <%= inline_svg_tag('marketing/common/buttons/icon-arrow.svg') %>
+  <% end %>
+
+</div>

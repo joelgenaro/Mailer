@@ -1,0 +1,2 @@
+# Stripe Webhook Fixtures
+We use `stripe-ruby-mock` for testing our Stripe integration, so see more on webhook fixtures here: https://github.com/stripe-ruby-mock/stripe-ruby-mock/tree/f291ba4e33cf72a6c7c4daab5b47b44b7511eca1#mocking-webhooks

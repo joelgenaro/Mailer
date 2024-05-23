@@ -1,0 +1,99 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.subscriptions {
+  padding: 60px 0;
+  background-color: #fff;
+  &__container {
+    @include container(1200px);
+  }
+  &__header {
+    text-align: center;
+    margin: 0 0 30px 0;
+  }
+  &__logo {
+    max-width: 240px;
+    margin: 0 0 10px 0;
+    img {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  &__text {
+    @include subtitle;
+    text-align: center;
+    margin: 15px 30px 0 30px;
+  }
+  &__back {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+  }
+
+  &__receptionist-unit {
+    @include card(20px 15px);
+    max-width: 700px;
+    width: 100%;
+    margin: 0px auto;
+    background-color: $color__teal-100;
+
+    display: flex;
+    flex-direction: row;
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      h4 {
+        color: $color__black;
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      h5 {
+        color: $color__black;
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      &__features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 8px 0;
+        li {
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 2.4;
+        }
+        svg {
+          width: 13px;
+          margin-right: 1;
+        }
+      }
+
+      p {
+        padding-top: 20px;
+      }
+    }
+
+    &__pricing {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 10px;
+      margin-left: 20px;
+      min-width: 270px;
+      text-align: center;
+
+      p {
+        margin-top: 20px;
+        font-size: 15px;
+      }
+    }
+  }
+}

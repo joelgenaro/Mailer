@@ -1,0 +1,83 @@
+<!-- Meta -->
+<% content_for :meta_title do %><%= @service_listing.business_name %> | <%= @service_listing.category.first.title %><% end %>
+<% content_for :meta_description do %>
+  <%= @service_listing.business_profile.truncate(156, separator: ' ') %>
+<% end %>
+
+<div class="service-directory-container-category-listing">
+  <div class="service-categories__hide"><%= render 'marketing/service_directory/service_directory_categories' %></div>
+  <div class="service-listing-container">
+    <div>
+      <%= link_to 'Service Directory', marketing_service_directory_path %> /
+      <%= link_to @service_listing.category.first.title, marketing_show_category_listings_path(@service_listing.category.first.slug)%>
+    </div>
+    <h2 class="service-listing-container__heading"><%= @service_listing.business_name %></h2>
+    <div class="service-listing-header">
+      <div class="service-listing-header__content">
+        <h2><%= @service_listing.business_name %></h2>
+        <div class="business-profile-container">
+          <p class="business-profile-free-text-container"><%= @service_listing.business_profile %></p>
+          <p class="business-profile-free-text"><%= @service_listing.business_profile %></p>
+          <p class="business-profile__more-link" onclick="swapTextContent()">more</p>
+        </div>
+      </div>
+      <div class="service-listing-header__profile-pic">
+        <img src="<%= contentful_image_url(@service_listing.business_pictures.first) %>" alt="<%= @service_listing.business_name%>">
+      </div>
+    </div>
+
+    <!-- Details -->
+    <div class="service-listing-details-container">
+      <p class="service-listing-details__heading">Details</p>
+
+      <!-- Address -->
+      <div class="service-listing-details__content">
+        <div>Address</div>
+        <div><%= @service_listing.business_add %></div>
+      </div>
+
+      <!-- Website -->
+      <% if @service_listing.website_name && !@service_listing.website_name.blank? %>
+        <div class="service-listing-details__content">
+          <div>Webite</div>
+          <div>
+            <% if @service_listing.website_url  %>
+              <a href="<%= @service_listing.website_url %>" target="_blank"><%= @service_listing.website_name %></a>
+            <% else %>
+              <%= @service_listing.website_name %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <!-- Reviews -->
+    <% if @service_listing.business_reviews %>
+      <div class="service-listing-reviews-container">
+        <p class="service-listing-reviews__heading">Reviews</p>
+        <p class="service-listing-reviews__content"><%= h(@service_listing.business_reviews).gsub(/\n/, '<br/>').html_safe %></p>
+      </div>
+    <% end %>
+
+    <!-- Gallery -->
+    <!-- # TODO -->
+    <%= react_component 'service_directory/service_listing_gallery_modal', {
+      serviceListingImages: contentful_images_url(@service_listing.business_pictures),
+      title: @service_listing.business_name,
+    } %>
+    <% if @service_listing.business_pictures %>
+      <div class="service-listing-images-container">
+        <p class="service-listing-images__heading">Gallery</p>
+        <div class="service-listing-images__content">
+          <% @service_listing.business_pictures.each do |image| %>
+              <div class="service-listing-images__content__image" onclick="_openServiceListingGalleryModal()">
+                <a href="<%= contentful_image_url(image) %>" data-lightbox="gallerySet" data-title="<%=@service_listing.business_name%>" >
+                  <%= image_tag(contentful_image_url(image))%>
+                </a>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

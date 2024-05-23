@@ -1,0 +1,32 @@
+<header id="header" class="header">
+  <div class="header__container">
+
+    <%= link_to "#{I18n.locale == :ja ? root_ja_path : root_path}", class: 'header__logo' do %>
+      <%= image_tag 'marketing/shared/header/logo.png', alt: 'MailMate' %>
+    <% end %>
+
+    <div class="header__nav header__hide-mobile">
+      <div class="header__nav__right">
+        <% if I18n.locale == :ja %>
+          <%= link_to "MailMateとは", root_ja_path(anchor: "mailmate_is"), class: 'header__link' %>
+          <%= link_to "料金プラン", root_ja_path(anchor: "plans"), class: 'header__link' %>
+          <%= link_to "機能", root_ja_path(anchor: "features"), class: 'header__link' %>
+        <% else %>
+          <%= link_to t('marketing.shared.header.home'), root_en_path, class: 'header__link' %>
+          <%= link_to t('marketing.shared.header.about'), marketing_about_path, class: 'header__link' %>
+          <%= link_to t('marketing.shared.header.pricing'),  marketing_pricing_path('mail'), class: 'header__link' %>
+          <%= link_to t('marketing.shared.header.assistant'), marketing_assistant_path, class: 'header__link' %>
+          <%= link_to t('marketing.shared.header.blog'), marketing_blog_path, class: 'header__link' %>
+          <%= link_to t('marketing.shared.header.faq'), marketing_faq_path, class: 'header__link' %>
+        <% end %>
+        <div class="header__link__divider"></div>
+        <%# <%= link_to t('marketing.shared.header.login'), user_signed_in? ? app_path : new_user_session_path, class: 'header__link', data: {turbo: "false"} %> 
+      </div>
+    </div>
+
+    <div class="header__show-mobile">
+      <div class="header__side-menu-button" data-side-menu-trigger="true"></div>
+      <%= render "marketing/shared/side_menu"%>
+    </div>
+  </div>
+</header>

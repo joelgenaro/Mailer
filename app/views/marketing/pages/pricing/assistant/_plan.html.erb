@@ -1,0 +1,30 @@
+<% if plan[:allow_display]!= false%>
+<div class="<%= pricing_plan_classes(plan) %>">
+  <span class="plan__title"><%= plan[:title] %></span>
+  <span class="plan__price"><sup>¥</sup><%= number_with_delimiter(plan[:price]) %><sub><%= plan[:price].to_i == 0 ? 'to start' : 'p/mo' %></sub></span>
+
+  <% if ENV.fetch("ASSISTANT_SERVICE_ENABLED", nil) == "true" && plan[:request_consultation]!= true  %>
+    <%= button_to t('marketing.pages.pricing.get_started'), new_register_url, method: :post, params: {subscriptionName: plan_name,subscriptionType: 'assistant'}, class: "plan__btn marketing-btn marketing-btn--block", data: {turbo: false} %>
+  <% else %>
+    <%= button_to 'Request Consultation', marketing_request_consultation_path, method: :get, class: "plan__btn marketing-btn marketing-btn--block" %>
+  <% end %>
+
+  <span class="plan__subtext">30-day money-back guarantee</span>
+  <p class="plan__desc"><%= plan[:content][:description] %></p>
+  
+  <span class="plan__features-title">What's included</span>
+  <ul class="plan__features">
+    <% plan[:content][:whats_included].each do |item| %>
+      <li>
+        <%= inline_svg_tag 'marketing/shared/tick.svg' %>
+        <span><%= item %></span>
+      </li>
+    <% end %>
+  </ul>
+
+  <% if plan[:content][:most_popular].present? %>
+    <span class="plan__most-popular">Most Popular</span>
+  <% end %>
+</div>
+<% end %>
+

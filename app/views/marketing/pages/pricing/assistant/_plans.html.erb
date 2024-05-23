@@ -1,0 +1,46 @@
+<div class="pricing__container">
+  <div class="pricing__header">
+    <h1 class="pricing__title">Assistant Pricing</h1>
+    <h2 class="pricing__subtitle">Simple, pay-as-you-go pricing.</h2>
+  </div>
+  <div class="plans plans--1x1" style="display: flex;justify-content: center;">
+    <div class="plans__left">
+    <!--<div class="plans__lead"><span class="highlight highlight--green">For Individuals</span></div>-->
+      <div class="plans__plans">
+        <% pricing_plans.select { |i, p| p[:content][:type] == 'individual' }.each do |plan_name, plan| %>
+          <%= render 'marketing/pages/pricing/assistant/plan', plan: plan, plan_name: plan_name, subscription_type: subscription_type %>
+        <% end %>
+      </div>
+    </div>
+    <!--
+    <div class="plans__right">
+      <div class="plans__lead"><span>For Businesses</span></div>
+      <div class="plans__plans">
+        <% pricing_plans.select { |i, p| p[:content][:type] == 'business' }.each do |plan_name, plan| %>
+          <%= render 'marketing/pages/pricing/assistant/plan', plan: plan, plan_name: plan_name, subscription_type: subscription_type %>
+        <% end %>
+      </div>
+    </div>
+    -->
+  </div>
+
+  <div class="pricing__includes">
+    <span class="pricing__includes__lead">All plans include:</span>
+    <ul class="pricing__includes__list">
+      <li><%= inline_svg_tag 'marketing/shared/tick.svg' %> Pay bills on your behalf</li>
+      <li><%= inline_svg_tag 'marketing/shared/tick.svg' %> Auto-pay</li>
+      <li><%= inline_svg_tag 'marketing/shared/tick.svg' %> On-demand translation/interpretation</li>
+      <li><%= inline_svg_tag 'marketing/shared/tick.svg' %> Add-on hours available</li>
+    </ul>
+  </div>
+
+  <!-- Removed as per David
+  <div class="pricing__business-includes">
+    <span class="pricing__business-includes__lead">All Business plans include:</span>
+    <ul class="pricing__business-includes__list">
+      <li><%= inline_svg_tag 'marketing/shared/tick.svg' %> Register your company address</li>
+      <li><%= inline_svg_tag 'marketing/shared/tick.svg' %> Custom NDA</li>
+    </ul>
+  </div>
+  -->
+</div>

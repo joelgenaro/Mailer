@@ -1,0 +1,24 @@
+<!-- Previously 'Why Choose Us', thus the naming... -->
+<div class="why-us why-us--1x3">
+  <div class="why-us__container">
+    <h1 class="why-us__title">How To Get Started</h1>
+    <div class="why-us__list">
+      <% items.each do |item| %>
+        <div class="why-us__item">
+          <div class="why-us__item__icon"><%= inline_svg_tag item[:icon] %></div>
+          <h3 class="why-us__item__title"><%= item[:label] %></h3>
+          <p class="why-us__item__desc"><%= item[:text] %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="why-us__squiggle why-us__squiggle--1">
+    <%= inline_svg_tag 'marketing/shared/squiggle-green-1.svg' %>
+  </div>
+  <div class="why-us__squiggle why-us__squiggle--2">
+    <%= inline_svg_tag 'marketing/shared/squiggle-green-2.svg' %>
+  </div>
+  <div class="why-us__squiggle why-us__squiggle--3">
+    <%= inline_svg_tag 'marketing/shared/squiggle-green-3.svg' %>
+  </div>
+</div>

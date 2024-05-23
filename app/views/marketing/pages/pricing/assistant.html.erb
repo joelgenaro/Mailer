@@ -1,0 +1,41 @@
+<%
+  content_for(:meta_title) { 'Virtual Assistant Pricing | MailMate' }
+  content_for(:meta_description) { 'Your own bilingual personal virtual assistant, immediately available in Japan. Everything from Planning to Booking to Bookkeeping to Research to Translation.' }
+%>
+
+<div class="pricing pricing--assistant">
+
+  <!-- Notice -->
+  <% if ENV.fetch("ASSISTANT_SERVICE_ENABLED", nil) != "true" %>
+  <div style="display: flex; justify-content: center; width: 100%;">
+    <div style="width: 100%; max-width: 960px;">
+      <div class="alert alert-primary alert-dismissible fade show" style="margin: 10px 0px -30px">
+        <center>
+          <i>We are currently no longer onboarding new customers to this service</i>
+        </center>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+  <%= render 'marketing/pages/pricing/assistant/plans', pricing_plans: @pricing_plans, subscription_type: 'assistant' %>
+  <%= render 'marketing/pages/pricing/assistant/features', features: assistant_features %>
+  <%#= render 'marketing/pages/pricing/assistant/comparison', pricing_plans: @pricing_plans, subscription_type: 'assistant', comparisons: assistant_comparisons %> <!-- having only two plans look ugly in comparison -->
+  <%= render 'marketing/pages/pricing/assistant/why_us', items: assistant_why_choose_us %>
+  <%= render 'marketing/pages/pricing/assistant/testimonials' %>
+  <%#= render 'marketing/pages/pricing/assistant/cta' %>
+</div>
+
+<script>
+  // Analytics
+  window.Analytics.track(
+    'Viewed Pricing', 
+    { 
+      page: 'marketing-assistant', 
+      path: window.location.pathname 
+    },
+    {
+      gtagSendto: window.Analytics.adwordsActionIds.viewedPricing
+    }
+  )
+</script> 

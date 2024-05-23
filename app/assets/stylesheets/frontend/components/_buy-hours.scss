@@ -1,0 +1,70 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.buy-hours {
+  font-family: $body__font;
+  padding: 45px 0;
+
+  &__container {
+    @include container(560px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__card {
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(60, 66, 87, 0.1);
+    border-radius: 6px;
+
+    &__section {
+      padding: 20px;
+      border-bottom: 1px solid $color__grey-100;
+    }
+  }
+
+  &__payment-method {
+    padding: 25px 15px 15px 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-align: left;
+    margin: 15px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__title {
+      position: absolute;
+      top: -20px;
+      left: 5px;
+      background: #fff;
+      padding: 10px;
+    }
+
+    &__details {
+      flex-grow: 1;
+    }
+    
+    &__change-link {
+      font-size: 85%;
+      color: $color__teal-500;
+      &:hover {
+        color: $color__teal-700;
+      }
+    }
+  }
+
+  &__title {
+    @include title;
+    margin: 0 0 10px 0;
+  }
+
+  p {
+    color: $color__grey-600;
+    font-size: 16px;
+
+    b {
+      color: $color__grey-800;
+    }
+  }
+}

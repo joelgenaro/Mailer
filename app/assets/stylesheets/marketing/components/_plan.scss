@@ -1,0 +1,170 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.plan {
+  width: 283px;
+  padding: 25px 20px;
+  border-radius: 4px;
+  position: relative;
+  background-color: #E6EDEE;
+  @include tablet {
+    width: 100% !important;
+  }
+  &__title {
+    color: #272729;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__price {
+    color: #11535d;
+    font-size: 32px;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+    sup {
+      color: #8A8F98;
+      font-size: 14px;
+      margin-right: 3px;
+      position: relative;
+      top: 10px;
+    }
+    sub {
+      color: #8A8F98;
+      font-size: 11px;
+      position: relative;
+      top: 0;
+      margin-left: 2px;
+    }
+  }
+  &__btn {
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    color: #292927;
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background-color: #004752;
+    }
+  }
+  &__subtext {
+    color: #8D8D94;
+    font-size: 12px;
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+  &__desc {
+    height: 130px;
+    color: #272729;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  &__features-title {
+    color: #11535d;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+  }
+  &__features {
+    height: 230px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 8px 0;
+    li {
+      display: flex;
+      align-items: flex-start;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+    svg {
+      width: 12px;
+      margin-top: 4px;
+      margin-right:10px;
+    }
+  }
+  &__most-popular {
+    border-radius: 500px;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    margin-left: -50px;
+    z-index: 9999;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 0;
+    width: 100px;
+    text-align: center;
+    background-color: #004752;
+    color: #fff;
+  }
+  &--most-popular {
+    border: 2px solid #004752;
+  }
+  &--green {
+    background-color: #E8F4F2;
+    .plan__price,
+    .plan__features-title {
+      color: #48AC98;
+    }
+    .plan__btn {
+      &:hover {
+        color: #fff;
+        background-color: #48AC98;
+      }
+    }
+    svg {
+      g {
+        path:last-child {
+          fill: #48AC98;
+        }
+      }
+    }
+  }
+  &--red {
+    background-color: #FFEEEC;
+    &.plan--most-popular {
+      border-color: #E16259;
+    }
+    .plan__features {
+      height: 230px;
+    }
+    .plan__features-title {
+      color: #222;
+    }
+    .plan__desc {
+      height: 130px;
+    }
+    .plan__price {
+      color: #DF5B57;
+    }
+    .plan__btn {
+      &:hover {
+        color: #fff;
+        background-color: #DF5B57;
+      }
+    }
+    .plan__most-popular {
+      color: #E16259;
+      background-color: #FFD4D0;
+    }
+    svg {
+      g {
+        path:last-child {
+          fill: #e36c64;
+        }
+      }
+    }
+  }
+}

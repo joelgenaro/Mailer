@@ -1,0 +1,5 @@
+<% service_listings.each do |listing| %>
+  <%= link_to marketing_show_service_listing_path(slug: listing.slug, category_slug: params[:category_slug] ) do %>
+    <%= render 'marketing/service_directory/service_directory_listing_card', listing: listing %>
+  <% end %>
+<% end %>

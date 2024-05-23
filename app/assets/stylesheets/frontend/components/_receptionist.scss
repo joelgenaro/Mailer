@@ -1,0 +1,79 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/mixins';
+
+.receptionist {
+  @include section;
+  &__container {
+    @include container(700px);
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  &__title {
+    @include title;
+    flex-grow: 1;
+  }
+
+  &__content {
+    @include card(0);
+    margin-bottom: 25px;
+
+    &__row {
+      border-bottom: 1px solid $color__grey-100;
+      padding: 25px 25px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &--last {
+        border-bottom: none;
+      }
+
+      &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 70px;
+        margin-right: 20px;
+
+        img {
+          height: 45px
+        }
+      }
+
+      &__details { 
+        flex-grow: 1;
+
+        h3 {
+          margin: 0px;
+          font-size: 20px;
+        }
+        p {
+          margin: 0px;
+          font-size: 14px;
+        }
+      }
+
+      &__value {
+        display: flex;
+        justify-content: flex-end;
+        min-width: 170px;
+
+        &__phone-number {
+          font-weight: 500;
+          color: $color__grey-700;
+          border: 1px solid $color__grey-100;
+          font-size: 0.875rem;
+          padding: 0.4rem 1rem;
+          font-size: 0.875rem;
+          line-height: 26px;
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+ 
+}

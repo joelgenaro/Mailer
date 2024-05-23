@@ -1,0 +1,210 @@
+<div class="page__assistant__examples">
+  <div class="page__assistant__examples__container">
+    <h4 class="page__assistant__examples__heading page__assistant__examples__heading--green">Personal Tasks</h4>
+    <div class="page__assistant__examples__units">
+      <%
+        [
+          {
+            icon: 'examples-calender.svg',
+            title: 'Event Planning',
+            subtitle: 'We provide efficient event planning for work or personal occasions.  ',
+            points: [
+              'Locate an appropriate venue.',
+              'Prepare your guest list.',
+              'Send invitations to guests.',
+              'Find the best vendors for food, decorations, etc',
+              'Plan event marketing.'
+            ]
+          },
+          {
+            icon: 'examples-social-media.svg',
+            title: 'Social Media',
+            subtitle: 'Social media is integral to the effective marketing of your business. However, it can be a time-consuming, never-ending task. We help you focus on the work that only you can do.',
+            points: [
+              'Write your social media posts in Japanese or English.',
+              'Manage your posting schedules.',
+              'Research content for your social media accounts.'
+            ]
+          },
+          {
+            icon: 'examples-restaurants.svg',
+            title: 'Restaurant Booking',
+            subtitle: 'We will provide you a list of the best restaurant options, based on your specific conditions.',
+            points: [
+              '“Can you make a booking at a restaurant with good vegetarian options near Shinjuku with four terrace seats at 7:30pm next Tuesday?”'
+            ],
+            style: 'padding-bottom: 40px'
+          },
+          {
+            icon: 'examples-travel.svg',
+            title: 'Travel Booking',
+            subtitle: 'During these COVID-times, all travelers must adhere to local health regulations and travel guidelines. We will do all the necessary research for you.',
+            points: [
+              'Book flights.',
+              'Search for the best travel routes.',
+              'Research visa requirements.',
+              'Look into the best travel insurance options.',
+              'Research information at your destination.'
+            ],
+            style: 'padding-bottom: 37px'
+          }
+        ].each_with_index do |item, index|
+      %>
+        <% if index % 2 == 0 %>
+          <div class="page__assistant__examples__col">
+        <% end %>
+
+        <div class="page__assistant__examples__unit page__assistant__examples__unit--green" style="<%= item[:style] || '' %>">
+          <div class="page__assistant__examples__unit__header">
+            <div class="page__assistant__examples__unit__header__icon">
+              <%= inline_svg_tag 'marketing/pages/assistant/' + item[:icon] %>
+            </div>
+            <p><%= item[:title] %>
+          </div>
+
+          <p class="page__assistant__examples__unit__subtitle"><%= item[:subtitle] %>
+
+          <ul>
+            <% item[:points].each do |point| %>
+              <li><%= point %>
+            <% end %>
+          </ul>
+        </div>
+
+         <% if index % 2 == 1 %>
+          </div>
+         <% end %>
+      <% end %>    
+    </div>
+
+    <h4 class="page__assistant__examples__heading page__assistant__examples__heading--blue">Business & Accounting Tasks</h4>
+    <div class="page__assistant__examples__units">
+      <%
+        [
+          {
+            icon: 'examples-bookkeeping.svg',
+            title: 'Basic Bookkeeping',
+            subtitle: 'Bookkeeping needs to be done, but it can be time-consuming and draining. Your virtual assistant can take care of tasks that you don\'t enjoy.',
+            points: [
+              'Ensuring your bills are paid on time.',
+              'Preparing and mailing invoices to customers.',
+              'Sending payment reminders to your clients, etc.'
+            ],
+            style: 'padding-bottom: 28px'
+          },
+          {
+            icon: 'examples-business.svg',
+            title: 'Business Research',
+            subtitle: 'We will do thorough research both in Japanese and English for information you need on any of the following:',
+            points: [
+              'Grants.',
+              'Government loans.',
+              'Market research.',
+              'A good accountant/lawyer.',
+              'Office insurance.'
+            ]
+          },
+          {
+            icon: 'examples-vendor.svg',
+            title: 'Vendor Research & Communication',
+            subtitle: 'Your virtual assistant will find the best vendor for your needs and handle communications for you.',
+            points: [
+              'Bilingual dentists.',
+              'International schools.',
+              'House cleaning services.',
+              'Babysitters',
+              'Yoga classes & more.'
+            ]
+          },
+          {
+            icon: 'examples-entry.svg',
+            title: 'Data Entry',
+            subtitle: 'Your assistant can take care of all your Data Entry needs.',
+            points: [
+              'Checking data for accuracy.',
+              'Maintaining records of activities and tasks.',
+              'Presenting data in required formats.',
+              'Preparing, compiling, and sorting out data for entry.'
+            ]
+          }
+        ].each_with_index do |item, index|
+      %>
+        <% if index % 2 == 0 %>
+          <div class="page__assistant__examples__col">
+        <% end %>
+
+        <div class="page__assistant__examples__unit page__assistant__examples__unit--blue" style="<%= item[:style] || '' %>">
+          <div class="page__assistant__examples__unit__header">
+            <div class="page__assistant__examples__unit__header__icon">
+              <%= inline_svg_tag 'marketing/pages/assistant/' + item[:icon] %>
+            </div>
+            <p><%= item[:title] %>
+          </div>
+
+          <p class="page__assistant__examples__unit__subtitle"><%= item[:subtitle] %>
+
+          <ul>
+            <% item[:points].each do |point| %>
+              <li><%= point %>
+            <% end %>
+          </ul>
+        </div>
+        <% if index % 2 == 1 %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <h4 class="page__assistant__examples__heading page__assistant__examples__heading--orange">Business & Accounting Tasks</h4>
+    <div class="page__assistant__examples__units">
+      <%
+        [
+          {
+            icon: 'examples-language.svg',
+            title: 'Document Translation',
+            subtitle: "From a quick liberal translation of short texts to summary translations/key-point memos of long articles or documents, let us help you jump over Japan's cultural and language barrier.",
+            points: [
+              'Emails.',
+              'Invoices.',
+              'Articles.',
+              'Websites.',
+              'Contracts, etc.'
+            ]
+          },
+          {
+            icon: 'examples-translation.svg',
+            title: 'Live Translation Support',
+            subtitle: 'We can help you with three-way calls.',
+            points: [
+              'Inquiry calls to Japanese companies.',
+              'Inquiry calls to your bank, city office, post office, etc.',
+              'Phone calls with a Japanese client.'
+            ],
+            style: 'min-height: 270px',
+            class: 'page__assistant__examples__unit--that-last-annoying-orange-one'
+          }
+        ].each_with_index do |item, index|
+      %>
+        <div class="page__assistant__examples__col">
+          <div class="page__assistant__examples__unit page__assistant__examples__unit--orange <%= item[:class] || '' %>" style="<%= item[:style] || '' %>">
+            <div class="page__assistant__examples__unit__header">
+              <div class="page__assistant__examples__unit__header__icon">
+                <%= inline_svg_tag 'marketing/pages/assistant/' + item[:icon] %>
+              </div>
+              <p><%= item[:title] %>
+            </div>
+
+            <p class="page__assistant__examples__unit__subtitle"><%= item[:subtitle] %>
+
+            <ul>
+              <% item[:points].each do |point| %>
+                <li><%= point %>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    
+  </div>
+</div>

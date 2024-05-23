@@ -1,0 +1,55 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.page {
+  @include section;
+  &--narrow {
+    .page__container {
+      @include container(800px);
+    }
+  }
+  &__container {
+    @include container;
+  }
+  &__header {
+    text-align: center;
+  }
+  &__title {
+    @include title;
+  }
+  &__subtitle {
+    @include subtitle;
+  }
+  &__request-consultation {
+    @include card;
+    padding: 45px;
+    margin: 30px auto 0 auto;
+    max-width: 600px;
+    &__form {
+      margin: 25px 0 0 0;
+      .form-group {
+        margin: 0 0 15px 0;
+      }
+      label {
+        margin: 0 0 3px 0;
+        font-weight: 600;
+      }
+      .btn {
+        margin: 5px 0 0 0;
+      }
+    }
+  }
+  &__request-consultation-thanks {
+    @include card;
+    padding: 30px 45px 45px 45px;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: center;
+    &__title {
+      @include title;
+    }
+    &__subtitle {
+      @include subtitle;
+    }
+  }
+}

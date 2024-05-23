@@ -1,0 +1,19 @@
+<div class="page__mail__hero">
+  <div class="page__mail__hero__container">
+    <div class="page__mail__hero__left">
+      <h1 class="page__mail__hero__title"><%= t('marketing.pages.mail.hero_title') %></h1>
+      <p class="page__mail__hero__subtitle"><%= t('marketing.pages.mail.hero_subtitle_html') %></p>
+
+      <div class="page__mail__hero__actions">
+        <%= link_to t('marketing.pages.mail.hero_button_get_started'), marketing_pricing_path('mail'), class: "marketing-btn marketing-btn--secondary marketing-btn--medium" %>
+        <%= link_to t('marketing.pages.mail.hero_button_request_consultation'), marketing_request_consultation_path, class: "marketing-btn marketing-btn--grey marketing-btn--medium " %>
+      </div>
+
+    </div>
+
+    <div class="page__mail__hero__right">
+      <%= image_tag 'marketing/pages/mail/hero.png' %>
+    </div>
+
+  </div>
+</div>

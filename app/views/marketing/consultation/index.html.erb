@@ -1,0 +1,62 @@
+<%
+  content_for(:meta_title) { 'Request A Consultation | MailMate' }
+  content_for(:meta_description) { 'Request a consultation about MailMate to find out more about our Virtual Mailbox and Virtual Assistant services. Making it easier to work, live and do business in Japan.' }
+%>
+
+<div class="page page--narrow">
+  <div class="page__container">
+    <div class="page__header">
+      <h1 class="page__title"><%= t('marketing.pages.consultation.title') %></h1>
+      <% if I18n.locale == :en %>
+        <p class="page__subtitle"><%= t('marketing.pages.consultation.subtitle') %></p>
+      <% end %>
+    </div>
+    <div class="page__request-consultation">
+      <% if I18n.locale == :en %>
+        <p><%= t('marketing.pages.consultation.detail') %></p>
+      <% end %>
+    
+      <%= form_for @consultation_request, url: marketing_submit_request_consultation_path, local: true, method: :post, authenticity_token: true, html: { class: 'page__request-consultation__form', id: 'contact-form' } do |f| %>
+        <div class="row">
+          <%
+            fields = [:first_name, :last_name]
+            fields.reverse! if I18n.locale == :ja
+            fields.each do |field|
+          %>
+            <div class="col-md-6">
+              <%= f.form_group field do %>
+                <%= f.label field, t("marketing.pages.consultation.#{field}") %>
+                <%= f.text_field field, class: "form-control" %>
+                <%= f.error_message_for field %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+
+        <%= f.form_group :phone do %>
+          <%= f.label :phone, t('marketing.pages.consultation.phone') %>
+          <%= f.phone_field :phone, class: "form-control", pattern: "[0-9]{1,3}-[0-9]{4,14}" %>
+          <span style="font-size: 12px; font-style:italic">format: CC-XXXXXXXXXXX</span>
+          <%= f.error_message_for :phone %>
+        <% end %>
+
+        <%= f.form_group :email do %>
+          <%= f.label :email, t('marketing.pages.consultation.email') %>
+          <%= f.email_field :email, class: "form-control" %>
+          <%= f.error_message_for :email %>
+        <% end %>
+
+        <!-- Make this a selectbox -->
+        <%= f.form_group :business_type do %>
+          <%= f.label :business_type, t('marketing.pages.consultation.business_type') %>
+          <%= f.select :business_type, business_type_options_for_select, { prompt: t('marketing.pages.consultation.select_one') }, { class: "form-control" } %>
+          <%= f.error_message_for :business_type %>
+        <% end %>
+            
+        <div class="form-group">
+          <%= f.submit t('marketing.pages.consultation.submit'), class: "btn btn-primary btn-lg" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

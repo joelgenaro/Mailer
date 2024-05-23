@@ -1,0 +1,25 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.tasks-none {
+  @include section;
+  &__container {
+    @include container(600px);
+    text-align: center;
+  }
+  &__title {
+    @include title;
+  }
+  &__subtitle {
+    @include subtitle;
+  }
+  &__illustration {
+    max-width: 200px;
+    margin: 0 0 30px 0;
+  }
+  &__button {
+    margin: 30px 0 0 0;
+    height: 54px;
+    padding: 0 30px;
+  }
+}

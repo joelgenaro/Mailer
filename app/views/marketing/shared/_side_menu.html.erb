@@ -1,0 +1,41 @@
+<div class="header__nav__right">
+<button id="hamburger_menu" class="hamburger hamburger--spin toggle_side_menu" type="button"><span class="hamburger-box toggle_side_menu"><span class="hamburger-inner toggle_side_menu"></span></span></button>
+</div>
+<div id="side-menu" class='side-menu--hidden' style='top: topOffset;'>
+    <div class="side_menuside-menu__primary">
+        <% if I18n.locale == :ja %>
+            <div class="side-menu__item">
+                <%= link_to "MailMateとは", root_ja_path(anchor: "mailmate_is"), class: 'side-menu__item__link toggle_side_menu' %>
+            </div>
+            <div class="side-menu__item">
+                <%= link_to "料金プラン", root_ja_path(anchor: "plans"), class: 'side-menu__item__link toggle_side_menu' %>
+            </div>
+            <div class="side-menu__item">
+                <%= link_to "機能", root_ja_path(anchor: "features"), class: 'side-menu__item__link toggle_side_menu' %>
+            </div>
+        <% else %>
+            <div class="side-menu__item">
+                <%= link_to t('marketing.shared.header.home'), root_en_path, class: 'side-menu__item__link toggle_side_menu' %>
+            </div>
+            <div class="side-menu__item">
+                <%= link_to t('marketing.shared.header.about'), marketing_about_path, class: 'side-menu__item__link' %>
+            </div>
+            <div class="side-menu__item">
+                <%= link_to t('marketing.shared.header.pricing'),  marketing_pricing_path('mail'), class: 'side-menu__item__link' %>
+            </div>
+            <div class="side-menu__item">
+                <%= link_to t('marketing.shared.header.assistant'), marketing_assistant_path, class: 'side-menu__item__link' %>
+            </div>
+            <div class="side-menu__item">
+                <%= link_to t('marketing.shared.header.blog'), marketing_blog_path, class: 'side-menu__item__link' %>
+            </div>
+            <div class="side-menu__item">
+                <%= link_to t('marketing.shared.header.faq'), marketing_faq_path, class: 'side-menu__item__link' %>
+            </div>
+        <% end %>
+        <div class="side-menu__item">
+            <%# <%= link_to t('marketing.shared.header.login'), user_signed_in? ? app_path : new_user_session_path, class: 'side-menu__item__link', data: {turbo: "false"} %> 
+        </div>
+    </div>
+</div>
+

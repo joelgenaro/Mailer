@@ -1,0 +1,48 @@
+<!-- Previously 'Why Choose Us', thus the naming... -->
+<div class="page__assistant__why">
+  <div class="page__assistant__why__container">
+    <div class="page__assistant__why__squiggle page__assistant__why__squiggle--hide-mobile" style="top: 0px; left: 0px;">
+      <%= inline_svg_tag('marketing/pages/assistant/why-squiggle-1.svg') %>
+    </div>
+
+    <div class="page__assistant__why__squiggle" style="top: 57px; right: 0px;">
+      <%= image_tag('marketing/pages/assistant/why-squiggle-2.png') %>
+    </div>
+    
+
+    <div class="page__assistant__why__content">
+      <h3 class="page__assistant__why__title">How To Get Started</h3>
+
+      <div class="page__assistant__why__units">
+        <%
+          [
+            {
+              icon: 'why-quality.svg',
+              title: 'Quick Discovery Call',
+              detail: 'Tell us the specifics of your needs and requirements. We will let you know the estimated time for you to start working with your assistant.'
+            },
+            {
+              icon: 'why-started.svg',
+              title: 'Sign Up To MailMate',
+              detail: 'Once your assistant is ready, you can sign up to a MailMate plan! MailMate accepts all major credit cards. Payments are processed with Stripe.'
+            },
+            {
+              icon: 'why-time.svg',
+              title: 'Onboarding Phone Call',
+              detail: 'Have an onboarding call with your assistant, clarify upcoming tasks and ask questions. Up to 30 min. of complimentary time to facilitate a great start.'
+            }
+          ].each do |item|
+        %>
+          <div class="page__assistant__why__unit">
+            <div class="page__assistant__why__unit__icon">
+              <%= inline_svg_tag('marketing/pages/assistant/' + item[:icon]) %>
+            </div>
+
+            <h4 class="page__assistant__why__unit__title"><%= item[:title] %></h4>
+            <p class="page__assistant__why__unit__detail"><%= item[:detail] %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

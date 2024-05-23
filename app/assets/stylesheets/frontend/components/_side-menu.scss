@@ -1,0 +1,66 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+/* Hamburgers */
+$hamburger-layer-color         : #333333;
+$hamburger-layer-width         : 35px;
+$hamburger-layer-height         : 2px;
+$hamburger-layer-spacing       : 10px; 
+$hamburger-padding-x: 5px;
+$hamburger-types     : (spin);
+
+.side-menu {
+  display: flexbox;
+  flex-direction: column;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 100;
+  top: 80px; // Offset the header
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 30px 15px 15px;
+  &.side-menu--hidden {
+    display: none;
+  }
+  .side-menu__item {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    .side-menu__item__button {
+      width: 90%;
+      font-family: $title__font;
+      color: #333333;
+      font-size: 28px;
+      font-weight: 400;
+      height: 100%;
+      line-height: 40px;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      &:hover {
+        background-color: rgb(214, 214, 214);
+      }
+    }
+    .side-menu__item__sign-up-button {
+      width: 90%;
+      border-radius: 4px;
+      background-color: #E7B366;
+      box-shadow: 0px 2px 5px 1px rgba(231, 179, 102, 0.72);
+      color: #FFFFFF;
+      font-family: $title__font;
+      font-size: 18px;
+      font-weight: 600;
+      height: 100%;
+      line-height: 40px;
+      text-decoration: none;
+      display: inline-block;
+      &:hover {
+        background-color: rgb(199, 153, 83);
+      }
+    }
+  }
+}

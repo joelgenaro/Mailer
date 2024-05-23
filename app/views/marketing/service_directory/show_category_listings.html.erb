@@ -1,0 +1,17 @@
+<!-- Meta -->
+<% content_for :meta_title do %><%= @category.title %> | MailMate<% end %>
+<% content_for :meta_description do %>
+  Curated list of select <%= @category.title %>, that make working and living in Japan as easy as possible.
+<% end %>
+
+<div class="service-directory-container-category-listing">
+  <div class="service-categories__hide"><%= render 'marketing/service_directory/service_directory_categories' %></div>
+  <div class="service-listings-container">
+    <p>
+      <%= link_to 'Service Directory', marketing_service_directory_path %> /
+      <%= link_to @category.title, marketing_show_category_listings_path(@category_slug) %>
+    </p>
+    <h1><%= @category.title %></h1>
+    <%= render 'marketing/service_directory/service_directory_listings', service_listings: @category_listings %>
+  </div>
+</div>

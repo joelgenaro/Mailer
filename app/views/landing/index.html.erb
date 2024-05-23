@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      MailMate - by Shoeboxed
+    </title>
+    <link
+      rel="shortcut icon"
+      href="<%= image_url('landing/favicon.svg') %>"
+      type="image/x-icon"
+    />
+    <%= stylesheet_link_tag 'landing/animate', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'landing/tailwind', 'data-turbolinks-track': 'reload' %>
+
+    <!-- ==== WOW JS ==== -->
+    <%= javascript_include_tag 'landing/wow.min', 'data-turbolinks-track': 'reload' %>
+    <script>
+      new WOW().init();
+    </script>
+    <!-- Calendly badge widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/morgan-269/mailmate?hide_gdpr_banner=1&primary_color=18bfff', text: 'Book a demo', color: '#18bfff', font: '26px', textColor: '#ffffff', branding: false }); }</script>
+  </head>
+
+  <body>
+    <!-- ====== Navbar Section Start -->
+    <div
+      class="ud-header absolute top-0 left-0 z-40 flex w-full items-center bg-white border-b border-gray-200"
+    >
+      <div class="container">
+        <div class="relative py-2 md:py-0 flex items-center justify-between">
+          <div class="max-w-full">
+            <a href="#home" class="navbar-logo block w-full py-0">
+              <%= image_tag 'landing/logo/logo.svg', alt: 'logo', class: 'header-logo w-full' %>
+            </a>
+            <div class="text-sm whitespace-nowrap text-gray-600">Business mail made easy</div>
+          </div>
+          <div class="flex w-full items-center justify-end">
+
+            <div>
+              <button
+                id="navbarToggler"
+                class="absolute right-4 top-1/2 block -translate-y-1/2 px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+              >
+                <span
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-dark"
+                ></span>
+                <span
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-dark"
+                ></span>
+                <span
+                  class="relative my-[6px] block h-[2px] w-[30px] bg-dark"
+                ></span>
+              </button>
+              <nav
+                id="navbarCollapse"
+                class="absolute right-4 mr-0 sm:mr-6 top-full hidden w-full max-w-[250px] bg-white py-3 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:py-0 lg:px-2 lg:shadow-none xl:px-2"
+              >
+                <ul class="blcok lg:flex">
+                  <li class="group relative">
+                    <a
+                      href="#how-it-works"
+                      class="ud-menu-scroll mx-4 flex py-2 text-base text-dark group-hover:text-primary lg:mr-0  lg:inline-flex lg:py-6 lg:px-0 lg:group-hover:opacity-70"
+                    >
+                      How it works
+                    </a>
+                  </li>
+                  <li class="group relative">
+                    <a
+                      href="#services"
+                      class="ud-menu-scroll mx-4 flex py-2 text-base text-dark group-hover:text-primary lg:mr-0 lg:inline-flex lg:py-6 lg:px-0 lg:group-hover:opacity-70 lg:ml-6 xl:ml-8"
+                    >
+                      Services
+                    </a>
+                  </li>
+
+                  <li class="group relative">
+                    <a
+                      href="#why-choose-us"
+                      class="ud-menu-scroll mx-4 flex py-2 text-base text-dark group-hover:text-primary lg:mr-0  lg:inline-flex lg:py-6 lg:px-0 lg:group-hover:opacity-70 lg:ml-6 xl:ml-8"
+                    >
+                      Why MailMate
+                    </a>
+                  </li>
+                  <li class="group relative">
+                    <a
+                      href="#faq"
+                      class="ud-menu-scroll mx-4 flex py-2 text-base text-dark group-hover:text-primary lg:mr-0  lg:inline-flex lg:py-6 lg:px-0 lg:group-hover:opacity-70 lg:ml-6 xl:ml-8"
+                    >
+                      FAQ
+                    </a>
+                  </li>
+
+                </ul>
+              </nav>
+            </div>
+            <div class="justify-end pr-16 sm:flex lg:pr-0">
+              <a
+                href="#home"
+                class="signUpBtn px-6 py-2 sm:px-3 mr-4 sm:mr-0 border rounded-md border-transparent text-base font-bold text-white bg-primary shadow-sm hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:mt-0 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====== Navbar Section End -->
+
+    <!-- ====== Hero Section Start -->
+    <div
+      id="home"
+      class="relative overflow-hidden pt-8"
+    >
+      <div class="container">
+        <main class="wow fadeInUp my-24 mx-auto max-w-7xl sm:mt-24 lg:mt-40 lg:mb-40"
+          data-wow-delay=".2s"
+        >
+          <div class="lg:grid lg:grid-cols-12 lg:gap-8 flex flex-col lg:flex-row items-center">
+            <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+              <h1>
+                <span class="mt-6 mb-8 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
+                  <span class="block text-gray-900">
+                    Your business mail made digital
+                  </span>
+                </span>
+              </h1>
+              <p class="mt-3 text-base text-gray-700 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl md:mr-12">
+                We receive, scan & store your mail. Making it readable & actionable from anywhere in the world.
+              </p>
+              <div class="wow fadeInUp mt-12 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0" data-wow-delay=".1s">
+                <%= form_with url: submit_email_path, method: :post do |form| %>
+                  <div class="flex flex-col sm:flex-row">
+                    <input
+                      class="block w-full px-4 py-4 mr-2 text-base text-black placeholder-gray-500 transition-all duration-200 border-2 border-gray-300 rounded-md caret-gray-600 focus:border-gray-600 focus:ring-1 focus:ring-gray-600"
+                      type="email" name="email" placeholder="Email addresss" required="true"
+                    >
+                    <button class="mt-3 w-full px-6 py-3 border border-transparent rounded-md text-lg font-bold text-white bg-primary shadow-sm hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:mt-0 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto" type="submit">
+                      Get Started
+                    </button>
+                  </div>
+                <% end %>
+
+              </div>
+            </div>
+            <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center md:pl-8">
+              <div class="relative mx-auto w-full">
+                <img class="w-full relative inset" src="<%= image_url('landing/hero/hero.png') %>" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap mt-12">
+            <div class="mx-4 w-full">
+              <div class="wow fadeInUp" data-wow-delay=".1s">
+                <div class="mt-16 mb-8 text-center">
+                  <p
+                    class="relative text-lg inline-flex items-center text-center font-normal text-body-color"
+                  >
+                    Trusted by the best
+                  </p>
+                </div>
+                <div class="grid gap-8 grid-col-2 sm:grid-cols-3 md:grid-cols-6">
+                  <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="<%= image_url('landing/brands/coinbase.svg')%>" alt="Coinbase">
+                  </div>
+                  <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="<%= image_url('landing/brands/spotify.svg')%>" alt="Spotify">
+                  </div>
+                  <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="<%= image_url('landing/brands/slack.svg')%>" alt="Slack">
+                  </div>
+
+                  <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="<%= image_url('landing/brands/dropbox.svg')%>" alt="Dropbox">
+                  </div>
+                  <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="<%= image_url('landing/brands/webflow.svg')%>" alt="Webflow">
+                  </div>
+                  <div class="col-span-1 flex justify-center">
+                    <img class="h-12" src="<%= image_url('landing/brands/zoom.svg')%>" alt="Zoom">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </main>
+
+      </div>
+    </div>
+    <!-- ====== Hero Section End -->
+    <section id="how-it-works" class="py-10 bg-gray-100 sm:py-16 lg:py-40">
+        <div class="wow fadeInUp px-4 mx-auto max-w-7xl sm:px-6 lg:px-8" data-wow-delay=".1s">
+            <div class="max-w-2xl mx-auto text-center">
+              <span class="mb-4 block text-base up font-bold text-secondary-500 uppercase">
+                How it works?
+              </span>
+
+                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">3 simple steps to digital mail</h2>
+            </div>
+
+            <div class="relative mt-12 lg:mt-20">
+                <div class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12">
+                    <div data-wow-delay=".1s" class="wow fadeInUp">
+                        <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                            <span class="text-xl font-semibold text-gray-700"> 1 </span>
+                        </div>
+                        <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">We receive your business mail</h3>
+                        <p class="mt-4 text-base text-gray-600">
+                          Your postal mail is sent to a virtual address and processed at our secure facilities
+                        </p>
+                    </div>
+
+                    <div data-wow-delay=".1s" class="wow fadeInUp">
+                        <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                            <span class="text-xl font-semibold text-gray-700"> 2 </span>
+                        </div>
+                        <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">
+                          We digitize it for you
+
+                        </h3>
+                        <p class="mt-4 text-base text-gray-600">
+                          We will help you change to your new address. Just take a photo of any mail that you wish to be redirected.
+                        </p>
+                    </div>
+
+                    <div data-wow-delay=".1s" class="wow fadeInUp">
+                        <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                            <span class="text-xl font-semibold text-gray-700"> 3 </span>
+                        </div>
+                        <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">
+                          You take control
+
+                        </h3>
+                        <p class="mt-4 text-base text-gray-600">
+                          You read and actionable your business mail from anywhere in the world. It's that simple!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== Services Section Start -->
+    <section id="services" class="py-12 sm:py-16 lg:py-40">
+      <div class="container">
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4">
+            <div class="mb-12 max-w-[520px] lg:mb-20">
+              <span class="mb-4 block text-base font-bold uppercase text-secondary-500">
+                Services
+              </span>
+              <h2
+                class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]"
+              >
+                Your business's virtual secretary
+              </h2>
+              <p
+                class="text-lg leading-relaxed text-body-color sm:text-xl sm:leading-relaxed"
+              >
+                Access and action your mail from anywhere in the world with MailMate.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-2 md:w-1/2 lg:w-1/4">
+            <div class="wow fadeInUp group mb-4 bg-white border border-gray-200 rounded-md p-8" data-wow-delay=".1s">
+              <svg width="110" height="52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.093 49.55C10.483 59.185 0 38.235 0 24.276 0 10.315 10.46-2 22.355 1s25.326 5.28 29.832 23.275c4.506 17.997-10.483 15.643-26.093 25.276Z" fill="#E0F2FE"/><path d="M73.333 30h2.134M72 26h3.467M70.667 22h4.8" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="63" y="25" width="10" height="2" rx="1" fill="#131313"/><path fill-rule="evenodd" clip-rule="evenodd" d="M96.667 13h-9.334a3.666 3.666 0 0 0-3.666 3.667v18.666A3.666 3.666 0 0 0 87.333 39h13.334a3.666 3.666 0 0 0 3.666-3.667V20.437c0-.972-.386-1.905-1.074-2.592l-3.77-3.77A3.667 3.667 0 0 0 96.895 13h-.23Zm-1 2h-8.334c-.92 0-1.666.746-1.666 1.667v18.666c0 .921.745 1.667 1.666 1.667h13.334c.921 0 1.666-.746 1.666-1.667V21.667H98a2.334 2.334 0 0 1-2.328-2.174l-.005-.16V15Zm6.477 4.667H98l-.067-.007a.334.334 0 0 1-.266-.327V15.19c.149.078.286.178.407.3l3.771 3.77c.121.121.221.259.299.408Zm-6.921 13.4v.156c0 .98.795 1.777 1.776 1.777h1.557a1.78 1.78 0 0 0 1.779-1.774v-1.56c0-.982-.796-1.778-1.778-1.778h-1.026l-1.245-1.945c.171-.273.27-.596.27-.942v-1.557c0-.982-.796-1.777-1.777-1.777H93.22c-.981 0-1.777.795-1.777 1.777v1.557c0 .346.099.669.27.942l-1.245 1.945h-1.025c-.982 0-1.777.796-1.777 1.777v1.558c0 .981.795 1.777 1.777 1.777h1.557c.982 0 1.778-.796 1.778-1.777v-.156h2.444Zm-2.818-2.493c.114.148.206.313.27.493h2.651c.064-.18.156-.345.27-.492l-1.15-1.796h-.892l-1.15 1.795Zm2.15-4.908v1.112h-1.112v-1.112h1.112Zm-3.777 7.333v-1.112h-1.112v1.112h1.112Zm7.556-1.112v1.112h-1.112v-1.112h1.112Z" fill="#000"/><path fill-rule="evenodd" clip-rule="evenodd" d="M32.744 16.759A1.75 1.75 0 0 0 31 15.152H21l-.143.006a1.75 1.75 0 0 0-1.607 1.744v2.32l-1.783 1.2-.151.11a2.726 2.726 0 0 0-1.063 2.099.78.78 0 0 0-.003.072V32l.005.168A2.75 2.75 0 0 0 19 34.75h13.999l.168-.005A2.75 2.75 0 0 0 35.749 32v-9.297l-.004-.063a2.73 2.73 0 0 0-1.214-2.218l-1.781-1.2v-2.32l-.006-.143ZM31.25 19.61v5.774l-2.734 1.84a.743.743 0 0 0-.105.07l-.592.398-.186.116a3.26 3.26 0 0 1-3.454-.116l-.58-.39a.75.75 0 0 0-.125-.085l-2.724-1.832v-5.754a.77.77 0 0 0 0-.021v-2.709l.007-.057a.25.25 0 0 1 .243-.193h10l.057.007a.25.25 0 0 1 .193.243v2.709Zm-12 1.42-.945.635a1.25 1.25 0 0 0-.116 1.987l.116.088.945.636V21.03Zm13.5 3.344v-3.344l.943.635.116.088a1.25 1.25 0 0 1-.116 1.987l-.943.634Zm-.364 2.053a.766.766 0 0 0 .063-.042l1.8-1.211V32l-.006.128a1.268 1.268 0 0 1-.006.048l-4.18-4.18 2.33-1.568Zm-3.73 2.51.132-.09 4.389 4.39a1.256 1.256 0 0 1-.178.012H19l-.128-.006a1.31 1.31 0 0 1-.049-.006l4.388-4.388.13.087.204.13a4.76 4.76 0 0 0 5.112-.13ZM17.75 25.175l4.193 2.82-4.18 4.181A1.26 1.26 0 0 1 17.75 32v-6.825ZM29 18.75a.75.75 0 0 1 .102 1.493L29 20.25h-6a.75.75 0 0 1-.102-1.493L23 18.75h6Zm.75 4.25a.75.75 0 0 0-.75-.75h-6l-.102.007A.75.75 0 0 0 23 23.75h6l.102-.007A.75.75 0 0 0 29.75 23Z" fill="#18BFFF"/>
+              </svg>
+              <h4 class="mt-6 text-xl sm:text-xl mb-2 font-bold text-dark">
+                Agent for service of process
+              </h4>
+              <p class="text-body-color">
+                Ensure someone is always on hand to act as an agent for service of processs.
+              </p>
+            </div>
+          </div>
+          <div class="w-full px-2 md:w-1/2 lg:w-1/4">
+            <div class="wow fadeInUp group mb-4 bg-white border border-gray-200 rounded-md p-8" data-wow-delay=".2s">
+              <svg width="112" height="52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.245 2.995C10.594-6.64.084 14.31.084 28.27c0 13.96 10.487 26.275 22.413 23.275s25.392-5.28 29.91-23.275c4.518-17.996-10.51-15.642-26.162-25.275Z" fill="#E0F2FE"></path><path d="M27.154 34v-7M24.981 29l2.173-2.167L29.327 29" stroke="#18BFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M31.165 34h2.566a3.511 3.511 0 0 0 3.51-3.5c0-1.928-1.577-3.5-3.51-3.5h-.436v-1c0-3.31-2.697-6-6.016-6a6.012 6.012 0 0 0-5.928 5.023c-2.383.121-4.283 2.07-4.283 4.477 0 2.485 2.02 4.5 4.511 4.5h1.565" stroke="#18BFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M95.332 14c3.428 0 6.223 2.711 6.345 6.101l.004.232v3h.335A3.67 3.67 0 0 1 105.692 27v9.333A3.67 3.67 0 0 1 102.016 40H88.647a3.67 3.67 0 0 1-3.676-3.667V27a3.67 3.67 0 0 1 3.676-3.667h.335v-3c0-3.497 2.843-6.333 6.35-6.333Zm4.344 6.333v3h-8.69v-3l.006-.21A4.34 4.34 0 0 1 95.332 16a4.34 4.34 0 0 1 4.344 4.333Zm-11.029 5h13.369c.923 0 1.671.746 1.671 1.667v9.333c0 .921-.748 1.667-1.671 1.667H88.647a1.668 1.668 0 0 1-1.67-1.667V27c0-.921.747-1.667 1.67-1.667Zm2.791 5.395-.117-.007-.117.007a1 1 0 0 0-.51.213l-.064.053-.044.045-.023.029-.024.028a.994.994 0 0 0-.214.509l-.006.097-.007.026.008.028.005.082c.018.153.07.295.15.42l.036.05a.531.531 0 0 0 .237.232l.036.026a.998.998 0 0 0 .42.149l.058.003.06.017.056-.017.06-.003a.998.998 0 0 0 .42-.15l.036-.025.08-.049a.522.522 0 0 0 .157-.183l.037-.05a.992.992 0 0 0 .149-.42l.004-.079.01-.031-.01-.03-.004-.093a.993.993 0 0 0-.213-.51l-.026-.027-.022-.029-.044-.045-.064-.053a1 1 0 0 0-.51-.213Zm3.9-.007.117.007a1 1 0 0 1 .51.213l.035.032.03.021.044.045.047.057a.993.993 0 0 1 .213.509l.005.093.009.03-.01.031-.004.079a.991.991 0 0 1-.15.42l-.035.05a.522.522 0 0 1-.157.183l-.083.05-.033.025a.998.998 0 0 1-.42.149l-.06.003-.058.017-.079-.019-.038-.001a.998.998 0 0 1-.22-.052l-.136-.056a.547.547 0 0 1-.202-.133l-.057-.071-.05-.056a.995.995 0 0 1-.214-.509l-.005-.085-.008-.025.007-.03.006-.093a.994.994 0 0 1 .214-.51l.047-.056a.48.48 0 0 1 .044-.045l.032-.024.032-.029a1 1 0 0 1 .51-.213l.117-.007Zm4.121.007-.117-.007-.117.007a1 1 0 0 0-.51.213l-.064.053-.044.045-.023.029-.024.028a.994.994 0 0 0-.214.509l-.007.097-.006.026.007.028.006.082c.018.153.07.295.15.42l.036.05a.531.531 0 0 0 .237.232l.036.026a.998.998 0 0 0 .42.149l.058.003.059.017.057-.017.06-.003a.998.998 0 0 0 .42-.15l.035-.025.081-.049a.52.52 0 0 0 .157-.183l.037-.05a.995.995 0 0 0 .149-.42l.004-.079.009-.031-.008-.03-.005-.093a.99.99 0 0 0-.214-.51l-.025-.027-.022-.029-.044-.045-.064-.053a1 1 0 0 0-.51-.213Z" fill="#000"></path><rect x="65.253" y="27" width="7.018" height="2" rx="1" fill="#131313"></rect>
+              </svg>
+              <h4 class="mt-6 text-xl sm:text-xl mb-2 font-bold text-dark">
+                Secure lockbox storage for mail
+              </h4>
+              <p class="text-body-color">
+                Store important mail in our secure facility. Press a button if you need it & we’ll ship it.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full px-2 md:w-1/2 lg:w-1/4">
+            <div class="wow fadeInUp group mb-4 bg-white border border-gray-200 rounded-md p-8" data-wow-delay=".2.5s">
+              <svg width="116" height="52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.587 2.403C45.124-7.049 56.23 13.506 56.23 27.202S43.854 52 28.587 52C13.321 52 5.72 44.857.945 27.202-3.83 9.545 12.05 11.854 28.587 2.403Z" fill="#E0F2FE"/><path fill-rule="evenodd" clip-rule="evenodd" d="M22.141 20.25a.751.751 0 0 1 .088 1.495l-.088.005h-2.005a.751.751 0 0 1-.088-1.495l.088-.005h2.005Zm-1.003 3a.75.75 0 0 1 .088 1.495l-.088.005h-1.002a.751.751 0 0 1-.088-1.495l.088-.005h1.002Zm16.643-3H27.164a3.158 3.158 0 0 0-3.025 2.244l-2.166 7.2c-.608 2.022.91 4.056 3.025 4.056h10.616a3.159 3.159 0 0 0 3.026-2.244l2.166-7.2c.608-2.022-.91-4.056-3.025-4.056Zm-10.617 1.5h10.617c.387 0 .736.13 1.013.345l-6.768 4.292a.754.754 0 0 0-.1.063l-.867.55-.047.023a.25.25 0 0 1-.278-.071l-4.317-5.024c.226-.115.48-.178.747-.178Zm-1.659 1.422-2.091 6.953a1.66 1.66 0 0 0-.069.387l5.393-3.578-3.233-3.762Zm4.229 4.903-5.76 3.822c.279.22.632.353 1.024.353h10.616c.263 0 .515-.062.74-.174l-4.08-4.069-.408.259a1.758 1.758 0 0 1-2.132-.19Zm3.84-.892 3.69 3.68 2.101-6.988a1.66 1.66 0 0 0 .07-.409l-5.86 3.717Zm1.6 9.067a.751.751 0 0 1 .089 1.495l-.088.005H21.138a.751.751 0 0 1-.087-1.495l.087-.005h14.037Z" fill="#18BFFF"/><rect x="68.261" y="30" width="10.026" height="2" rx="1" fill="#131313"/><path fill-rule="evenodd" clip-rule="evenodd" d="M99.342 16c7.187 0 13.034 5.832 13.034 13 0 7.169-5.846 13-13.034 13-7.188 0-13.034-5.83-13.034-13s5.846-13 13.034-13Zm0 2c6.08 0 11.029 4.936 11.029 11s-4.949 11-11.029 11-11.029-4.935-11.029-11 4.948-11 11.029-11Zm4.578 6.673-.129-.006-.129.006a1.332 1.332 0 0 0 .13 2.66c.739 0 1.337-.597 1.337-1.333 0-.694-.531-1.263-1.209-1.327Zm-9.071-.006.129.006c.678.064 1.21.633 1.21 1.327 0 .736-.6 1.333-1.338 1.333a1.334 1.334 0 0 1-.13-2.66l.129-.006Zm8.504 6h-8.021c-.554 0-1.003.447-1.003 1 0 2.775 2.23 5 5.013 5a4.99 4.99 0 0 0 5.013-5c0-.553-.449-1-1.002-1Zm-6.851 1.999h5.679l-.005.018a2.988 2.988 0 0 1-2.834 1.983l-.178-.005a2.986 2.986 0 0 1-2.588-1.806l-.074-.19Z" fill="#000"/><path d="M72.272 25.667h4.812" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h4 class="mt-6 text-xl sm:text-xl mb-2 font-bold text-dark">
+                Send corresponding outbound mail
+              </h4>
+              <p class="text-body-color">
+                Reply through mailmate and we’ll generate real postal mail back to your recipient.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full px-2 md:w-1/2 lg:w-1/4">
+            <div class="wow fadeInUp group mb-4 bg-white border border-gray-200 rounded-md p-8" data-wow-delay=".1s">
+              <svg width="110" height="51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.052 2.995C39.704-6.64 50.215 13.31 50.215 27.27c0 13.96-9.485 26.275-21.41 23.275-11.927-3-22.384-3.28-26.903-21.275-4.518-17.996 6.5-16.642 22.151-26.275Z" fill="#E0F2FE"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M100.381 18.542c-4.29-4.278-11.245-4.278-15.534 0a10.936 10.936 0 0 0 0 15.494c4.05 4.04 10.478 4.266 14.793.676l3.672 3.662.094.083c.394.305.962.277 1.324-.083a1 1 0 0 0 0-1.415l-3.672-3.662a10.936 10.936 0 0 0-.677-14.755Zm-14.117 1.414c3.438-3.428 8.97-3.496 12.49-.201l.21.201.201.209a8.94 8.94 0 0 1-.202 12.457c-3.506 3.498-9.192 3.498-12.699 0a8.94 8.94 0 0 1 0-12.666Zm6.486 5.007-.136-.007-.13.006a1.333 1.333 0 0 0 .131 2.66c.738 0 1.337-.596 1.337-1.333a1.34 1.34 0 0 0-1.202-1.326Zm4.3-.007.128.006c.679.065 1.21.634 1.21 1.327 0 .737-.6 1.334-1.337 1.334a1.334 1.334 0 0 1-.13-2.66l.128-.007Zm-8.744.006-.129-.006-.13.006a1.333 1.333 0 0 0 .131 2.66c.739 0 1.337-.596 1.337-1.333 0-.693-.53-1.262-1.21-1.327Z" fill="#000"></path><rect x="63.248" y="26" width="10.026" height="2" rx="1" fill="#131313"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M34.172 17.25H20.136A2.753 2.753 0 0 0 17.379 20v14c0 1.52 1.234 2.75 2.757 2.75h14.036A2.753 2.753 0 0 0 36.93 34V20c0-1.52-1.234-2.75-2.758-2.75Zm1.254 12V20c0-.69-.561-1.25-1.254-1.25H20.136c-.693 0-1.253.56-1.253 1.25v9.25h3.641c.62 0 1.191.326 1.506.852l.063.116.448.893a.252.252 0 0 0 .169.133l.056.006h4.776a.25.25 0 0 0 .193-.091l.031-.047.449-.895a1.756 1.756 0 0 1 1.437-.962l.132-.005h3.642Zm-16.544 1.5h3.642l.056.006a.249.249 0 0 1 .167.132l.449.894.064.116c.316.526.886.852 1.506.852h4.776l.132-.005a1.753 1.753 0 0 0 1.438-.963l.447-.894.031-.047a.252.252 0 0 1 .194-.091h3.642V34c0 .69-.561 1.25-1.254 1.25H20.136c-.693 0-1.253-.56-1.253-1.25v-3.25Zm13.285-9.5a.751.751 0 0 1 .088 1.495l-.088.005H22.141a.751.751 0 0 1-.088-1.495l.088-.005h10.026ZM32.92 26a.751.751 0 0 0-.752-.75H22.141l-.088.005a.751.751 0 0 0 .088 1.495h10.026l.088-.005a.751.751 0 0 0 .664-.745Z" fill="#18BFFF"></path>
+              </svg>
+              <h4 class="mt-6 text-xl sm:text-xl mb-2 font-bold text-dark">
+                Digitally searchable print mail
+              </h4>
+              <p class="text-body-color">
+                Easily search & scan through your securely stored mail archive with text search.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full px-2 md:w-1/2 lg:w-1/4">
+            <div class="wow fadeInUp group mb-4 bg-white border border-gray-200 rounded-md p-8" data-wow-delay=".2s">
+              <svg width="114" height="52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.25 2.995C10.6-6.64.09 14.31.09 28.27c0 13.96 10.487 26.275 22.413 23.275s25.392-5.28 29.91-23.275C56.93 10.274 41.902 12.628 26.25 2.995Z" fill="#E0F2FE"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M21.144 16.25h8.02c3.184 0 5.765 2.574 5.765 5.75v8c0 3.176-2.58 5.75-5.765 5.75h-8.02a5.761 5.761 0 0 1-5.762-5.561L15.379 30v-8c0-3.176 2.58-5.75 5.765-5.75Zm8.02 1.5h-8.02A4.256 4.256 0 0 0 16.883 22v7.987l.002.163a4.256 4.256 0 0 0 4.259 4.1h8.02A4.256 4.256 0 0 0 33.426 30v-8a4.256 4.256 0 0 0-4.262-4.25Zm-4.782 1.5c.386 0 .703.29.747.663l.005.087v1.06a.751.751 0 0 1-1.499.088l-.005-.088V20c0-.414.337-.75.752-.75Zm-3.53 8.44a.753.753 0 0 1 1.064 0c.271.27.292.695.063.99l-.063.07-.752.75a.753.753 0 0 1-1.063 0 .749.749 0 0 1-.063-.99l.063-.07.752-.75Zm.241-6.793a.753.753 0 0 0-.992.063.748.748 0 0 0 0 1.06l.752.75.07.063a.753.753 0 0 0 .993-.063.749.749 0 0 0 0-1.06l-.752-.75-.07-.063Zm-.892 3.583a.75.75 0 0 1 .088 1.495l-.088.005h-1.063a.751.751 0 0 1-.087-1.495l.087-.005h1.063Zm8.462-3.52a.753.753 0 0 0-1.063 0l-.752.75-.062.07a.749.749 0 0 0 .062.99.753.753 0 0 0 1.064 0l.752-.75.062-.07a.749.749 0 0 0-.063-.99Zm-4.87 2.965c-.597.199-.92.844-.72 1.44l2.215 6.608c.104.307.333.555.63.683l.103.039a1.142 1.142 0 0 0 1.397-.633l1.144-2.663 2.668-1.14a1.137 1.137 0 0 0-.087-2.124l-6.626-2.21a1.144 1.144 0 0 0-.723 0Zm.937 1.652 5.03 1.677-2.067.885-.085.043a.75.75 0 0 0-.31.35l-.887 2.062-1.681-5.017Z" fill="#18BFFF"></path><path fill-rule="evenodd" clip-rule="evenodd" d="m94.693 12.962-1.18.157-.178.03a2.79 2.79 0 0 0-2.224 2.364l-.159 1.182-.724.946-.115.16c-.111.17-.203.348-.273.532h-1.381l-.207.005a4.144 4.144 0 0 0-3.944 4.132V34l.005.217A5.007 5.007 0 0 0 89.32 39h16.042l.217-.005A5.006 5.006 0 0 0 110.376 34V22.473a4.145 4.145 0 0 0-4.149-4.14h-1.386a2.789 2.789 0 0 0-.389-.692l-.725-.947-.157-1.178-.03-.176a2.79 2.79 0 0 0-2.37-2.22l-1.186-.158-.947-.723a2.8 2.8 0 0 0-3.393 0l-.95.723Zm10.147 7.371a2.8 2.8 0 0 1-.273.53l-.115.162-.725.946-.159 1.181a2.79 2.79 0 0 1-2.225 2.365l-.176.029-1.18.155-.95.725a2.8 2.8 0 0 1-3.232.115l-.162-.115-.949-.724-1.183-.157a2.79 2.79 0 0 1-2.371-2.22l-.03-.176-.158-1.178-.724-.946a2.778 2.778 0 0 1-.388-.692h-1.381a2.142 2.142 0 0 0-2.146 2.14c0 .712.35 1.372.937 1.77l7.655 5.174a4.351 4.351 0 0 0 4.873 0l7.652-5.173a2.14 2.14 0 0 0-1.05-3.905l-.153-.006h-1.387Zm-13.18-.962a.783.783 0 0 0 .16.44l.889 1.158a.998.998 0 0 1 .197.475l.192 1.441c.047.353.325.63.678.677l1.45.194c.172.023.337.09.475.196l1.16.886a.79.79 0 0 0 .958 0l1.02-.779a.978.978 0 0 1 .489-.28l.128-.024 1.446-.192a.789.789 0 0 0 .679-.676l.193-1.445c.039-.29.171-.507.327-.66l.047-.043.711-.93a.784.784 0 0 0 0-.954l-.887-1.159a.99.99 0 0 1-.198-.475l-.192-1.44a.788.788 0 0 0-.678-.678l-1.449-.193a1.004 1.004 0 0 1-.476-.197l-1.16-.885a.79.79 0 0 0-.958 0l-1.023.779a.959.959 0 0 1-.486.28l-.128.023-1.447.192a.788.788 0 0 0-.679.675l-.192 1.445c-.039.291-.17.507-.326.66l-.049.044-.71.929a.785.785 0 0 0-.161.516Zm7.052-1.782a1.005 1.005 0 0 1 1.418 0c.361.36.389.928.083 1.32l-.083.094-2.6 2.593c-.362.36-.93.389-1.324.084l-.094-.084-1.56-1.556a.998.998 0 0 1 0-1.414c.361-.36.93-.388 1.323-.083l.095.083.85.849 1.892-1.886Zm-12.399 8.437V34a3.003 3.003 0 0 0 2.831 2.995l.177.005h16.042a3.005 3.005 0 0 0 3.003-2.824l.005-.176v-7.976l-7.468 5.049a6.36 6.36 0 0 1-7.123 0l-7.467-5.047Z" fill="#000"></path><rect x="66.261" y="26" width="7.018" height="2" rx="1" fill="#131313"></rect>
+              </svg>
+              <h4 class="mt-6 text-xl sm:text-xl mb-2 font-bold text-dark">
+                Auto-enter accounting info
+              </h4>
+              <p class="text-body-color">
+                Expenses, receipts, bills all go direclty into your favourite accounting system.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full px-2 md:w-1/2 lg:w-1/4">
+            <div class="wow fadeInUp group mb-4 bg-white border border-gray-200 rounded-md p-8" data-wow-delay=".2.5s">
+              <svg width="110" height="52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M26.093 49.55C10.483 59.185 0 38.235 0 24.276 0 10.315 10.46-2 22.355 1s25.326 5.28 29.832 23.275c4.506 17.997-10.483 15.643-26.093 25.276Z" fill="#E0F2FE"/><path d="M73.333 30h2.134M72 26h3.467M70.667 22h4.8" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="63" y="25" width="10" height="2" rx="1" fill="#131313"/><path fill-rule="evenodd" clip-rule="evenodd" d="M96.667 13h-9.334a3.666 3.666 0 0 0-3.666 3.667v18.666A3.666 3.666 0 0 0 87.333 39h13.334a3.666 3.666 0 0 0 3.666-3.667V20.437c0-.972-.386-1.905-1.074-2.592l-3.77-3.77A3.667 3.667 0 0 0 96.895 13h-.23Zm-1 2h-8.334c-.92 0-1.666.746-1.666 1.667v18.666c0 .921.745 1.667 1.666 1.667h13.334c.921 0 1.666-.746 1.666-1.667V21.667H98a2.334 2.334 0 0 1-2.328-2.174l-.005-.16V15Zm6.477 4.667H98l-.067-.007a.334.334 0 0 1-.266-.327V15.19c.149.078.286.178.407.3l3.771 3.77c.121.121.221.259.299.408Zm-6.921 13.4v.156c0 .98.795 1.777 1.776 1.777h1.557a1.78 1.78 0 0 0 1.779-1.774v-1.56c0-.982-.796-1.778-1.778-1.778h-1.026l-1.245-1.945c.171-.273.27-.596.27-.942v-1.557c0-.982-.796-1.777-1.777-1.777H93.22c-.981 0-1.777.795-1.777 1.777v1.557c0 .346.099.669.27.942l-1.245 1.945h-1.025c-.982 0-1.777.796-1.777 1.777v1.558c0 .981.795 1.777 1.777 1.777h1.557c.982 0 1.778-.796 1.778-1.777v-.156h2.444Zm-2.818-2.493c.114.148.206.313.27.493h2.651c.064-.18.156-.345.27-.492l-1.15-1.796h-.892l-1.15 1.795Zm2.15-4.908v1.112h-1.112v-1.112h1.112Zm-3.777 7.333v-1.112h-1.112v1.112h1.112Zm7.556-1.112v1.112h-1.112v-1.112h1.112Z" fill="#000"/><path fill-rule="evenodd" clip-rule="evenodd" d="M32.744 16.759A1.75 1.75 0 0 0 31 15.152H21l-.143.006a1.75 1.75 0 0 0-1.607 1.744v2.32l-1.783 1.2-.151.11a2.726 2.726 0 0 0-1.063 2.099.78.78 0 0 0-.003.072V32l.005.168A2.75 2.75 0 0 0 19 34.75h13.999l.168-.005A2.75 2.75 0 0 0 35.749 32v-9.297l-.004-.063a2.73 2.73 0 0 0-1.214-2.218l-1.781-1.2v-2.32l-.006-.143ZM31.25 19.61v5.774l-2.734 1.84a.743.743 0 0 0-.105.07l-.592.398-.186.116a3.26 3.26 0 0 1-3.454-.116l-.58-.39a.75.75 0 0 0-.125-.085l-2.724-1.832v-5.754a.77.77 0 0 0 0-.021v-2.709l.007-.057a.25.25 0 0 1 .243-.193h10l.057.007a.25.25 0 0 1 .193.243v2.709Zm-12 1.42-.945.635a1.25 1.25 0 0 0-.116 1.987l.116.088.945.636V21.03Zm13.5 3.344v-3.344l.943.635.116.088a1.25 1.25 0 0 1-.116 1.987l-.943.634Zm-.364 2.053a.766.766 0 0 0 .063-.042l1.8-1.211V32l-.006.128a1.268 1.268 0 0 1-.006.048l-4.18-4.18 2.33-1.568Zm-3.73 2.51.132-.09 4.389 4.39a1.256 1.256 0 0 1-.178.012H19l-.128-.006a1.31 1.31 0 0 1-.049-.006l4.388-4.388.13.087.204.13a4.76 4.76 0 0 0 5.112-.13ZM17.75 25.175l4.193 2.82-4.18 4.181A1.26 1.26 0 0 1 17.75 32v-6.825ZM29 18.75a.75.75 0 0 1 .102 1.493L29 20.25h-6a.75.75 0 0 1-.102-1.493L23 18.75h6Zm.75 4.25a.75.75 0 0 0-.75-.75h-6l-.102.007A.75.75 0 0 0 23 23.75h6l.102-.007A.75.75 0 0 0 29.75 23Z" fill="#18BFFF"/>
+              </svg>
+              <h4 class="mt-6 text-xl sm:text-xl mb-2 font-bold text-dark">
+                Easy physical mail forwarding
+              </h4>
+              <p class="text-body-color">
+                Accrue mail, then ship it. Equivalent of a vacation auto-responder, vacation forward.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full px-2 md:w-1/2 lg:w-1/4">
+            <div class="wow fadeInUp group mb-4 bg-white border border-gray-200 rounded-md p-8" data-wow-delay=".1s">
+              <svg width="100" height="52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.907 49.55C42.517 59.185 53 38.235 53 24.276 53 10.315 42.54-2 30.645 1S5.319 6.28.813 24.275c-4.506 17.997 10.483 15.643 26.094 25.276Z" fill="#E0F2FE"/><path fill-rule="evenodd" clip-rule="evenodd" d="M78.667 15.333a1 1 0 0 1 .116 1.994l-.116.006H72a1 1 0 0 1-.117-1.993l.117-.007h6.667Zm12.906.933a3.666 3.666 0 0 0-5.033.143l-8.188 8.188-.144.151a3.666 3.666 0 0 0 .144 5.034l1.551 1.551h-6.57A2.334 2.334 0 0 0 71 33.667v2.666a2.334 2.334 0 0 0 2.333 2.334h21.334A2.334 2.334 0 0 0 97 36.333v-2.666a2.334 2.334 0 0 0-2.333-2.334h-4.28l5.539-5.538.143-.151a3.666 3.666 0 0 0-.143-5.034l-3.04-3.04a1.05 1.05 0 0 0-.123-.123l-1.039-1.038-.15-.143Zm-.87 1.95-.393-.393a1.666 1.666 0 0 0-2.237-.108l-.12.108-8.187 8.188a1.666 1.666 0 0 0-.108 2.238l.108.119.393.393 10.544-10.545Zm-9.13 11.959 1.159 1.158h4.827l6.953-6.952a1.666 1.666 0 0 0 .108-2.238l-.108-.119-2.395-2.394-10.544 10.545Zm6.401 3.158H73.333a.334.334 0 0 0-.333.334v2.666c0 .184.15.334.333.334h21.334c.183 0 .333-.15.333-.334v-2.666a.334.334 0 0 0-.333-.334h-6.693ZM77 20.333a1 1 0 0 0-1-1h-4l-.117.007A1 1 0 0 0 72 21.333h4l.117-.006a1 1 0 0 0 .883-.994Zm-3.667 3a1 1 0 0 1 .117 1.994l-.117.006H67a1 1 0 0 1-.117-1.993l.117-.007h6.333Z" fill="#000"/><path fill-rule="evenodd" clip-rule="evenodd" d="M33.5 14.25h-11A2.75 2.75 0 0 0 19.75 17v14a2.75 2.75 0 0 0 2.75 2.75h11A2.75 2.75 0 0 0 36.25 31V17a2.75 2.75 0 0 0-2.75-2.75Zm-11 1.5h11c.69 0 1.25.56 1.25 1.25v14c0 .69-.56 1.25-1.25 1.25h-11c-.69 0-1.25-.56-1.25-1.25V17c0-.69.56-1.25 1.25-1.25Zm10.25 3.75a.75.75 0 0 0-.75-.75h-2l-.087.005A.75.75 0 0 0 30 20.25h2l.087-.005a.75.75 0 0 0 .663-.745ZM32 21.75a.75.75 0 0 1 .087 1.495L32 23.25h-2a.75.75 0 0 1-.087-1.495L30 21.75h2Zm.75 5.25a.75.75 0 0 0-.75-.75h-8l-.087.005A.75.75 0 0 0 24 27.75h8l.087-.005A.75.75 0 0 0 32.75 27ZM32 29.25a.75.75 0 0 1 .087 1.495L32 30.75h-8a.75.75 0 0 1-.087-1.495L24 29.25h8Zm-5.755-11.337A.75.75 0 0 0 24.75 18v.025a1.804 1.804 0 0 0-.136 3.527l1.407.352.055.02a.303.303 0 0 1-.129.578h-.392a.774.774 0 0 0-.11 0h-.32l-.067-.007a.351.351 0 0 1-.22-.172l-.05-.072a.75.75 0 0 0-1.23.854c.27.442.695.753 1.192.858V24l.005.087A.75.75 0 0 0 26.25 24v-.023a1.804 1.804 0 0 0 .136-3.527l-1.407-.352-.055-.02a.304.304 0 0 1 .129-.578H25.875l.066.007c.086.02.162.077.22.17a.75.75 0 0 0 1.279-.782c-.27-.441-.695-.751-1.19-.856V18l-.005-.087Z" fill="#18BFFF"/>
+              </svg>
+              <h4 class="mt-6 text-xl sm:text-xl mb-2 font-bold text-dark">
+                Pay your bills from anywhere
+              </h4>
+              <p class="text-body-color">
+                We’ll deal with organizations and get your business's bills paid on your behalf.
+              </p>
+            </div>
+          </div>
+
+          <div class="w-full px-2 md:w-1/2 lg:w-1/4">
+            <div class="wow fadeInUp group mb-4 bg-white border border-gray-200 rounded-md p-8" data-wow-delay=".2.5s">
+              <svg width="116" height="52" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M28.587 2.403C45.124-7.049 56.23 13.506 56.23 27.202S43.854 52 28.587 52C13.321 52 5.72 44.857.945 27.202-3.83 9.545 12.05 11.854 28.587 2.403Z" fill="#E0F2FE"/><path fill-rule="evenodd" clip-rule="evenodd" d="M22.141 20.25a.751.751 0 0 1 .088 1.495l-.088.005h-2.005a.751.751 0 0 1-.088-1.495l.088-.005h2.005Zm-1.003 3a.75.75 0 0 1 .088 1.495l-.088.005h-1.002a.751.751 0 0 1-.088-1.495l.088-.005h1.002Zm16.643-3H27.164a3.158 3.158 0 0 0-3.025 2.244l-2.166 7.2c-.608 2.022.91 4.056 3.025 4.056h10.616a3.159 3.159 0 0 0 3.026-2.244l2.166-7.2c.608-2.022-.91-4.056-3.025-4.056Zm-10.617 1.5h10.617c.387 0 .736.13 1.013.345l-6.768 4.292a.754.754 0 0 0-.1.063l-.867.55-.047.023a.25.25 0 0 1-.278-.071l-4.317-5.024c.226-.115.48-.178.747-.178Zm-1.659 1.422-2.091 6.953a1.66 1.66 0 0 0-.069.387l5.393-3.578-3.233-3.762Zm4.229 4.903-5.76 3.822c.279.22.632.353 1.024.353h10.616c.263 0 .515-.062.74-.174l-4.08-4.069-.408.259a1.758 1.758 0 0 1-2.132-.19Zm3.84-.892 3.69 3.68 2.101-6.988a1.66 1.66 0 0 0 .07-.409l-5.86 3.717Zm1.6 9.067a.751.751 0 0 1 .089 1.495l-.088.005H21.138a.751.751 0 0 1-.087-1.495l.087-.005h14.037Z" fill="#18BFFF"/><rect x="68.261" y="30" width="10.026" height="2" rx="1" fill="#131313"/><path fill-rule="evenodd" clip-rule="evenodd" d="M99.342 16c7.187 0 13.034 5.832 13.034 13 0 7.169-5.846 13-13.034 13-7.188 0-13.034-5.83-13.034-13s5.846-13 13.034-13Zm0 2c6.08 0 11.029 4.936 11.029 11s-4.949 11-11.029 11-11.029-4.935-11.029-11 4.948-11 11.029-11Zm4.578 6.673-.129-.006-.129.006a1.332 1.332 0 0 0 .13 2.66c.739 0 1.337-.597 1.337-1.333 0-.694-.531-1.263-1.209-1.327Zm-9.071-.006.129.006c.678.064 1.21.633 1.21 1.327 0 .736-.6 1.333-1.338 1.333a1.334 1.334 0 0 1-.13-2.66l.129-.006Zm8.504 6h-8.021c-.554 0-1.003.447-1.003 1 0 2.775 2.23 5 5.013 5a4.99 4.99 0 0 0 5.013-5c0-.553-.449-1-1.002-1Zm-6.851 1.999h5.679l-.005.018a2.988 2.988 0 0 1-2.834 1.983l-.178-.005a2.986 2.986 0 0 1-2.588-1.806l-.074-.19Z" fill="#000"/><path d="M72.272 25.667h4.812" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <h4 class="mt-6 text-xl sm:text-xl mb-2 font-bold text-dark">
+                The right info with the right people
+              </h4>
+              <p class="text-body-color">
+                Easily share important mail with your team members, lawyers or accountants.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+    </section>
+    <!-- ====== Services Section End -->
+
+
+
+    <!-- ====== Why Choose Us -->
+    <section id="why-choose-us" class="py-12 bg-gray-900 sm:py-16 lg:py-32">
+        <div data-wow-delay=".1s" class="wow fadeInUp mx-auto container sm:px-6 lg:px-8">
+            <div class="lg:max-w-xl">
+                <h2 class="text-3xl font-bold text-white sm:text-3xl xl:text-4xl">
+                  Why choose us
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 mx-auto mt-8 sm:mt-12 lg:mt-16 xl:mt-20 sm:grid-cols-2 lg:gap-x-6">
+                <div data-wow-delay=".1s" class="wow fadeInUp overflow-hidden border border-gray-700 rounded-md">
+                    <div class="p-6 lg:py-10 lg:px-9">
+                      <svg width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#fff" fill-opacity=".2"/><path fill-rule="evenodd" clip-rule="evenodd" d="m12.926 10.206 1.747-.233L16.08 8.9a3.161 3.161 0 0 1 3.84 0l1.403 1.072 1.756.235a3.161 3.161 0 0 1 2.687 2.536l.03.182.231 1.749 1.072 1.406a3.162 3.162 0 0 1 .118 3.675l-.118.165-1.074 1.403-.234 1.755a3.162 3.162 0 0 1-2.536 2.687l-.183.03-1.748.231-1.405 1.074a3.161 3.161 0 0 1-3.675.118l-.164-.118-1.405-1.073-1.754-.235a3.161 3.161 0 0 1-2.687-2.536l-.03-.183-.232-1.749-1.073-1.405a3.163 3.163 0 0 1-.118-3.674l.118-.165 1.073-1.405.236-1.753a3.161 3.161 0 0 1 2.535-2.687l.183-.03Zm7.646 1.08-1.563-1.194a1.661 1.661 0 0 0-2.019 0l-1.463 1.117-.075.071a.735.735 0 0 1-.27.132l-.11.021-1.949.26a1.662 1.662 0 0 0-1.429 1.427l-.26 1.952a.837.837 0 0 1-.254.504l-.023.02-1.027 1.344-.13.182a1.663 1.663 0 0 0 .09 1.887l1.196 1.564a.75.75 0 0 1 .148.357l.258 1.947c.098.744.683 1.33 1.427 1.429l1.952.26a.75.75 0 0 1 .356.148l1.563 1.194a1.661 1.661 0 0 0 2.019 0l1.46-1.116.01-.01a.716.716 0 0 1 .338-.195l.11-.021 1.948-.258a1.661 1.661 0 0 0 1.43-1.428l.26-1.952a.75.75 0 0 1 .15-.359l1.192-1.56a1.662 1.662 0 0 0 0-2.02l-1.193-1.563a.75.75 0 0 1-.147-.357l-.259-1.947a1.662 1.662 0 0 0-1.427-1.429l-1.953-.26a.749.749 0 0 1-.356-.147ZM18 13.434c1.299 0 2.383 1.052 2.468 2.314l.005.159v.585a1.725 1.725 0 0 1 1.277 1.666v2.052c0 .952-.772 1.724-1.724 1.724h-4.052a1.724 1.724 0 0 1-1.724-1.724v-2.052c0-.798.541-1.469 1.277-1.666v-.585A2.472 2.472 0 0 1 18 13.434Zm-1.723 4.5h-.303c-.124 0-.224.1-.224.224v2.052c0 .124.1.224.224.224h4.052c.124 0 .224-.1.224-.224v-2.052c0-.124-.1-.224-.224-.224h-3.749Zm2.696-1.5h-1.946v-.527l.006-.114a.973.973 0 0 1 .967-.859c.518 0 .973.464.973.973v.527Z" fill="#fff"/>
+                      </svg>
+
+                        <p class="mt-8 text-xl font-bold text-white">
+                          Security focussed
+                        </p>
+                        <p class="mt-4 text-base font-normal leading-6 opacity-60 text-white">
+                          Security is our #1 priority. All your mail stays under 24/7 surveillance or can be shredded to ensure your privacy. Once your mail is digitally converted, it’s encrypted with 256-bit encryption level technology.
+                        </p>
+                    </div>
+                </div>
+
+                <div data-wow-delay=".1s" class="wow fadeInUp overflow-hidden border border-gray-700 rounded-md">
+                    <div class="p-6 lg:py-10 lg:px-9">
+                        <svg width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#fff" fill-opacity=".2"/><path fill-rule="evenodd" clip-rule="evenodd" d="m12.926 10.206 1.747-.233L16.08 8.9a3.161 3.161 0 0 1 3.84 0l1.403 1.072 1.756.235a3.161 3.161 0 0 1 2.687 2.536l.03.182.231 1.749 1.072 1.406a3.162 3.162 0 0 1 .118 3.675l-.118.165-1.074 1.403-.234 1.755a3.162 3.162 0 0 1-2.536 2.687l-.183.03-1.748.231-1.405 1.074a3.161 3.161 0 0 1-3.675.118l-.164-.118-1.405-1.073-1.754-.235a3.161 3.161 0 0 1-2.687-2.536l-.03-.183-.232-1.749-1.073-1.405a3.163 3.163 0 0 1-.118-3.674l.118-.165 1.073-1.405.236-1.753a3.161 3.161 0 0 1 2.535-2.687l.183-.03Zm7.646 1.08-1.563-1.194a1.661 1.661 0 0 0-2.019 0l-1.463 1.117-.075.071a.735.735 0 0 1-.27.132l-.11.021-1.949.26a1.662 1.662 0 0 0-1.429 1.427l-.26 1.952a.837.837 0 0 1-.254.504l-.023.02-1.027 1.344-.13.182a1.663 1.663 0 0 0 .09 1.887l1.196 1.564a.75.75 0 0 1 .148.357l.258 1.947c.098.744.683 1.33 1.427 1.429l1.952.26a.75.75 0 0 1 .356.148l1.563 1.194a1.661 1.661 0 0 0 2.019 0l1.46-1.116.01-.01a.716.716 0 0 1 .338-.195l.11-.021 1.948-.258a1.661 1.661 0 0 0 1.43-1.428l.26-1.952a.75.75 0 0 1 .15-.359l1.192-1.56a1.662 1.662 0 0 0 0-2.02l-1.193-1.563a.75.75 0 0 1-.147-.357l-.259-1.947a1.662 1.662 0 0 0-1.427-1.429l-1.953-.26a.749.749 0 0 1-.356-.147ZM18 13.434c1.299 0 2.383 1.052 2.468 2.314l.005.159v.585a1.725 1.725 0 0 1 1.277 1.666v2.052c0 .952-.772 1.724-1.724 1.724h-4.052a1.724 1.724 0 0 1-1.724-1.724v-2.052c0-.798.541-1.469 1.277-1.666v-.585A2.472 2.472 0 0 1 18 13.434Zm-1.723 4.5h-.303c-.124 0-.224.1-.224.224v2.052c0 .124.1.224.224.224h4.052c.124 0 .224-.1.224-.224v-2.052c0-.124-.1-.224-.224-.224h-3.749Zm2.696-1.5h-1.946v-.527l.006-.114a.973.973 0 0 1 .967-.859c.518 0 .973.464.973.973v.527Z" fill="#fff"/>
+                        </svg>
+                        <p class="mt-8 text-xl font-bold text-white">
+                          Superior customer support
+                        </p>
+                        <p class="mt-4 text-base font-normal leading-6 opacity-60 text-white">
+                          If you ever have any questions, our digital mailroom customer service team are the best in the business.
+                        </p>
+                    </div>
+                </div>
+
+                <div data-wow-delay=".1s" class="wow fadeInUp overflow-hidden border border-gray-700 rounded-md">
+                    <div class="p-6 lg:py-10 lg:px-9">
+                      <svg width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#fff" fill-opacity=".2"/><path fill-rule="evenodd" clip-rule="evenodd" d="m12.926 10.206 1.747-.233L16.08 8.9a3.161 3.161 0 0 1 3.84 0l1.403 1.072 1.756.235a3.161 3.161 0 0 1 2.687 2.536l.03.182.231 1.749 1.072 1.406a3.162 3.162 0 0 1 .118 3.675l-.118.165-1.074 1.403-.234 1.755a3.162 3.162 0 0 1-2.536 2.687l-.183.03-1.748.231-1.405 1.074a3.161 3.161 0 0 1-3.675.118l-.164-.118-1.405-1.073-1.754-.235a3.161 3.161 0 0 1-2.687-2.536l-.03-.183-.232-1.749-1.073-1.405a3.163 3.163 0 0 1-.118-3.674l.118-.165 1.073-1.405.236-1.753a3.161 3.161 0 0 1 2.535-2.687l.183-.03Zm7.646 1.08-1.563-1.194a1.661 1.661 0 0 0-2.019 0l-1.463 1.117-.075.071a.735.735 0 0 1-.27.132l-.11.021-1.949.26a1.662 1.662 0 0 0-1.429 1.427l-.26 1.952a.837.837 0 0 1-.254.504l-.023.02-1.027 1.344-.13.182a1.663 1.663 0 0 0 .09 1.887l1.196 1.564a.75.75 0 0 1 .148.357l.258 1.947c.098.744.683 1.33 1.427 1.429l1.952.26a.75.75 0 0 1 .356.148l1.563 1.194a1.661 1.661 0 0 0 2.019 0l1.46-1.116.01-.01a.716.716 0 0 1 .338-.195l.11-.021 1.948-.258a1.661 1.661 0 0 0 1.43-1.428l.26-1.952a.75.75 0 0 1 .15-.359l1.192-1.56a1.662 1.662 0 0 0 0-2.02l-1.193-1.563a.75.75 0 0 1-.147-.357l-.259-1.947a1.662 1.662 0 0 0-1.427-1.429l-1.953-.26a.749.749 0 0 1-.356-.147ZM18 13.434c1.299 0 2.383 1.052 2.468 2.314l.005.159v.585a1.725 1.725 0 0 1 1.277 1.666v2.052c0 .952-.772 1.724-1.724 1.724h-4.052a1.724 1.724 0 0 1-1.724-1.724v-2.052c0-.798.541-1.469 1.277-1.666v-.585A2.472 2.472 0 0 1 18 13.434Zm-1.723 4.5h-.303c-.124 0-.224.1-.224.224v2.052c0 .124.1.224.224.224h4.052c.124 0 .224-.1.224-.224v-2.052c0-.124-.1-.224-.224-.224h-3.749Zm2.696-1.5h-1.946v-.527l.006-.114a.973.973 0 0 1 .967-.859c.518 0 .973.464.973.973v.527Z" fill="#fff"/>
+                      </svg>
+                      <p class="mt-8 text-xl font-bold text-white">
+                        Absolute flexibility
+                      </p>
+                      <p class="mt-4 text-base font-normal leading-6 opacity-60 text-white">
+                        Whether you’re in the office, travelling the globe or sat drinking cocktails on the beach, you’ll always have 100% access to all your mail and documents.
+                      </p>
+                    </div>
+                </div>
+
+                <div data-wow-delay=".1s" class="wow fadeInUp overflow-hidden border border-gray-700 rounded-md">
+                    <div class="p-6 lg:py-10 lg:px-9">
+                      <svg width="36" height="36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="18" fill="#fff" fill-opacity=".2"/><path fill-rule="evenodd" clip-rule="evenodd" d="m12.926 10.206 1.747-.233L16.08 8.9a3.161 3.161 0 0 1 3.84 0l1.403 1.072 1.756.235a3.161 3.161 0 0 1 2.687 2.536l.03.182.231 1.749 1.072 1.406a3.162 3.162 0 0 1 .118 3.675l-.118.165-1.074 1.403-.234 1.755a3.162 3.162 0 0 1-2.536 2.687l-.183.03-1.748.231-1.405 1.074a3.161 3.161 0 0 1-3.675.118l-.164-.118-1.405-1.073-1.754-.235a3.161 3.161 0 0 1-2.687-2.536l-.03-.183-.232-1.749-1.073-1.405a3.163 3.163 0 0 1-.118-3.674l.118-.165 1.073-1.405.236-1.753a3.161 3.161 0 0 1 2.535-2.687l.183-.03Zm7.646 1.08-1.563-1.194a1.661 1.661 0 0 0-2.019 0l-1.463 1.117-.075.071a.735.735 0 0 1-.27.132l-.11.021-1.949.26a1.662 1.662 0 0 0-1.429 1.427l-.26 1.952a.837.837 0 0 1-.254.504l-.023.02-1.027 1.344-.13.182a1.663 1.663 0 0 0 .09 1.887l1.196 1.564a.75.75 0 0 1 .148.357l.258 1.947c.098.744.683 1.33 1.427 1.429l1.952.26a.75.75 0 0 1 .356.148l1.563 1.194a1.661 1.661 0 0 0 2.019 0l1.46-1.116.01-.01a.716.716 0 0 1 .338-.195l.11-.021 1.948-.258a1.661 1.661 0 0 0 1.43-1.428l.26-1.952a.75.75 0 0 1 .15-.359l1.192-1.56a1.662 1.662 0 0 0 0-2.02l-1.193-1.563a.75.75 0 0 1-.147-.357l-.259-1.947a1.662 1.662 0 0 0-1.427-1.429l-1.953-.26a.749.749 0 0 1-.356-.147ZM18 13.434c1.299 0 2.383 1.052 2.468 2.314l.005.159v.585a1.725 1.725 0 0 1 1.277 1.666v2.052c0 .952-.772 1.724-1.724 1.724h-4.052a1.724 1.724 0 0 1-1.724-1.724v-2.052c0-.798.541-1.469 1.277-1.666v-.585A2.472 2.472 0 0 1 18 13.434Zm-1.723 4.5h-.303c-.124 0-.224.1-.224.224v2.052c0 .124.1.224.224.224h4.052c.124 0 .224-.1.224-.224v-2.052c0-.124-.1-.224-.224-.224h-3.749Zm2.696-1.5h-1.946v-.527l.006-.114a.973.973 0 0 1 .967-.859c.518 0 .973.464.973.973v.527Z" fill="#fff"/>
+                      </svg>
+                      <p class="mt-8 text-xl font-bold text-white">
+                        No more clutter
+                      </p>
+                      <p class="mt-4 text-base font-normal leading-6 opacity-60 text-white">
+                        We'll receive, scan and store your mail and convert it to high-res PDFs. No more stacks of mail sitting around your office.
+                      </p>
+                    </div>
+                </div>
+
+
+              </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ====== Faq Section Start -->
+    <section
+      class="relative z-20 overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[180px]"
+      id="faq"
+    >
+      <div class="container">
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4">
+            <div class="mb-[60px] max-w-[620px] lg:mb-20">
+              <span class="mb-4 block text-lg font-bold text-primary">
+                FAQ
+              </span>
+              <h2
+                class="mb-4 text-3xl font-bold text-dark sm:text-4xl md:text-[42px]"
+              >
+                Any Questions?
+              </h2>
+              <!-- <p
+                class="text-lg leading-relaxed text-body-color sm:text-xl sm:leading-relaxed"
+              >
+                More questions? Book a demo, or email us at <a class="border-b border-dashed border-dark hover:text-primary" href="">john@aluminum</a>
+              </p> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="-mx-4 flex flex-wrap">
+          <div class="w-full px-4 lg:w-1/2">
+            <div
+              class="single-faq wow fadeInUp mb-8 w-full border border-gray-200 rounded-md bg-white p-5 sm:p-8"
+              data-wow-delay=".1s
+              "
+            >
+              <button class="faq-btn flex w-full items-center text-left">
+                <div
+                  class="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center bg-gray-100 rounded-md text-primary"
+                >
+                  <svg
+                    width="17"
+                    height="10"
+                    viewBox="0 0 17 10"
+                    class="icon fill-current"
+                  >
+                    <path
+                      d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                      fill="#3056D3"
+                      stroke="#111827"
+                    />
+                  </svg>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-base font-bold text-black sm:text-lg">
+                    How quickly can I start using my virtual address?
+                  </h4>
+                </div>
+              </button>
+              <div class="faq-content hidden pl-[62px]">
+                <p class="py-3 text-base leading-relaxed text-body-color">
+                  After you complete the signup process, you will receive an email with your Personal Mailbox Number. This will be part of your new address and must appear on every mail item we receive in your name. You can start forwarding your mail to your new virtual address immediately.
+                </p>
+              </div>
+            </div>
+            <div
+              class="single-faq wow fadeInUp mb-8 w-full border border-gray-200 rounded-md bg-white p-5 sm:p-8"
+              data-wow-delay=".15s
+              "
+            >
+              <button class="faq-btn flex w-full items-center text-left">
+                <div
+                  class="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center bg-gray-100 rounded-md text-primary"
+                >
+                  <svg
+                    width="17"
+                    height="10"
+                    viewBox="0 0 17 10"
+                    class="icon fill-current"
+                  >
+                    <path
+                      d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                      fill="#3056D3"
+                      stroke="#111827"
+                    />
+                  </svg>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-base font-bold text-black sm:text-lg">
+                    How does virtual mail work?
+                  </h4>
+                </div>
+              </button>
+              <div class="faq-content hidden pl-[62px]">
+                <p class="py-3 text-base leading-relaxed text-body-color">
+                  Our virtual mail service lets you forward your mail to our secure processing facility using a virtual address from our national network. We then scan it and send you high-resolution PDFs that you can access from anywhere in the world.
+                </p>
+              </div>
+            </div>
+            <div
+              class="single-faq wow fadeInUp mb-8 w-full border border-gray-200 rounded-md bg-white p-5 sm:p-8"
+              data-wow-delay=".2s
+              "
+            >
+              <button class="faq-btn flex w-full items-center text-left">
+                <div
+                  class="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center bg-gray-100 rounded-md text-primary"
+                >
+                  <svg
+                    width="17"
+                    height="10"
+                    viewBox="0 0 17 10"
+                    class="icon fill-current"
+                  >
+                    <path
+                      d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                      fill="#3056D3"
+                      stroke="#111827"
+                    />
+                  </svg>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-base font-bold text-black sm:text-lg">
+                    Can I use a virtual address for business registration?
+                  </h4>
+                </div>
+              </button>
+              <div class="faq-content hidden pl-[62px]">
+                <p class="py-3 text-base leading-relaxed text-body-color">
+                  Yes, in most states you can use MailMate's network of virtual mail addresses to register your business. We advise you check your state laws or get legal counsel to ensure you are compliant with current laws.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <div
+              class="single-faq wow fadeInUp mb-8 w-full border border-gray-200 rounded-md bg-white p-5 sm:p-8"
+              data-wow-delay=".1s
+              "
+            >
+              <button class="faq-btn flex w-full items-center text-left">
+                <div
+                  class="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center bg-gray-100 rounded-md text-primary"
+                >
+                  <svg
+                    width="17"
+                    height="10"
+                    viewBox="0 0 17 10"
+                    class="icon fill-current"
+                  >
+                    <path
+                      d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                      fill="#3056D3"
+                      stroke="#111827"
+                    />
+                  </svg>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-base font-bold text-black sm:text-lg">
+                    How do I choose the right virtual address?
+                  </h4>
+                </div>
+              </button>
+              <div class="faq-content hidden pl-[62px]">
+                <p class="py-3 text-base leading-relaxed text-body-color">
+                  Currently we only operate out of Delaware but we are expanding out PO boxes.
+                </p>
+              </div>
+            </div>
+            <div
+              class="single-faq wow fadeInUp mb-8 w-full border border-gray-200 rounded-md bg-white p-5 sm:p-8"
+              data-wow-delay=".15s
+              "
+            >
+              <button class="faq-btn flex w-full items-center text-left">
+                <div
+                  class="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center bg-gray-100 rounded-md text-primary"
+                >
+                  <svg
+                    width="17"
+                    height="10"
+                    viewBox="0 0 17 10"
+                    class="icon fill-current"
+                  >
+                    <path
+                      d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                      fill="#3056D3"
+                      stroke="#111827"
+                    />
+                  </svg>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-base font-bold text-black sm:text-lg">
+                    How does having a virtual address help me?
+                  </h4>
+                </div>
+              </button>
+              <div class="faq-content hidden pl-[62px]">
+                <p class="py-3 text-base leading-relaxed text-body-color">
+                  You can use virtual addresses for many different purposes, as a business or as an individual. If you live abroad or travel a lot, you can rest assured that you can access your postal mail online, from anywhere in the world. If you’re thinking of starting your own business, a virtual mail address helps protect your personal privacy.
+                </p>
+              </div>
+            </div>
+            <div
+              class="single-faq wow fadeInUp mb-8 w-full border border-gray-200 rounded-md bg-white p-5 sm:p-8"
+              data-wow-delay=".2s
+              "
+            >
+              <button class="faq-btn flex w-full items-center text-left">
+                <div
+                  class="mr-5 flex h-10 w-full max-w-[40px] items-center justify-center bg-gray-100 rounded-md text-primary"
+                >
+                  <svg
+                    width="17"
+                    height="10"
+                    viewBox="0 0 17 10"
+                    class="icon fill-current"
+                  >
+                    <path
+                      d="M7.28687 8.43257L7.28679 8.43265L7.29496 8.43985C7.62576 8.73124 8.02464 8.86001 8.41472 8.86001C8.83092 8.86001 9.22376 8.69083 9.53447 8.41713L9.53454 8.41721L9.54184 8.41052L15.7631 2.70784L15.7691 2.70231L15.7749 2.69659C16.0981 2.38028 16.1985 1.80579 15.7981 1.41393C15.4803 1.1028 14.9167 1.00854 14.5249 1.38489L8.41472 7.00806L2.29995 1.38063L2.29151 1.37286L2.28271 1.36548C1.93092 1.07036 1.38469 1.06804 1.03129 1.41393L1.01755 1.42738L1.00488 1.44184C0.69687 1.79355 0.695778 2.34549 1.0545 2.69659L1.05999 2.70196L1.06565 2.70717L7.28687 8.43257Z"
+                      fill="#3056D3"
+                      stroke="#111827"
+                    />
+                  </svg>
+                </div>
+                <div class="w-full">
+                  <h4 class="text-base font-bold text-black sm:text-lg">
+                    Are your services available worldwide?
+                  </h4>
+                </div>
+              </button>
+              <div class="faq-content hidden pl-[62px]">
+                <p class="py-3 text-base leading-relaxed text-body-color">
+                  Yes, if you want to receive mail at a virtual address in the US you can sign up with MailMate from anywhere in the world.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    <!-- ====== Faq Section End -->
+
+    <section class="py-10 bg-primary-100 sm:py-16 lg:py-40">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div data-wow-delay=".1s" class="wow fadeInUp max-w-2xl mx-auto text-center">
+            <div data-wow-delay=".1s" class="wow fadeInUp flex justify-center mb-8">
+              <svg width="133" height="133" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><rect width="133" height="133" rx="66.5" fill="#fff"/><path d="m8.612 62.147 24.148-4.258 2.423 13.736-24.15 4.258-2.421-13.736Z" fill="#F3F4F6"/><path d="m32.5 58.5-10.435 8-13.565-4m.112-.353 24.148-4.258 2.423 13.736-24.15 4.258-2.421-13.736Z" stroke="#D1D5DB" stroke-width="1.802"/><path d="M131.133 71.808a.478.478 0 0 0 .734-.615l-.734.615Zm-.46-1.972a.478.478 0 0 0-.703.65l.703-.65Zm-3.225-1.791a.478.478 0 1 0 .622-.727l-.622.727Zm-2.304-2.89a.478.478 0 1 0-.507.811l.507-.81Zm-3.601-.755a.478.478 0 1 0 .347-.892l-.347.892Zm-3.189-1.844a.478.478 0 1 0-.143.946l.143-.946Zm-3.584.836a.478.478 0 0 0-.083-.953l.083.953Zm-3.675-.219a.478.478 0 0 0 .295.91l-.295-.91Zm-2.858 2.326a.478.478 0 1 0-.484-.826l.484.826Zm23.63 5.694a37.858 37.858 0 0 0-1.194-1.357l-.703.65c.387.417.774.858 1.163 1.322l.734-.615Zm-3.797-3.875a24.385 24.385 0 0 0-2.926-2.163l-.507.811a23.495 23.495 0 0 1 2.811 2.079l.622-.727Zm-6.18-3.81a16.5 16.5 0 0 0-3.536-.952l-.143.946c1.062.16 2.177.447 3.332.898l.347-.892Zm-7.203-1.07c-1.326.116-2.533.391-3.592.735l.295.91c1-.324 2.135-.583 3.38-.691l-.083-.953Zm-6.934 2.235a14.176 14.176 0 0 0-1.426.954l-.079.063-.021.018-.007.005-.001.002h-.002l.308.366.309.367h-.001.001l.003-.003.015-.012a8.372 8.372 0 0 1 .333-.253c.238-.172.593-.412 1.052-.681l-.484-.826Z" fill="#111827"/><path d="M7.067 71.923S3.364 74.553-4 74.247M38.034 64.355s5.286 3.755 15.788 1.77" stroke="#111827" stroke-width=".957" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="3.83 3.83"/><path d="M74.412 84.765h2.74v49.899h-2.74V84.765ZM28.162 82.71h27.75v2.055h-27.75v-2.056ZM55.912 51.19h39.399v33.575H55.912V51.191Z" fill="#1F2937"/><path d="M95.14 51.19v33.575h12.504V64.52c0-7.362-5.599-13.33-12.505-13.33Z" fill="#1F2937"/><mask id="b" fill="#fff"><path d="M68.245 64.52v20.245h-25.01V64.52c0-7.362 5.6-13.33 12.506-13.33 6.906 0 12.504 5.968 12.504 13.33Z"/></mask><path d="M68.245 64.52v20.245h-25.01V64.52c0-7.362 5.6-13.33 12.506-13.33 6.906 0 12.504 5.968 12.504 13.33Z" fill="#515151"/><path d="M68.245 84.765v2.056h2.056v-2.056h-2.056Zm-25.01 0H41.18v2.056h2.056v-2.056Zm2.056-20.245c0-6.352 4.8-11.274 10.45-11.274v-4.11c-8.163 0-14.56 7.013-14.56 15.384h4.11Zm10.45-11.274c5.649 0 10.449 4.922 10.449 11.274h4.11c0-8.371-6.396-15.385-14.56-15.385v4.111ZM66.19 64.52v20.245h4.11V64.52h-4.11Zm2.055 18.19h-25.01v4.11h25.01v-4.11Zm-25.01 2.055h2.056V64.52h-4.11V84.764l2.055.001Z" fill="#1F2937" mask="url(#b)"/></g><defs><clipPath id="a"><rect width="133" height="133" rx="66.5" fill="#fff"/></clipPath></defs>
+              </svg>
+            </div>
+            <h2 data-wow-delay=".1s" class="wow fadeInUp text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">A digital solution for your business mailbox</h2>
+            <p data-wow-delay=".1s" class="wow fadeInUp max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">
+              Join over 100's businesses who have already digitised their mail!
+            </p>
+        </div>
+
+        <div data-wow-delay=".2s" class="wow fadeInUp max-w-xl mx-auto mt-12">
+            <div class="flex flex-col items-center sm:flex-row sm:justify-center">
+                <div class="flex-1 w-full min-w-0 px-4 sm:px-0">
+                <%= form_with url: submit_email_path, method: :post do |form| %>
+
+                    <div class="flex flex-col md:flex-row sm:flex-row">
+                      <input
+                        class="block w-full px-4 py-4 mr-2 text-base text-black placeholder-gray-500 transition-all duration-200 border-2 border-gray-300 rounded-md caret-gray-600 focus:border-gray-600 focus:ring-1 focus:ring-gray-600"
+                        type="email" name="email" placeholder="Email addresss" required="true"
+                      >
+                      <button class="mt-3 w-full px-6 py-3 border border-transparent rounded-md text-lg font-bold text-white bg-primary shadow-sm hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 sm:mt-0 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto" type="submit">
+                        Get Started
+                      </button>
+                    </div>
+                  <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- ====== Footer Section Start -->
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <footer class=" bg-primary-100 border-t border-2 border-white">
+      <div data-wow-delay=".1s" class="wow fadeInUp max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+        <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+          <div class="px-5 py-2">
+            <a href="#how-it-works" class="text-lg text-gray-700 hover:text-gray-900"> How it works </a>
+          </div>
+
+          <div class="px-5 py-2">
+            <a href="#services" class="text-lg text-dark hover:text-primary"> Services </a>
+          </div>
+
+          <div class="px-5 py-2">
+            <a href="#" class="text-lg text-dark hover:text-primary"> Why Mailmate </a>
+          </div>
+
+          <div class="px-5 py-2">
+            <a href="#FAQ" class="text-lg text-dark hover:text-primary"> FAQ </a>
+          </div>
+
+          <div class="px-5 py-2">
+            <a href="#" class="text-lg text-dark hover:text-primary"> Contact </a>
+          </div>
+
+        </nav>
+        <p class="mt-8 mb-4 text-center text-lg text-gray-400">&copy; 2022 MailMate. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- ====== Footer Section End -->
+
+
+    <!-- ====== All Scripts -->
+
+    <%= javascript_include_tag 'landing/main', 'data-turbolinks-track': 'reload' %>
+    <script>
+      // ==== for menu scroll
+      const pageLink = document.querySelectorAll(".ud-menu-scroll");
+
+      pageLink.forEach((elem) => {
+        elem.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(elem.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+            offsetTop: 1 - 60,
+          });
+        });
+      });
+
+      // section menu active
+      function onScroll(event) {
+        const sections = document.querySelectorAll(".ud-menu-scroll");
+        const scrollPos =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop;
+
+        for (let i = 0; i < sections.length; i++) {
+          const currLink = sections[i];
+          const val = currLink.getAttribute("href");
+          const refElement = document.querySelector(val);
+          const scrollTopMinus = scrollPos + 73;
+          if (
+            refElement.offsetTop <= scrollTopMinus &&
+            refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+          ) {
+            document
+              .querySelector(".ud-menu-scroll")
+              .classList.remove("active");
+            currLink.classList.add("active");
+          } else {
+            currLink.classList.remove("active");
+          }
+        }
+      }
+
+      window.document.addEventListener("scroll", onScroll);
+    </script>
+  </body>
+</html>

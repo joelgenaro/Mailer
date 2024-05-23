@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="229px" height="167px" viewBox="0 0 229 167" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Mask</title>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tokyomate-Mail" transform="translate(-1179.000000, -3164.000000)" fill-rule="nonzero" stroke="#E16259" stroke-width="2">
+            <g id="Group-8" transform="translate(32.000000, 3164.000000)">
+                <path d="M1285.57865,153.677308 C1365.39819,198.210661 1419,101.365483 1419,36.8386539 C1419,-27.6911126 1359.26765,-80 1285.57865,-80 C1211.89454,-80 1175.19951,-46.3467544 1152.1573,36.8386539 C1129.11656,120.028763 1205.7591,109.14748 1285.57865,153.677308 Z" id="Mask"></path>
+            </g>
+        </g>
+    </g>
+</svg>

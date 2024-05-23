@@ -1,0 +1,90 @@
+// Colors
+
+$color__white: #fff;
+$color__black: #000;
+$color__grey-50: #F5F5F5;
+$color__grey-100: #E5E5E5;
+$color__grey-200: #C8CDD5;
+$color__grey-300: #A3ACB9;
+$color__grey-400: #8792A2;
+$color__grey-500: #697386;
+$color__grey-600: #4F566B;
+$color__grey-700: #272729;
+$color__grey-800: #1C1E20;
+$color__grey-900: #131313;
+
+$color__teal-100: #E8F4F2;
+$color__teal-200: #D1EAE5;
+$color__teal-300: #B6DED6;
+$color__teal-400: #7FC5B7;
+$color__teal-500: #48AC98;
+$color__teal-600: #419B89;
+$color__teal-700: #2B675B;
+$color__teal-800: #204D44;
+$color__teal-900: #00515D;
+
+$color__orange-100: #FFEEEC;
+$color__orange-200: #FFD4D0;
+$color__orange-300: #FEBBB4;
+$color__orange-400: #FE877C;
+$color__orange-500: #E16259;
+$color__orange-600: #E44C3D;
+$color__orange-700: #983229;
+$color__orange-800: #72261F;
+$color__orange-900: #4C1914;
+
+$color__yellow-100: #FFF7E6;
+$color__yellow-200: #FFECC0;
+$color__yellow-300: #FFE19A;
+$color__yellow-500: #FFB302;
+
+$color__red-100: #FED7D2;
+$color__red-300: #F2BDBC;
+$color__red-500: #DF5B57;
+$color__red-700: #863734;
+$color__red-900: #431B1A;
+
+$color__primary: $color__orange-500;
+$color__secondary: $color__teal-500;
+$color__success: $color__teal-500;
+$color__info: $color__yellow-200;
+$color__warning: $color__yellow-300;
+$color__danger: $color__red-500;
+$color__light: $color__grey-100;
+$color__dark: $color__grey-700;
+
+
+// Other
+
+$body__font: 'Inter', sans-serif;
+$body__font-size: 16px;
+$body__color: $color__grey-700;
+
+$title__font: 'Inter', sans-serif;
+$title__font-size: 24px;
+$title__font-style: normal;
+$title__font-weight: 600;
+$title__color: #2b3035;
+
+$subtitle__font: $title__font;
+$subtitle__font-size: 16px;
+$subtitle__font-style: normal;
+$subtitle__font-weight: normal;
+$subtitle__color: #737670;
+
+$heading__font: $title__font;
+$heading__font-size: 18px;
+$heading__font-style: normal;
+$heading__font-weight: 500;
+$heading__color: #231F1F;
+
+$button__font: $title__font;
+$button__font-size: 14px;
+
+$container__max-width: 1140px;
+$container__max-width--mobile: 700px;
+
+$footer__font: $title__font;
+$footer__font-size: 20px;
+
+$alert__height: 56px;

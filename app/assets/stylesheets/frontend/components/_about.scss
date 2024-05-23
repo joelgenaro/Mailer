@@ -1,0 +1,98 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.about {
+  @include section;
+  overflow: hidden;
+  &__container {
+    @include container;
+  }
+  &__header {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  &__title {
+    @include title;
+    line-height: 1.2;
+    max-width: 900px;
+    margin-bottom: 15px;
+  }
+  &__subtitle {
+    @include subtitle;
+  }
+  &__banner {
+    margin-left: -50px;
+    margin-right: -50px;
+    @include tablet {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    img {
+      width: 100%;
+      max-width: 1400px;
+    }
+  }
+  &__team-header {
+    margin: 50px 0 0 0;
+    &__title {
+      @include title(40px);
+      margin-bottom: 30px;
+    }
+  }
+  &__team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  &__team-member {
+    @include card(0);
+    flex: 0 0 220px;
+    margin: 5px;
+    &__photo {
+      width: 100%;
+      padding-top: 10px;
+    }
+    &__main {
+      padding: 20px 20px 25px 20px;
+    }
+    &__name {
+      font-family: $title__font;
+      font-size: 28px;
+      font-weight: $title__font-weight;
+      font-style: $title__font-style;
+      color: $title__color;
+      line-height: 1.6;
+      margin: 0;
+    }
+    &__role {
+      font-family: $title__font;
+      font-size: 20px;
+      font-weight: $title__font-weight;
+      font-style: $title__font-style;
+      color: $title__color;
+      line-height: 1.6;
+      margin: 0;
+    }
+    &__intro {
+      margin: 15px 0 0 0;
+      font-size: 16px;
+    }
+  }
+  &__box {
+    @include card;
+    margin: 40px 0 0 0;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      line-height: 2;
+    }
+    strong {
+      font-weight: 600;
+    }
+  }
+}

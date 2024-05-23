@@ -1,0 +1,13 @@
+<div class="blog-posts">
+  <div class="blog-posts__author-title">
+    <h1>Author: <%= @author.name %></h1>
+  </div>
+  <div class="blog-posts__posts">
+    <% @posts.each do |post| %>
+      <%= render 'post', post: post %>
+    <% end %>
+    <% if contentful_needs_pagination?(@posts) %>
+      <%= render 'pagination', posts: @posts %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.admin-toolbar {
+  z-index: 999999;
+  background: rgb(0,0,0);
+  &__box {
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    border: 1px solid #eee;
+    align-items: center;
+    display: flex;
+    padding: 5px 15px;
+  }
+  &__text {
+    flex-grow: 1;
+    margin-right: 30px;
+  }
+  &__btn {
+    margin-left: 10px;
+  }
+  strong {
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.review {
+  @include section;
+  text-align: center;
+  &__container {
+    @include container(800px);
+    @include card;
+  }
+  &__title {
+    @include title(40px);
+  }
+  &__content {
+    margin: 20px 0 0 0;
+  }
+}

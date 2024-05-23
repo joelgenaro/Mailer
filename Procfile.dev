@@ -1,0 +1,8 @@
+# Web
+web: rails s
+
+# Worker
+worker: sidekiq -C config/sidekiq.yml
+
+# Webpacker
+webpacker: ./bin/webpack-dev-server

@@ -1,0 +1,14 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.profile {
+  padding-bottom: 60px;
+  &__container {
+    @include container(800px);
+    @include card;
+  }
+  &__title {
+    @include title;
+    text-align: center;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../utils/variables';
+
+.highlight {
+  color: $color__primary;
+  &--red {
+  	color: #DF5B57;
+  }
+  &--green {
+  	color: #48AC98;
+  }
+}

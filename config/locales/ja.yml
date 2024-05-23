@@ -1,0 +1,233 @@
+ja:
+  shared:
+    sidebar:
+      Mail: 郵便物
+      Assistant: アシスタント
+      Receptionist: 電話受付
+      Transactions: 利用明細
+      Settings: 設定
+      Logout: ログアウト
+  frontend:
+    onboarding:
+      thanks_for_signing: 新規アカウント作成ありがとうございます。あと少し登録完了です！内容を確認し情報を追加して下さい。
+      first_name: 名
+      last_name: 姓
+      occupation: 職業
+      phone_number: 携帯電話番号
+      format: "例：080-12345678"
+      i_live_in_jp: 現在、私は日本に住んでいます。
+      i_dont_live_in_jp: 現在、私は日本に住んでいません。
+      by_clicking_submit: ご入力頂いた内容が正しいかご確認のうえ、「登録を完了する」ボタンを押してください。
+      complete_registration: 登録を完了する
+      notice: "%{name}さんのアカウント登録が完了いたしました。"
+    mails:
+      open_mail:
+        mail_is_requested_to_be_opened: 開封スキャン依頼完了。24時間以内に開封スキャンされます。
+      Search_your_inbox: 受信ボックスを検索する
+      Inbox: 受信ボックス
+      MailInbox:
+        Mails: 郵便物
+        Inbox: 受信箱
+        All: すべて表示
+        Unopened: 未開封
+        Archived: アーカイブ
+        Bills: 請求書
+        Unpaid: 未払い
+        Paid: 支払済み
+        Folders: フォルダー
+        Tags: タグ
+        PostalMail:
+          StateHumanized:
+            unopened: 未開封
+            opening: 開封待ち
+            opened: 開封済み
+          empty_inbox_message: 受信郵便物は現在ありません
+      MailInboxItem:
+        open_requested_alert: 開封スキャン依頼を完了しました。近日中に更新します。
+        unopened_alert: "郵便物がまだ開封スキャンされていません。"
+        open_it: 開封スキャン
+        unpaid_bill_alert: "%{unpaid_bill}の未払い請求書があります。"
+        pay_bill: 支払代行
+        pay_bill_with_due_date: "支払期限が%{due_date}の未払い請求書（%{unpaid_bill}）があります。"
+        paid_bill_info: "こちらの請求はお支払済みです。追加の処置は必要ありません。"
+        received_on: 受領日
+        status: ステータス
+        forwarding: 転送依頼
+        notes: メモ
+        edit_notes: メモを編集
+        save_notes: 保存
+        questions_button: "ご質問等ございましたらMailMateチームにご連絡ください"
+        forward_mail: "メール・郵便物の転送"
+      MailForwardRequestModal:
+        mail_forward_request: "郵便物の転送依頼"
+        body: "転送先の住所と受取人の姓名を入力してください。転送後、通知が届きます。転送が完了しなかった際は、ご連絡します。"
+        address: "転送先の住所"
+        request_forward: "転送を依頼"
+      PayBillModal:
+        pay_a_bill: "請求書を支払う"
+        processing_fee: "手数料"
+        payment_card: "　現在の登録クレジットカード"
+        change: "変更"
+        confirm_payment: "支払う"
+      Folders:
+        search: フォルダー
+        placeholder: フォルダー名
+        create: 作成する
+        created_notice: フォルダーが作成されました。
+        rename: フォルダー名を変更
+        delete: フォルダーを削除
+        updated_notice: フォルダーが更新されました。
+        deleted_notice: フォルダーが削除されました。
+      Tags:
+        search: タグ
+        placeholder: タグ名
+        create: 作成する
+        created_notice: タグが作成されました。
+        rename: タグ名を変更
+        delete: タグを削除
+        updated_notice: タグが更新されました。
+        deleted_notice: タグが削除されました。
+    assistant:
+      up_sell:
+        heading: オンラインアシスタントサービスはご利用いただけません。
+        description: MailMateアシスタントを利用することで、人手不足の解消やコスト削減し、本来やるべき業務に使える時間が増えます。
+        action: MailMateアシスタントにアクセス
+    receptionist:
+      up_sell:
+        heading: 電話受付サービスはご利用いただけません。
+        description: 電話代行サービスご希望ですか？詳細については、下記をクリックしてください。
+        action: MailMateアシスタントにアクセス
+    settings:
+      sidebar:
+        general: 一般設定
+        billing: 支払代行
+        invoices: 請求書
+      account:
+        save_changes: 変更を保存
+        account: アカウント情報
+        language: 言語
+        email: メールアドレス
+        email_address: メールアドレス
+        password: パスワード
+        old_password: 現在のパスワード
+        new_password: 新規パスワード
+        confirm_password: 新規パスワード（確認用）
+        change_password: パスワード変更を保存
+        your_virtual_addresses: バーチャルアドレス設定
+        address_in_english: 住所の英語表記
+        address_in_japanese: 住所の日本語表記
+        auto_open_mail: 郵便物の自動開封スキャン
+        would_you_like_us_to_automatically_open_all_mail: 郵便物を自動的に開封スキャンしますか？
+        tick_this_option_and_well_open_all_mail_received: 全ての郵便物を自動的に開封スキャンする
+        your_payment_card: 決済方法
+        your_current_payment_card: 登録クレジットカード
+        change_payment_card: クレジットカードの更新
+        automatically_pay_bills: 自動決済
+        would_you_like_us_to_automatically_pay_any_bills: 請求書を自動的にお支払いしますか？
+        disabled_bills_are_not_paid_automatically: "設定OFF：請求書を自動的にお支払いしません"
+        enable_auto_pay: 設定ON
+        maximum_amount_for_auto_billing: 自動決済の限度額を設定
+        bills_above_this_threshold_will_have_to_be_paid_manually: 限度額以上の請求書はマニュアル決済後、お支払いします。
+        update_threshold: 変更を保存
+        subscriptions: 利用状況
+        plan_type: 利用プラン
+        status: ステータス
+        actions: アクション
+        invoices: 請求書
+      invoices:
+        amount: 金額
+        status: ステータス
+        description: 説明
+        note: メモ
+        date_created: 作成日
+        action: アクション
+        receipt: 領収書
+        detail: 詳細
+    transactions:
+      transactions: 利用明細
+      past_payments: 明細履歴
+      succeed: 成功
+      partial_refund: 一部返金
+      refund: 返金
+      failed: 失敗
+      view: 詳細
+      back_to_transactions: 利用明細に戻る
+      transaction_overview: 概要
+      created_at: 作成日
+      state: ステータス
+      total: 金額
+      description: 説明
+      card_type: タイプ	
+      card_no: 番号
+      attachments: 添付ファイル
+      no_attachments: ファイルはありません
+    email:
+      subject:
+        unpaid_bill_yesterday_email: 【至急】:請求書のお支払期限日が過ぎています。
+        unpaid_bill_tomorrow_email: お支払期限が明日に迫っています！
+        unpaid_bill_three_days_email: ３日後にお支払期限の過ぎる未払い請求書があります。
+        unopened_mail_three_days_email: 未開封の郵便物があります！
+        unopened_mail_ten_days_email: 郵便物を10日間確認していません！
+        opened_email: 郵便物が開封されました
+        updated_email: あなたの郵便物が更新されました
+        created_email: 郵便物が届いています
+        forwarded_email: 転送された郵便物があります
+        shredded_email: あなたの郵便物が破棄されました。
+        email_forward_email: 転送された郵便物があります
+        paid_email: 請求書のお支払いが完了いたしました。
+        onboarding_email: MailMateにご登録いただきありがとうございます。
+      body:
+        onboarding_email:
+          welcome_to_mailmate: MailMateへようこそ 
+          your_account_is: アカウントの登録が完了しました。
+          so_what_do: 次のステップは？
+          good_question_to: MailMateを最大限にご活用いただくため、お客様が現在使用中のサービスに登録されている住所をMailMateの住所に変更いただく必要があります。手続き完了後に、お客様の郵便物をオンラインでスマホやパソコンから確認・管理していただけます。
+          bonus_free_service: 無料サポートのご紹介
+          take_a_photo_html: 請求書の届け先として登録されている住所の変更手続きをお手伝いいたします。ご希望の方は、お客様の請求書の写真をこちらのメールアドレスまで <a href="mailto:support@mailmate.jp">support@mailmate.jp</a> お送りください。
+          if_you_have_html: ご不明点やご質問などございましたら、お気軽にこちらまで <a href="mailto:support@mailmate.jp">support@mailmate.jp</a> お問い合わせください。
+          here_is_your: "こちらがお客様のMailMate住所です："
+          heres_the_japanese: "下記がお客様のMailMate住所です："
+          when_we_receive_html: 郵便物の受け取りおよび処理の完了後、お客様にメールで通知が届きます。通知の到着後、<a href="https://mailmate.jp/app/mails">こちら</a>から郵便物がご確認いただけます。
+          if_you_have_2: ご質問等のある方は、お気軽にお問い合わせください。
+          the_mailmate_team: MailMate チーム
+          login_to_mailmate: MailMate にログイン
+        unopened_mail_three_days_email:
+          header: 未開封の郵便物があります！
+          description: "メールボックスに未開封の郵便物が %{unopened_count} 件あります。重要な書類かどうか確認してみましょう。"
+        unopened_mail_ten_days_email:
+          header: 郵便物を10日間確認していません！
+          description: "最後に郵便物を確認してから10日経ちました！メールボックスに未開封の郵便物が %{unopened_count} 件あります。重要な書類かどうか確認してみましょう。"
+        created_email:
+          header: 郵便物が届いています
+          description: "%{date} に郵便物を受け取りました。"
+        shredded_email:
+          header: あなたの郵便物が破棄されました。
+          description: "%{date} に受け取った郵便物は、破棄されました。"
+        updated_email:
+          header: あなたの郵便物が更新されました
+          description: あなたの受け取った郵便物がスタッフにより更新されました。詳細は、下の「Mailmateを確認する」ボタンからご確認ください。
+        paid_email:
+          header: 請求書のお支払いが完了いたしました。
+          description: "%{datetime} に請求書のお支払が完了いたしました。"
+        opened_email:
+          header: 郵便物が開封されました
+          description: "%{date}に受け取った郵便物が開封されました。下の「確認する」をクリックして詳細をご確認ください。"
+        unpaid_bill_yesterday_email:
+          header: 【至急】:請求書のお支払期限日が過ぎています。
+          description: 未払い請求書のお支払期限日が過ぎています。公共料金等の請求書である場合、契約解除などの事態に至ってしまう場合があります。下の「Mailmateで支払う」からお支払いを完了させましょう。
+        unpaid_bill_tomorrow_email:
+          header: お支払期限が明日に迫っています！
+          description: 明日がお支払期限の未払いの請求書があります！下の「請求書を確認する」ボタンからお支払いください。
+        unpaid_bill_three_days_email:
+          header: 未払いの請求書があります。
+          description: ３日後にお支払期限の過ぎる未払い請求書があります。下の「請求書を確認する」ボタンからお支払いください。
+        email_forward_email:
+          header: 転送された郵便物があります
+          description: "%{date} に郵便物を受け取りました。"
+        forward_email:
+          header: 郵便物が転送されました。
+          description: "郵便物が %{address} に転送されました。詳細は、下の「Mailmateを確認する」ボタンからご確認ください。"
+      footer:
+        view_mail_on_mailmate: Mailmateで郵便物を確認する
+        view_bill_on_mailmate: 請求書を確認する
+        pay_bill_on_mailmate: MailMateで支払う

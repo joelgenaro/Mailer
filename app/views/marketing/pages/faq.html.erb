@@ -1,0 +1,303 @@
+<%
+  content_for(:meta_title) { t('marketing.shared.meta_title.faq') }
+  content_for(:meta_description) { t('marketing.shared.meta_description.faq') }
+  @layout_footer_overlapping_top = true
+%>
+
+<% if I18n.locale != :ja %>
+  <div class="page page--narrow">
+    <div class="page__container" id="accordion">
+      <div class="page__header">
+        <h1 class="page__title">Frequently Asked Questions</h1>
+        <p class="page__parah">If you can’t find the answer you’re looking for below. Reach out to our
+          <span class="secondary_text">customer support</span> team.</p>
+      </div>
+
+      <div class="page__card-container con_width accordion" >
+        <div class="accordion-item active">
+          <div id="headingOne" class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <h5 class="mb-0">
+              <button class="white-space-normal btn btn-link collapsed" >
+                <h5>If I upload my personal information, how does MailMate keep my data secure?</h5>
+              </button>
+            </h5>
+            <i class="fa fa-angle-up"></i>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
+            <div>
+              <p class="description_style">We only use the most advanced adaptive hashing, secure network with SSL, and
+                heavy-duty VPN to protect your
+                data. Your credit card information is kept secure with Stripe—renowned as one of the world’s safest
+                payment platforms.</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="accordion-item">
+          <div id="headingTwo" class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <h5 class="mb-0">
+              <button class="white-space-normal btn btn-link collapsed" >
+                <h5>Is it complicated to use?</h5>
+              </button>
+              <i class="far fa-angle-up"></i>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+            <div>
+              <p class="description_style">No, it’s straightforward to use. Simply redirect your mail to your MailMate
+                address, then relax, knowing we’ll sort, digitize, and translate all your mail for you. Once you’re
+                set-up, it’s simple to arrange for MailMate to pay your bills, too. In fact, it only takes a single
+                click.</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="accordion-item">
+          <div id="headingThree" class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <h5 class="mb-0">
+              <button class="white-space-normal btn btn-link collapsed" >
+                <h5>I don’t want to miss important mail. Can MailMate provide reliable service?</h5>
+              </button>
+              <i class="far fa-angle-up"></i>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+            <div>
+              <p class="description_style">Absolutely. Our team includes expert server engineers who maintain MailMate’s
+                secure servers. They ensure the correct systems are in place, updated, and maintained, so your MailMate
+                experience is always smooth and stable.</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="accordion-item">
+          <div id="headingFive" class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <h5 class="mb-0">
+              <button class="white-space-normal btn btn-link collapsed" >
+                <h5>Does MailMate store my physical mail?</h5>
+              </button>
+              <i class="far fa-angle-up"></i>
+            </h5>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-bs-parent="#accordion">
+            <div>
+              <p class="description_style">According to postal law in Japan, we’ll store any mail we received on your
+                behalf for 7 years. It will remain securely stored in a locked safe in a private, guarded location in
+                Azabu-juban. However, if you’d prefer, we can shred your mail for you. Just let us know.</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="accordion-item">
+          <div id="headingSix" class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            <h5 class="mb-0">
+              <button class="white-space-normal btn btn-link collapsed" >
+                <h5>How do I redirect my mail to a new address?</h5>
+              </button>
+              <i class="far fa-angle-up"></i>
+            </h5>
+          </div>
+          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-bs-parent="#accordion">
+            <div>
+              <p class="description_style">Where possible, we can arrange for your mail to be redirected to you. However,
+                for certain accounts, verification is required. In such cases, we’ll be happy to support you as a
+                third-party in any calls, making the switch quick, easy, and stress-free. In addition to that, we will
+                send you a monthly envelope as requested, where you can put all the mail. Put that in the post, and then
+                we will digitize your mail for you.</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="accordion-item">
+          <div id="headingSeven" class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+            <h5 class="mb-0">
+              <button class="white-space-normal btn btn-link collapsed" >
+                <h5>How much is it to use MailMate? From what point should I pay, and how?</h5>
+              </button>
+              <i class="far fa-angle-up"></i>
+            </h5>
+          </div>
+          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-bs-parent="#accordion">
+            <div>
+              <p class="description_style">Please check
+                our <%= link_to 'Pricing Page here', marketing_pricing_path(:mail) %> for more information on pricing and
+                what’s available with each plan.</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="accordion-item">
+          <div id="headingNine" class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+            <h5 class="mb-0">
+              <button class="white-space-normal btn btn-link collapsed" >
+                <h5>Do I have to sign a longterm contract?</h5>
+              </button>
+              <i class="far fa-angle-up"></i>
+            </h5>
+          </div>
+          <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-bs-parent="#accordion">
+            <div>
+              <p class="description_style">Nope - you can pay month by month, and cancel anytime. Further, we’re so
+                confident in our service that we offer a full money back guarantee for the first 30 days.</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="accordion-item">
+          <div id="headingFourteen" class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+            <h5 class="mb-0">
+              <button class="white-space-normal btn btn-link collapsed">
+                <h5>I have some unique requirements, or I need a larger plan.</h5>
+              </button>
+              <i class="far fa-angle-up"></i>
+            </h5>
+          </div>
+          <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordion">
+            <div>
+              <p class="description_style">We’ll do our best to help, and we’d love to chat. Contact us through
+                support@mailmate.jp or the livechat function in the bottom right hand corner of this website.</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+
+        <div class="accordion-item">
+          <div id="headingNineteen" class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
+            <h5 class="mb-0">
+              <button class="white-space-normal btn btn-link collapsed">
+                <h5>More Questions?</h5>
+              </button>
+              <i class="far fa-angle-up"></i>
+            </h5>
+          </div>
+          <div id="collapseNineteen" class="collapse" aria-labelledby="headingNineteen" data-bs-parent="#accordion">
+            <div>
+              <p class="description_style">Perfect, we have answers! Please feel free to email us any time on
+                <span class="green_text">support@mailmate.jp</span>, or you can livechat with us by clicking the icon in
+                the bottom right hand corner of the screen.</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home__cta__container">
+    <div class="home__cta__col" style="padding-right: 40px;">
+      <h4>Ready to get started?</h4>
+      <p>30 day money back guarantee. A pricing structure that grows with you.</p>
+    </div>
+    <div class="home__cta__actions">
+      <%= link_to 'Book a Consultation', marketing_request_consultation_path, class: "home__cta__button home__cta__button--white" %>
+    </div>
+  </div>
+
+<% else %>
+  <div class="page page--narrow">
+    <div class="page__container" id="accordion">
+      <div class="page__header">
+        <h1 class="page__title">Frequently Asked Questions</h1>
+        <p class="page__parah">If you can’t find the answer you’re looking for below. Reach out to our
+          <span class="secondary_text">customer support</span> team.</p>
+      </div>
+
+
+      <div class="page__card-container con_width accordion">
+        <% 
+          [
+            {
+              title: "個人情報をアップロードした場合、MailMateはどのようにデータの安全性を担保していますか？",
+              detail: "
+                私たちは、お客様のデータを保護するために、最新のアダプティブハッシュ、SSLによる安全なネットワーク、および頑丈なVPNのみを使用しています。お客様のクレジットカード情報は、世界で最も安全な決済プラットフォームとして知られるStripeによって安全に保護されています。
+              "
+            },
+            {
+              title: "使い方は複雑ですか？",
+              detail: "
+                いいえ、使い方は簡単です。MailMateの住所に郵便物を転送するだけで、あとは私たちがお客様の代わりに郵便物の仕分け、デジタル化、簡易翻訳などを行います。一度セットアップすれば、支払い通知書の支払いのMailMateに代行依頼などもワンクリックで可能となります。
+              "
+            },
+            {
+              title: "重要な郵便物を見逃したくありません。MailMateは信頼できるサービスですか？",
+              detail: "
+                もちろんです。私たちには、MailMateのセキュアサーバーを保守する専門のサーバーエンジニアがいます。そのため、お客様のMailMateのご利用は、常にスムーズで安定したものとなります。
+              "
+            },
+            {
+              title: "MailMateは、私の郵便物の原本を保管してくれますか？",
+              detail: "
+                お客様からお預かりした郵便物は7年間保管されます。福岡の厳重に警備された場所にある、ロックき郵便室に安全に保管されます。ご希望された場合は、アプリ内の指示でセキュアな書類廃棄も依頼可能です。
+              "
+            },
+            {
+              title: "新しい住所にメールを転送するにはどうすればよいですか？",
+              detail: "
+                私たちは可能な限り、お客様宛の郵便物の転送手配をお手伝い致します。ただし、一部については、本人確認が必要となります。そのような場合でも、第三者への代行電話など手続きのサポートをさせていただきますので、迅速、簡単、かつストレスなく切り替えが可能です。さらに、ご希望に応じて毎月MailMate宛の封筒を送付いたしまして、そこにすべての郵便物を封入して投函して頂ければ、あとは私たちが郵便物を受け取り、デジタル化します。
+              "
+            },
+            {
+              title: "MailMateの利用料はいくらですか？どのタイミングから、どのように支払えばいいのでしょうか？",
+              detail: <<~EOM
+                料金プランや各プランに含まれるサービス内容については、こちらの<a href="https://mailmate.jp/ja/pricing/mail">料金ページ</a>をご確認ください。
+              EOM
+            },
+            {
+              title: "長期契約を結ぶ必要がありますか？",
+              detail: "
+                いいえ、月払いで、いつでも解約できます。万が一、サービスにご不満の場合、最初の30日間は全額返金保証を提供しています。
+              "
+            },
+            {
+              title: "特殊の要件がある、あるいは、大量利用に適したプランが必要なのですが？",
+              detail: "
+                ぜひ一度ご相談ください。support@mailmate.jp または本ウェブサイトの画面右下にあるライブチャット機能を利用してご連絡ください。
+              "
+            },
+            {
+              title: "その他のご質問",
+              detail: "
+                いつでもお気軽に support@mailmate.jp までメールしてください。また、本ウェブサイトの画面右下のライブチャット機能でもお問い合わせ可能です。
+              "
+            }
+          ].each_with_index do |item, index|
+        %>
+          <div class="accordion-item">
+            <div id="heading-<%= index %>" class="accordion-title" data-bs-toggle="collapse" data-bs-target="#collapse-<%= index %>" aria-expanded="false" aria-controls="collapse-<%= index %>">
+              <h5 class="mb-0">
+                <button class="white-space-normal btn btn-link collapsed" >
+                  <h5><%= item[:title] %></h5>
+                </button>
+              </h5>
+              <i class="fa fa-angle-up"></i>
+            </div>
+            <div id="collapse-<%= index %>" class="collapse <%= index == 0 ? "show" : "" %>" aria-labelledby="heading-<%= index %>" data-bs-parent="#accordion">
+              <div>
+                <p class="description_style">
+                  <%= item[:detail] %>
+                </p>
+              </div>
+            </div>
+            <hr>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+  <div class="home__cta__container">
+    <div class="home__cta__col" style="padding-right: 40px;">
+      <h4>Ready to get started?</h4>
+      <p>30 day money back guarantee. A pricing structure that grows with you.</p>
+    </div>
+    <div class="home__cta__actions">
+      <%= link_to 'Book a Consultation', marketing_request_consultation_path, class: "home__cta__button home__cta__button--white" %>
+    </div>
+  </div>
+<% end %>

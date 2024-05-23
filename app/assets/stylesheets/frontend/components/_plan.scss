@@ -1,0 +1,20 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.plan {
+  padding-bottom: 60px;
+  &__container {
+    @include container(1300px);
+    @include card;
+  }
+  &__header {
+    margin: 0;
+    text-align: center;
+  }
+  &__title {
+    @include title;
+  }
+  &__subtitle {
+    @include subtitle;
+  }
+}

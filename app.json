@@ -1,0 +1,167 @@
+{
+  "stack": "heroku-22",
+  "addons": [
+    "heroku-postgresql",
+    "heroku-redis"
+  ],
+  "buildpacks": [
+    { "url": "https://github.com/michaelschmitz/heroku-buildpack-apt"},
+    { "url": "heroku/nodejs"},
+    { "url": "heroku/ruby" }
+  ],
+  "env": {
+    "ACTION_MAILER_HOST": { "required": true },
+    "APPLICATION_URL": { "required": true },
+    "AWS_S3_ACCESS_KEY_ID": { "required": true },
+    "AWS_S3_BUCKET_NAME": { "required": true },
+    "AWS_S3_REGION": { "required": true },
+    "AWS_S3_SECRET_ACCESS_KEY": { "required": true },
+    "BASIC_AUTH_ENABLED": { "required": true },
+    "GET_RESPONSE_API_KEY": { "required":true },
+    "GET_RESPONSE_LIST_TOKEN": { "required":true },
+    "LANG": { "value": "en_US.UTF-8", "required": true },
+    "MAILGUN_API_KEY": { "required": true },
+    "MAILGUN_DOMAIN": { "required": true },
+    "MARKETING_METRICS_FB_PAGE_ACCESS_TOKEN": { "required": true },
+    "RACK_ENV": { "value": "production", "required": true },
+    "RAILS_ENV": { "value": "production", "required": true },
+    "RAILS_LOG_TO_STDOUT": { "value": true, "required": true },
+    "RAILS_SERVE_STATIC_FILES": { "value": true, "required": true },
+    "REDIS_URL": { "required": true },
+    "SECRET_KEY_BASE": { "required": true },
+    "SENTRY_DSN_RAILS": { "required": true },
+    "SENTRY_DSN_JS": { "required": true },
+    "SITEMAP_HOST": { "required":true },
+    "SITEMAP_S3_URL": { "required":true },
+    "SLACK_NOTIFICATIONS_WEBHOOK_URL": { "required": true },
+    "STRIPE_PUBLISHABLE_KEY": { "required": true },
+    "STRIPE_SECRET_KEY": { "required":true },
+    "STRIPE_WEBHOOK_SECRET": { "required":true },
+    "MAILGUN_INGRESS_SIGNING_KEY": { "required": true },
+    "MAILER_DEFAULT_FROM_ADDRESS": { "required": true },
+    "SLACK_NOTIFICATION_TASK_URL_PREFIX": { "required": true, "value": "https://mailmate.jp/boxm293/admin/tasks" },
+    "ASSISTANT_SERVICE_ENABLED": { "value": "false", "required": true },
+    "ASSISTANT_PLAN_FREE_ENABLED": { "value": "false", "required": true },
+    "RECEPTION_SERVICE_ENABLED": { "value": "false", "required": true },
+    "PIPEDRIVE_API_KEY" : { "required": true },
+    "PIPEDRIVE_PIPELINE_ID" : { "required": true }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    },
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "name": "mailmate-web",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:seed"
+  },
+  "stack": "heroku-20",
+  "environments": {
+    "review": {
+      "stack": "heroku-22",
+      "addons": [
+        "heroku-redis",
+        "heroku-postgresql"
+      ],
+      "env": {
+        "RAILS_MAX_THREADS": { "value": 2, "required": false },
+        "SECRET_KEY_BASE": { "generator": "secret", "required": false },
+        "BASIC_AUTH_ENABLED": { "required": true, "value": "true" },
+        "BASIC_AUTH_USERNAME": { "required": true, "value": "pullrequest" },
+        "BASIC_AUTH_PASSWORD": { "required": true, "value": "pullrequest" },
+        "FORCE_SSL": { "value": true },
+
+        "ACTION_MAILER_HOST": { "required": true },
+        "APPLICATION_URL": { "required": true },
+        "AWS_S3_ACCESS_KEY_ID": { "required": true },
+        "AWS_S3_BUCKET_NAME": { "required": true },
+        "AWS_S3_REGION": { "required": true },
+        "AWS_S3_SECRET_ACCESS_KEY": { "required": true },
+        "GET_RESPONSE_API_KEY": { "required":true },
+        "GET_RESPONSE_LIST_TOKEN": { "required":true },
+        "LANG": { "value": "en_US.UTF-8", "required": true },
+        "MAILGUN_API_KEY": { "required": true },
+        "MAILGUN_DOMAIN": { "required": true },
+        "MARKETING_METRICS_FB_PAGE_ACCESS_TOKEN": { "required": true },
+        "RACK_ENV": { "value": "production", "required": true },
+        "RAILS_ENV": { "value": "production", "required": true },
+        "RAILS_LOG_TO_STDOUT": { "value": true, "required": true },
+        "RAILS_SERVE_STATIC_FILES": { "value": true, "required": true },
+        "REDIS_URL": { "required": true, "value": "ReplacedWithHerokuAddOn" },
+        "SENTRY_DSN_RAILS": { "required": false },
+        "SENTRY_DSN_JS": { "required": false },
+        "SITEMAP_HOST": { "required":true },
+        "SITEMAP_S3_URL": { "required":true },
+        "SLACK_NOTIFICATIONS_WEBHOOK_URL": { "required": true },
+        "STRIPE_PUBLISHABLE_KEY": { "required": true },
+        "STRIPE_SECRET_KEY": { "required":true },
+        "STRIPE_WEBHOOK_SECRET": { "required":true },
+        "PIPEDRIVE_API_KEY" : { "required": true , "value": "UNUSED-IN-PR"},
+        "PIPEDRIVE_PIPELINE_ID" : { "required": true , "value": "UNUSED-IN-PR"},
+        "ASSISTANT_SERVICE_ENABLED": { "value": "true", "required": true },
+        "ASSISTANT_PLAN_FREE_ENABLED": { "value": "false", "required": true },
+        "RECEPTIONIST_SERVICE_ENABLED": { "value": "false", "required": true }
+      },
+      "buildpacks": [
+        { "url": "https://github.com/michaelschmitz/heroku-buildpack-apt"},
+        { "url": "heroku/nodejs" },
+        { "url": "heroku/ruby" }
+      ]
+    },
+    "test": {
+      "addons": [ "heroku-redis:in-dyno", "heroku-postgresql:in-dyno" ],
+      "env": {
+        "SECRET_KEY_BASE": { "generator": "secret", "required": false },
+        "BASIC_AUTH_ENABLED": { "required": true, "value": "true" },
+        "BASIC_AUTH_USERNAME": { "required": true, "value": "testenv" },
+        "BASIC_AUTH_PASSWORD": { "required": true, "value": "testenv" },
+        "FORCE_SSL": { "value": true },
+        "RACK_ENV": { "value": "test", "required": true },
+        "RAILS_ENV": { "value": "test", "required": true },
+
+        "ACTION_MAILER_HOST": { "required": true, "value": "http://localhost" },
+        "APPLICATION_URL": { "required": true, "value": "http://localhost" },
+        "AWS_S3_ACCESS_KEY_ID": { "required": true, "value": "AWS" },
+        "AWS_S3_BUCKET_NAME": { "required": true, "value": "AWS" },
+        "AWS_S3_REGION": { "required": true, "value": "AWS" },
+        "AWS_S3_SECRET_ACCESS_KEY": { "required": true, "value": "AWS" },
+        "GET_RESPONSE_API_KEY": { "required":true, "value": "UNUSED-IN-TESTING" },
+        "GET_RESPONSE_LIST_TOKEN": { "required":true, "value": "UNUSED-IN-TESTING" },
+        "LANG": { "value": "en_US.UTF-8", "required": true },
+        "MAILGUN_API_KEY": { "required": true, "value": "UNUSED-IN-TESTING" },
+        "MAILGUN_DOMAIN": { "required": true, "value": "UNUSED-IN-TESTING" },
+        "MARKETING_METRICS_FB_PAGE_ACCESS_TOKEN": { "required": true, "value": "UNUSED-IN-TESTING" },
+        "RAILS_LOG_TO_STDOUT": { "value": true, "required": true },
+        "RAILS_SERVE_STATIC_FILES": { "value": true, "required": true },
+        "SENTRY_DSN_RAILS": { "required": false, "value": "UNUSED-IN-TESTING" },
+        "SENTRY_DSN_JS": { "required": false, "value": "UNUSED-IN-TESTING" },
+        "SITEMAP_HOST": { "required":true, "value": "UNUSED-IN-TESTING" },
+        "SITEMAP_S3_URL": { "required":true, "value": "UNUSED-IN-TESTING" },
+        "SLACK_NOTIFICATIONS_WEBHOOK_URL": { "required": true, "value": "UNUSED-IN-TESTING" },
+        "STRIPE_PUBLISHABLE_KEY": { "required": true, "value": "pk_test_51IJyvDDWPLY96bTNovT_NOT_REAL" },
+        "STRIPE_SECRET_KEY": { "required":true, "value": "sk_test_51IJyvDDWPLY96bTNPXY7c_NOT_REAL" },
+        "STRIPE_WEBHOOK_SECRET": { "required":true, "value": "whsec_mURRZblt_NOT_REAL" },
+        "PIPEDRIVE_API_KEY" : { "required": true , "value": "UNUSED-IN-TESTING"},
+        "PIPEDRIVE_PIPELINE_ID" : { "required": true , "value": "UNUSED-IN-TESTING"},
+        "ASSISTANT_SERVICE_ENABLED": { "value": "true", "required": true },
+        "ASSISTANT_PLAN_FREE_ENABLED": { "value": "false", "required": true },
+        "RECEPTIONIST_SERVICE_ENABLED": { "value": "false", "required": true }
+      },
+      "scripts": {
+        "test": "bundle exec parallel_rspec spec/ -o '--color --require spec_helper --format documentation' -n $CI_NODE_TOTAL --only-group $CI_NODE_INDEX",
+        "test-setup": "bundle exec rails assets:precompile db:create db:schema:load --trace"
+      },
+      "buildpacks": [
+        { "url": "https://github.com/michaelschmitz/heroku-buildpack-apt"},
+        { "url": "heroku/nodejs" },
+        { "url": "heroku/ruby" }
+      ],
+      "formation": {
+        "test": { "quantity": 2, "size": "performance-l" }
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+
+// Overriding any non-variable SASS must be done after the fact.
+// For example, to change the default status-tag color:
+.status_tag { background: grey; }
+
+.selectize-dropdown-content {
+  .item {
+    padding: 5px 8px;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.admin-user-info {
+  label {
+    opacity: 0;
+  }
+  table {
+    th {
+      width: 200px;
+    }
+  }
+  &__note-wrap {
+    margin: 0;
+    padding: 0 0 0 20%;
+  }
+  &__note {
+    background: white;
+    border-left: 3px solid grey;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    width: 300px;
+    border-radius: 2px;
+    font-weight: bold;
+    display: flex;
+    padding: 10px;
+    &--yes {
+      border-color: #28a745;
+      .status_tag {
+        background-color: #28a745;
+      }
+    }
+    &--no {
+      border-color: lighten(#343a40, 40%);
+      .status_tag {
+        background-color: lighten(#343a40, 40%);
+      }
+    }
+    p {
+      flex-grow: 1;
+    }
+  }
+  &__alert {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    width: 78%;
+    margin-left: auto;
+  }
+}
+
+.col-name {
+  min-width: 150px;
+}
+.col-state {
+  min-width: 120px;
+}
+.col-card_no {
+  min-width: 80px;
+}
+.panel_contents {
+  .col-started_at,
+  .col-created_at,
+  .col-valid_to,
+  .col-valid_from {
+    width: 240px;
+  }
+  .col-valid {
+    width: 100px;
+  }
+  .row-currently_used,
+  .row-currently_allocated,
+  .row-currently_remaining,
+  .row-current_number_of_tasks {
+    th {
+      width: 240px;
+    }
+  }
+}
+
+.ticker-timer {
+  &__time {
+    font-size: 18px;
+    margin-left: 10px;
+    display: inline-block;
+  }
+  &__button {
+    &--stop {
+      display: none;
+    }
+  }
+}

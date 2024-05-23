@@ -1,0 +1,181 @@
+en:
+  marketing: 
+    sign_up:
+      email_address: 'Email Address:'
+      enter_your_email_address: 'Enter your email address'
+      password: 'Password:'
+      enter_your_password: 'Enter a secure password'
+      create_an_account: 'Create an Account'
+      money_back_guarantee: "After creating an account you will be redirected to our checkout process. If you're unhappy, we offer a 30-day money back guarantee."
+    shared:
+      meta_title:
+        home: 'Secure Virtual Mail and Addresses in Japan | MailMate'
+        about: 'About | MailMate'
+        pricing: 'Virtual Mail Pricing | MailMate'
+        blog: 'Blog | MailMate'
+        faq: 'FAQ | MailMate'
+        service_directory: 'Service Directory | MailMate'
+        terms: 'Terms | MailMate'
+        privacy: 'Privacy | MailMate'
+        consultation: 'Request A Consultation | MailMate'
+      meta_description:
+        home: "Mail made digital. We receive, scan, translate & store mail. Access from anywhere. We'll deal with non-English speaking organizations & pay bills on your behalf."
+        about: 'Making it easier to work, live and do business in Japan.'
+        pricing: 'Mail made digital. We receive, scan, translate & store mail. Access from anywhere. We’ll deal with non-English speaking organizations & pay bills on your behalf.'
+        blog: "Making it easier to work, live and do business in Japan."
+        faq: 'Frequently Asked Questions about MailMate. Making it easier to work, live and do business in Japan.'
+        service_directory: "  Curated list of select services that make working and living in Japan as easy as possible."
+        terms: 'Making it easier to work, live and do business in Japan.'
+        privacy: 'Making it easier to work, live and do business in Japan.'
+        consultation: 'Request a consultation about MailMate to find out more about our Virtual Mailbox and Virtual Assistant services. Making it easier to work, live and do business in Japan.'
+      header:
+        home: Home 
+        about: About
+        pricing: Pricing
+        assistant: Assistant
+        blog: Blog
+        service_directory: Service Directory
+        faq: FAQ
+        login: Login
+      footer:
+        MAIL: Mail
+        Features: Features
+        Pricing: Pricing
+        COMPANY: Company
+        About: About
+        FAQ: FAQ
+        Blog: Blog
+        service_directory: Service Directory
+        FOLLOW: Follow
+        terms: 'Terms'
+        privacy_policy: 'Privacy Policy'
+        email: 'support@mailmate.jp'
+        language: 'Language'
+        en_japanese: 'Japanese'
+        jp_japanese: '日本語'
+    pages:
+      mail:
+        hero_title: Your Mail Made Digital. 
+        hero_subtitle_html: We receive it. Scan it. Translate it. Store it. <br />Then, you can read it from anywhere in the world.
+        hero_button_get_started: Get Started
+        hero_button_request_consultation: Request a Consultation
+        how_helps_heading: "Here's how MailMate helps"
+        how_helps_subheading: "Read your mail anywhere in the world."
+        how_helps_no_more_clutter_title: 'No more clutter'
+        how_helps_no_more_clutter_detail: 'We receive, store, and convert your mail to high-res PDFs.'
+        how_helps_search_title: 'Advanced search & back-up'
+        how_helps_search_detail: 'Easily scan through your securely stored archive using text search.'
+        how_helps_right_info_title: The right info with the right people'
+        how_helps_right_info_detail: 'Easily share important mail with your team members, lawyers, or accountants.'
+        how_helps_pay_bills_title: 'Pay your bills'
+        how_helps_pay_bills_detail: 'We’ll deal with non-English speaking organizations & pay bills on your behalf.'
+        how_helps_everything_safe_title: 'Everything safe in the cloud'
+        how_helps_everything_safe_detail: 'Your physical mail is stored under lock and key. Your virtual mail is encrypted with 256-bit encryption level technology.'
+        how_helps_onboarding_title: 'Onboard easily'
+        how_helps_onboarding_detail: 'Our bilingual team will ensure your mail is diverted to your new virtual address.'
+        how_helps_view_pricing: 'View Pricing'
+        steps_title: 3 simple steps to digital mail
+        steps_step_1_title: Step 1
+        steps_step_1_detail_1: Try MailMate risk free
+        steps_step_1_detail_2: "If you're unhappy, we offer a 30-day money-back guarantee."
+        steps_step_2_title: Step 2
+        steps_step_2_detail_1: Redirect your mail to your new address
+        steps_step_2_detail_2: We will help you switch to your new address. Just send us a picture of the postal mail that you wish to be redirected.
+        steps_step_3_title: Step 3
+        steps_step_3_detail_1: Check your mail online
+        steps_step_3_detail_2: "With 1-click, you can request to have your mail stored, scanned, shredded, or settled (if it’s a bill that’s due)."
+        steps_step_4_title: Step 4
+        steps_step_4_detail_1: Pay bills, offload tasks. Get things done.
+        steps_step_4_detail_2: 'Pay your bills with 1-click. Hand over tasks to our Assistant. Get back to doing what you do best.'
+        steps_get_started: 'Get Started'
+        why_title: 'Why Choose Us?'
+        why_item_1_title: 'We do all the work for you'
+        why_item_1_detail: "You don’t have the time to jump through hoops. That’s why we do everything for you. From scanning, translating, and securely storing—to shredding and even paying your invoices."
+        why_item_2_title: 'Superior customer support'
+        why_item_2_detail: 'If you ever have any questions, our digital mailroom customer service team are the best in the business. And, most importantly, they all speak fluent English.'
+        why_item_3_title: 'Security focused'
+        why_item_3_detail: "Security is our #1 priority. All your mail stays under 24/7 surveillance or can be shredded to ensure your privacy. Once your mail is digitally converted, it’s encrypted with 256-bit encryption level technology."
+        why_item_4_title: 'Absolute flexibility'
+        why_item_4_detail: "Whether you’re in the office, travelling the globe, or drinking cocktails on the beach, you’ll always have 100% access to all your mail and documents."
+        testimonials_subheading: Happy Customers
+        testimonials_heading: "Don’t just take our word for it..."
+        testimonials_item_1_quote_html: "
+          After spending 10 years based in Tokyo as an expat you accumulate a lot of correspondence which doesn’t go
+          away the minute you leave. Thanks to MailMate bringing this service (finally) to Japan it was a worry I
+          crossed off my list.
+          <b>The process is simple, online and offers various levels of service so you have choices</b>. My mail is
+          making it to me in South Korea regularly and securely.
+        "
+        testimonials_item_1_author: "Paul Hardisty, President & Representative Director - Sports Footwear & Apparel Industry"
+        testimonials_item_2_quote_html: "
+          Mailmate's service has
+          proven to be much, much more than virtual mail forwarding. They assist with getting me copies of all my
+          Japanese correspondence, utility bills, and government notices, provide a bill payment facility when I am
+          outside of Japan, and even help translate correspondence I don’t understand.
+          <br/><br/>
+          They’re practically
+          <b>my Japanese concierge at a fraction of the cost I was previously paying property managers, assistants, and
+            translators, etc. for the same service(s)</b>.
+        "
+        testimonials_item_2_author: "Managing Director (Asia Pacific), International Trading Company"
+        combo_title: 'View your mail from anywhere and never pay a Convenience Store bill again'
+        combo_detail: "See all your mail from anywhere anytime and pay your bills with the click of a button. You’ll never need to run to the Convenience Store last minute again."
+      pricing:
+        title: Mail Pricing
+        get_started: Get Started
+        money_back_guarantee: 30-day money-back guarantee
+        whats_included: What's included
+        processing_fees: "* Processing fee for bills below ¥50,000 is ¥500 + 3% of the amount, for bills above ¥50,000 is ¥500 + 4% of the amount"
+        why_us_title: Why Choose Us?
+        feature_list_comparison: Full feature list comparison
+        additional_details_title: Additional Details
+        testimonials_title: Don’t just take our word for it
+        testimonials_quote_1_html: "
+          <i><b>“My mail is making it to me in South Korea regularly and securely.”</b></i>
+          <br /><br />
+          After spending 10 years based in Tokyo as an expat you accumulate a lot of correspondence which doesn’t go away the minute you leave. 
+          Thanks to MailMate bringing this service (finally) to Japan, it was a worry I crossed off my list. 
+          <b>The process is simple, online, and offers various levels of service</b> so you have choices.
+          My mail is making it to me in South Korea regularly and securely.
+        "
+        testimonials_author_1_html: "
+          Paul Hardisty, President & Representative Director, Sports Footwear & Apparel Industry
+        "
+        testimonials_quote_2_html: "
+          <i><b>“MailMate has been truly INVALUABLE in helping me manage my Japanese investment and business dealings when I am outside of Japan.”</b></i>
+          <br /><br />
+          Their service has proven to be much, much more than virtual mail forwarding. They assist with getting me copies of all my Japanese correspondence, utility bills and government notices, 
+          provide a bill payment facility when I am outside of Japan, and even help translate correspondence I don’t understand. They’re practically <b>my Japanese Concierge at a 
+          fraction of the cost</b> I was previously paying property managers, assistants, and translators etc. for the same service(s).
+        "
+        testimonials_author_2_html: "
+          Managing Director (Asia Pacific), International Trading Company
+        "
+      about:
+        the_mailmate_story: "MailMate was founded with a simple idea in mind: make paper mail digital in Japan. We built a platform that allows anyone to manage paper mail in Japan online,  win back time and focus on the things that matter."
+        how_it_began: "Founded in 2019, MailMate is a first-of-its-kind tech solution to Japanese mail, allowing users to access their local mail from anywhere in Japan, or the world. We felt your pain –– we’ve paid our own bills at the local convinience store and navigated scores of paperwork in our mailboxes (most of which was never relevant to begin with). Fast forward to today and we’ve built a solution: MailMate."
+        get_in_touch_with_us: Get in touch with us
+        address_title: ADDRESS
+        address_detail: Crea Land Mark 305, 2-9 Reisenmachi, Hakata, Fukuoka, 812-0039
+        email_title: Contact
+        email_detail: contact@mailmate.jp
+        representative_title: Representative
+        representative_detail: John Cross
+        payment_methods_title: Accepted Payment Methods
+        payment_methods_detail: Credit Card or Bank Transfer* (*Bank Transfer applies to special plans only. Ask a representative for more information.)
+        cta_title: Ready to get started?
+        cta_button: Book a Consultation
+      consultation:
+        title: Request a Consultation
+        subtitle: Your virtual mailbox service, for a fraction of the cost.
+        detail: Save hours and hours every month by letting us work for you. We're standing by to help you deal with Japanese paperwork, do research, manage your bookings, receive your mail, do translations, and hop on the phone to interpret for you—and anything else where you need help.
+        first_name: First Name
+        last_name: Last Name
+        phone: Phone Number
+        email: Email Address
+        business_type: Business Type
+        select_one: Select one...
+        submit: Submit
+      blog:
+        blogPost: 'blogPost'
+        read_more: 'Read More'

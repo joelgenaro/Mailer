@@ -1,0 +1,23 @@
+<div class="page__assistant__hero">
+  <div class="page__assistant__hero__container">
+    <div class="page__assistant__hero__left">
+      <h1 class="page__assistant__hero__title">Your own bilingual personal virtual assistant.</h1>
+      <p class="page__assistant__hero__subtitle">Competent bilingual virtual assistants immediately available in Japan.<br /><br />Your to-do list will never be the same again.</p>
+
+      <div class="page__assistant__hero__actions">
+        <% if ENV.fetch("ASSISTANT_SERVICE_ENABLED", nil) == "true" %>
+          <%= link_to t('marketing.pages.mail.hero_button_get_started'), marketing_pricing_path('assistant'), class: "marketing-btn marketing-btn--primary marketing-btn--medium" %>
+          <%= link_to t('marketing.pages.mail.hero_button_request_consultation'), marketing_request_consultation_path, class: "marketing-btn marketing-btn--grey marketing-btn--medium " %>
+        <% else %>
+          <%= link_to 'Request a Consultation', marketing_request_consultation_path, class: "marketing-btn marketing-btn--primary marketing-btn--medium" %>
+        <% end %>
+      </div>
+
+    </div>
+
+    <div class="page__assistant__hero__right">
+      <%= image_tag 'marketing/pages/assistant/hero.png' %>
+    </div>
+
+  </div>
+</div>

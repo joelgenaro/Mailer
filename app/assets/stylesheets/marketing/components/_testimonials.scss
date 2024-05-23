@@ -1,0 +1,66 @@
+.testimonials {
+  padding: 0 0 90px 0;
+  @include mobile {
+    padding-bottom: 30px;
+  }
+  &__subheading {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: #8A8F98;
+    text-transform: uppercase;
+    margin: 10px 0px;
+  }
+  &__heading {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    color: #272729;
+    margin: 10px 0px;
+  }
+  &__units {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+    @include mobile {
+      flex-direction: column;
+    }
+    &__unit {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: #FFFFFF;
+      border: 1px solid #F5F5F5;
+      border-radius: 8px;
+      margin: 10px;
+      max-width: 584px;
+      width: 100%;
+      padding: 20px;
+      @include mobile {
+        width: auto;
+      }
+      &__icon {
+        position: absolute;
+        top: -8px;
+        left: -12px;
+        svg {
+          height: 24px;
+          width: 38px;
+        }
+      }
+      &__quote {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #272729;
+      }
+      &__author {
+        font-weight: 400;
+        font-size: 16px;
+        color: #718096;
+      }
+    }
+  }
+}

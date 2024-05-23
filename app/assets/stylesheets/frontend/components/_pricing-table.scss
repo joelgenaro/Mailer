@@ -1,0 +1,136 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.pricing-table {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 30px;
+  &--main {
+    td {
+      width: 13%;
+    }
+  }
+  &--options {
+    td {
+      width: 13%;
+    }
+  }
+  &--extra-info {
+    th {
+      width: 30%;
+    }
+  }
+  &__price {
+    @include subtitle;
+    font-size: 32px;
+    color: #111;
+  }
+  &__sub-price {
+    @include subtitle;
+    font-size: 24px;
+    color: #111;
+  }
+}
+
+.legacy-pricing-table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin: 30px 0;
+  @include tablet {
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 15px;
+  }
+  @include mobile {
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 15px;
+  }
+  &__plan {
+    background-color: #fff;
+    padding: 30px 20px 15px 20px;
+    margin: 0;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+  }
+  &__plan-head {
+    height: 200px;
+    @media (max-width: 1140px) {
+      height: 250px;
+    }
+    @include tablet {
+      height: 200px;
+    }
+    @include mobile {
+      height: auto;
+    }
+  }
+  &__plan-label {
+    @include title;
+    font-size: 28px;
+  }
+  &__plan-desc {
+    @include subtitle;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  &__price {
+    @include title;
+    color: #111;
+    font-size: 60px !important;
+    font-weight: 600;
+    margin: 20px 0;
+    letter-spacing: -1px;
+    @media (max-width: 1140px) {
+      font-size: 40px !important;
+    }
+  }
+  &__currency {
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    top: -24px;
+    right: -7px;
+  }
+  &__timeframe {
+    font-size: 25px;
+    font-weight: 600;
+    color: #999;
+    position: relative;
+    left: -10px;
+  }
+  &__plan-highlights {
+    @include subtitle;
+    font-size: 20px;
+    margin: 0 0 20px 0;
+  }
+  &__features {
+    margin: 20px 0 0 0;
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+    flex-grow: 1;
+    li {
+      padding-left: 0;
+      line-height: 2;
+    }
+  }
+  &__processing-fee {
+    text-align: left;
+    padding: 30px 0 0 0;
+    color: #999;
+    p {
+      margin: 0;
+      font-size: 13px;
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+}

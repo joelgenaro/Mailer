@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <%= render 'frontend/shared/head' %>
+  <body>
+    <%= render 'frontend/shared/alerts' %>
+    <%= yield %>
+    <%= render 'frontend/shared/admin_toolbar' if user_masquerade? %>
+    <% if content_for?(:footer_scripts) %>
+      <%= yield(:footer_scripts) %>
+    <% end %>
+  </body>
+</html>

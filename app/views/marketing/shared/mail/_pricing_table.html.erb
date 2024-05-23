@@ -1,0 +1,19 @@
+<div class="legacy-pricing-table">
+  <% pricing_plans.each do |plan_name, plan| %>
+    <div class="legacy-pricing-table__plan">
+      <div class="legacy-pricing-table__plan-head clearfix">
+        <span class="legacy-pricing-table__plan-label"><%= plan[:label] %></span>
+        <p class="legacy-pricing-table__plan-desc"><%= plan[:description] %></p>
+      </div>
+      <div class="legacy-pricing-table__price">
+        <span class="legacy-pricing-table__currency">¥</span>
+        <span class="legacy-pricing-table__price"><%= plan[:price_int] %>*</span>
+        <span class="legacy-pricing-table__timeframe">/mo</span>
+      </div>
+        <%= button_to 'Request Consultation', marketing_request_consultation_path, method: :get, class: "plan__btn marketing-btn marketing-btn--block" %>
+      <div class="legacy-pricing-table__processing-fee">
+        <p>* <strong>Processing fee:</strong> ¥500 + 3% of the amount of the bill.</p>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,186 @@
+.comparison {
+  &__table {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    border-spacing: 0;
+    tbody {
+      text-align: center;
+    }
+  }
+  &__feature {
+    font-size: 14px;
+    font-weight: 500;
+    color: #272729;
+  }
+  &__feature,
+  &__plan-price,
+  &__action {
+    width: 185px;
+    background-color: #F5F5F5;
+    border-right: 3px solid #fff;
+    border-left: 3px solid #fff;
+    &--business {
+      background-color: #E6EDEE;
+    }
+  }
+  &__features-lead,
+  &__features-title {
+    text-align: left;
+  }
+  &__features-lead {
+    color: #8A8F98;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 32px;
+    padding-top: 24px;
+  }
+  &__features-title {
+    color: #272729;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+    white-space: nowrap;
+    padding-right: 5px;
+  }
+  &__plan-name {
+    text-align: center;
+    padding: 0 0 20px 0;
+  }
+  &__plan-price {
+    font-size: 24px;
+    font-weight: 500;
+    color: #272729;
+    padding-top: 24px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  &__action {
+    padding: 16px 16px 24px 16px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  &__btn {
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    color: #292927;
+    background-color: #fff;
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      background-color: #292927;
+    }
+  }
+  &__tick {
+    g {
+      path:last-child {
+        fill: #000;
+      }
+    }
+  }
+
+  &__asterisks-section {
+    margin-top: -45px;
+    margin-bottom: 45px;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      li {
+        text-align: left;
+        font-size: 12px;
+        color: #8A8F98;
+        font-weight: 500;
+      }
+    }
+  }
+  // Green
+  &__feature--green,
+  &__plan-price--green,
+  &__action--green {
+    background-color: #E8F4F2;
+  }
+  &__feature--green {
+    .comparison__tick {
+      g {
+        path:last-child {
+          fill: #48ac98;
+        }
+      }
+    }
+  }
+  &__plan-price--green {
+    color: #48AC98;
+  }
+  &__action--green {
+    .comparison__btn {
+      &:hover {
+        color: #fff;
+        background-color: #48AC98;
+      }
+    }
+  }
+  // Blue
+  &__feature--blue,
+  &__plan-price--blue,
+  &__action--blue {
+    background-color: #E6EDEE;
+  }
+  &__feature--blue {
+    .comparison__tick {
+      g {
+        path:last-child {
+          fill: #2D5A88;
+        }
+      }
+    }
+  }
+  &__plan-price--blue {
+    color: #2D5A88;
+  }
+  &__action--blue {
+    .comparison__btn {
+      &:hover {
+        color: #fff;
+        background-color: #004752;
+      }
+    }
+  }
+  // Red
+  &__feature--red,
+  &__plan-price--red,
+  &__action--red {
+    background-color: #FFEEEC;
+  }
+  &__feature--red {
+    .comparison__tick {
+      g {
+        path:last-child {
+          fill: #E16259;
+        }
+      }
+    }
+  }
+  &__plan-price--red {
+    color: #E16259;
+  }
+  &__action--red {
+    .comparison__btn {
+      &:hover {
+        color: #fff;
+        background-color: #DF5B57;
+      }
+    }
+  }
+  &__processing-fee {
+    text-align: left;
+    font-size: 12px;
+    color: #8A8F98;
+    font-weight: 500;
+  }
+}

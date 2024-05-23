@@ -1,0 +1,125 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+// For ensuring footer is always at the bottom of the page
+// See components/_viewport.scss also
+html, body {
+  height: 100%;
+}
+
+html {
+  background-color: #F5F5F5;
+}
+
+body {
+  background-color: #F5F5F5;
+  color: #647787;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  outline: 0;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+button {
+  color: inherit;
+}
+
+pre {
+  color: #647787;
+  background-color: #f0f2f5;
+  border-color: rgba(135, 150, 165, 0.1);
+}
+
+hr {
+  border-color: rgba(135, 150, 165, 0.1);
+}
+
+blockquote {
+  border-color: rgba(135, 150, 165, 0.1);
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+sup {
+  vertical-align: text-top;
+  top: -.25em;
+}
+
+b,
+strong {
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2b3035;
+}
+
+.form-control {
+  border-color: rgba(135, 150, 165, 0.3);
+  border-width: 1px;
+  border-radius: 0.25rem;
+  color: inherit;
+  &:focus {
+    color: inherit;
+    box-shadow: 0 0 0 0.2rem rgba(19, 126, 255, 0.25);
+  }
+}
+
+.form-label {
+  color: $color__grey-700;
+  font-weight: 500;
+  margin: 0 0 4px 0;
+}
+
+// Generic error classes that don't really fit in anywhere else
+.has-error {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  textarea,
+  select {
+    border-color: #dc3545 !important;
+  }
+  .form_errors {
+    color: #dc3545;
+    font-weight: 500;
+    margin-top: 5px;
+  }
+}
+.error_message {
+  color: #dc3545;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.table {
+  background-color: #fff;
+}
+
+.btn-link {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.card {
+  box-shadow: 0 1px 1px 0 rgba(60, 66, 87, 0.1);
+}

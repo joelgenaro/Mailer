@@ -1,0 +1,45 @@
+<div class="page__mail__how-helps__container">
+
+  <h2 class="page__mail__how-helps__heading" id="features"> 
+  機能
+  </h2>
+  <h3 class="page__mail__how-helps__subheading"> 
+  </h3>
+  
+  <div class="page__mail__how-helps__units">
+    <% 
+      [
+        { title: 'marketing.pages.mail.how_helps_no_more_clutter_title', detail: 'marketing.pages.mail.how_helps_no_more_clutter_detail', icon: 'marketing/pages/mail/how-helps-clutter.png' },
+        { title: 'marketing.pages.mail.how_helps_onboarding_title', detail: 'marketing.pages.mail.how_helps_onboarding_detail', icon: 'marketing/pages/mail/how-helps-onboard.png' },
+        { title: 'marketing.pages.mail.how_helps_search_title', detail: 'marketing.pages.mail.how_helps_search_detail', icon: 'marketing/pages/mail/how-helps-advanced.png' },
+      ].each do |item|
+    %>
+      <div class="page__mail__how-helps__units__unit">
+        <div class="page__mail__how-helps__units__unit__icon index-image9">
+          <%= image_tag(item[:icon]) %>
+        </div>
+        <p class="page__mail__how-helps__units__unit__title index-text055"><%= t(item[:title]) %></p>
+        <p class="page__mail__how-helps__units__unit__detail index-text057"><%= t(item[:detail]) %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="page__mail__how-helps__units ">
+    <% 
+      [
+        { title: 'marketing.pages.mail.how_helps_pay_bills_title', detail: 'marketing.pages.mail.how_helps_pay_bills_detail', icon: 'marketing/pages/mail/how-helps-bills.png' },
+        { title: 'marketing.pages.mail.how_helps_right_info_title', detail: 'marketing.pages.mail.how_helps_right_info_detail', icon: 'marketing/pages/mail/how-helps-right-info.png' },
+        { title: 'marketing.pages.mail.how_helps_everything_safe_title', detail: 'marketing.pages.mail.how_helps_everything_safe_detail', icon: 'marketing/pages/mail/how-helps-safe.png' },
+      ].each do |item|
+    %>
+      <div class="page__mail__how-helps__units__unit">
+        <div class="page__mail__how-helps__units__unit__icon index-image9">
+          <%= image_tag(item[:icon]) %>
+        </div>
+        <p class="page__mail__how-helps__units__unit__title index-text055"><%= t(item[:title]) %></p>
+        <p class="page__mail__how-helps__units__unit__detail index-text057"><%= t(item[:detail]) %></p>
+      </div>
+    <% end %>
+  </div>
+
+</div>

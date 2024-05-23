@@ -1,0 +1,74 @@
+<div class="pricing__container">
+  <div class="comparison">
+    <h1 class="comparison__title">Full feature list comparison</h1>
+    <table class="comparison__table">
+      <thead>
+        <th></th>
+        <% pricing_plans.each do |plan_name, plan| %>
+          <% if plan[:allow_display]!= false%>
+          <th class="comparison__plan-name comparison__plan-name--<%= pricing_comparison_color(plan) %>">
+            <%= plan[:title] %>
+          </th>
+          <% end %>
+        <% end %>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <% pricing_plans.each do |plan_name, plan| %>
+            <% if plan[:allow_display]!= false%>
+            <td class="comparison__plan-price comparison__plan-price--<%= pricing_comparison_color(plan) %>">
+              <%= humanized_money_with_symbol(plan[:price]) %>
+            </td>
+            <% end %>
+          <% end %>
+        </tr>
+
+        <!-- Comparisions -->
+        <% comparisons.each do |group| %>
+          <tr>
+            <td class="comparison__features-lead"><%= group[:label] %></td>
+            <% pricing_plans.each do |plan_name, plan| %>
+              <% if plan[:allow_display]!= false  %>
+                <td class="comparison__feature comparison__feature--<%= pricing_comparison_color(plan) %>"></td>
+              <% end %>
+            <% end %>
+          </tr>
+          <!-- Feature Row -->
+          <% group[:features].each do |feature| %>
+            <tr>
+              <td class="comparison__features-title"><%= feature[:label] %></td>
+              <% pricing_plans.each do |plan_name, plan| %>
+                <% if plan[:allow_display]!= false  %>
+                  <td class="comparison__feature comparison__feature--<%= pricing_comparison_color(plan) %>">
+                    <% if plan[:content][:comparison_features][feature[:key]] == true %>
+                      <%= inline_svg_tag 'marketing/shared/tick.svg', class: 'comparison__tick' %>
+                    <% elsif plan[:content][:comparison_features][feature[:key]] == false %>
+                      <%= inline_svg_tag 'marketing/shared/close.svg', class: 'comparison__close' %>
+                    <% else %>
+                      <%= plan[:content][:comparison_features][feature[:key]] %>
+                    <% end %>
+                  </td>
+                <% end %>
+              <% end %>
+            </tr>
+          <% end %>
+        <% end %>
+        <tr>
+          <td></td>
+          <% pricing_plans.each do |plan_name, plan| %>
+            <% if plan[:allow_display]!= false%>
+              <td class="comparison__action comparison__action--<%= pricing_comparison_color(plan) %>">
+              <% if ENV.fetch("ASSISTANT_SERVICE_ENABLED", nil) == "true" && plan[:request_consultation]!= true %>
+                <%= button_to t('marketing.pages.pricing.get_started'), new_register_url, method: :post, params: {subscriptionName: plan_name,subscriptionType: 'assistant'}, class: "plan__btn marketing-btn marketing-btn--block", data: {turbo: false} %>
+              <% else %>
+                <%= button_to 'Request Consultation', marketing_request_consultation_path, method: :get, class: "plan__btn marketing-btn marketing-btn--block" %>
+              <% end %>
+              </td>
+            <% end %>
+          <% end %>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.referrer-banner {
+  background-color: $color__teal-900;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  padding: 15px 15px;
+
+  @include mobile {
+    padding: 10px 10px;
+    font-size: 16px;
+  }
+}

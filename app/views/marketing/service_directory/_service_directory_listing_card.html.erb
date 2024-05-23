@@ -1,0 +1,10 @@
+<div class="service-list-card">
+  <div class="service-list-image">
+    <img src="<%=contentful_image_url(listing.business_pictures.first) %>" alt="<%=contentful_process_shortcodes(listing.business_name) %>"/>
+  </div>
+  <div class="service-list-content">
+    <h2 class="service-list-content__heading"><%=contentful_process_shortcodes(listing.business_name) %></h2>
+    <p class="service-list-content__text"><%=listing.business_profile %></p>
+    <div class="service-list-content__category" ><%= contentful_service_listing_category(listing.category)%></div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.tick {
+  &--grey {
+    g {
+      path:last-child {
+        fill: #a3acb9;
+      }
+    }
+  }
+  &--green {
+    g {
+      path:last-child {
+        fill: #48ac98;
+      }
+    }
+  }
+  &--dark-green {
+    g {
+      path:last-child {
+        fill: #11535d;
+      }
+    }
+  }
+  &--red {
+    g {
+      path:last-child {
+        fill: #e36c64;
+      }
+    }
+  }
+}

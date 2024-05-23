@@ -1,0 +1,69 @@
+<!-- Meta -->
+<% content_for :meta_title do %><%= @post.meta_title %> | MailMate<% end %>
+<% content_for :meta_description do %><%= @post.meta_description %><% end %>
+<% content_for :meta_image do %><%= contentful_cover_image_url(@post) %><% end %>
+<% content_for :meta_url do %><%= marketing_blog_post_url(@post.slug) %><% end %>
+<% @layout_footer_transparent_bg = true %>
+
+<div class="blog-post">
+  <div class="blog-post__main">
+    <div class="blog-post__image">
+      <img src="<%= contentful_cover_image_url(@post) %>" alt="<%= @post.title %>">
+    </div>
+    <p class="blog-post__inner">
+      <div class="blog-post__meta">
+        <span class="blog-post__categories"><%= contentful_categories(@post.categories) %></span>
+        <span class="blog-post__published-on"><%= @post.published_on.strftime("%B #{@post.published_on.day.ordinalize}, %Y") %></span>
+      </div>
+      <h1 class="blog-post__post-title"><%= @post.title %></h1>
+
+      <div class="blog-post__content"><%= contentful_rich_text(@post.content) %></div>
+
+      <!-- Blog Newsletter Sign Up Modal With PDF (shown via JS) --> 
+
+      <div class="blog-post__author">
+        <div class="blog-post__author-avatar">
+          <img src="<%= @post.author.avatar.image_url %>" alt="<%= @post.author.name %>">
+        </div>
+        <div class="blog-post__author-info">
+          <span class="blog-post__author-name"><%= link_to @post.author.name, marketing_blog_author_path(@post.author.slug) %></span>
+          <span class="blog-post__author-position"><%= @post.author.position %></span>
+        </div>
+      </div>
+      <div class="blog-post__social">
+        <span class="blog-post__social-title">Share this Article</span>
+        <div class="blog-post__social-links">
+          <div class="blog-post__social-link">
+            <%= tweet_button(@post.title, marketing_blog_post_url(@post.slug)) %>
+          </div>
+          <div class="blog-post__social-link">
+            <%= share_button(marketing_blog_post_url(@post.slug)) %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Blog Newsletter Sign Up Section -->
+  <%= render "layouts/blog_newsletter_sign_up" %>
+
+  <div class="blog-post__popular-posts">
+    <div class="blog-post__popular-posts__container">
+      <h2 class="blog-post__popular-posts__title">
+        Popular Posts
+      </h2>
+      <div class="blog-post__popular-posts__posts">
+        <% @popular_posts.each do |post| %>
+          <div class="blog-post__popular-posts__post">
+            <a class="blog-post__popular-posts__post__left" href="<%= marketing_blog_post_path(post.slug) %>" style="background-image: url(<%= image_path(contentful_cover_image_url(post)) %>"></a>
+            <div class="blog-post__popular-posts__post__right">
+              <span class="blog-post__popular-posts__post__published-on"><%= post.published_on.strftime("%B #{post.published_on.day.ordinalize}, %Y") %></span>
+              <h3 class="blog-post__popular-posts__post__post-title"><%= link_to post.title, marketing_blog_post_path(post.slug) %></h3>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

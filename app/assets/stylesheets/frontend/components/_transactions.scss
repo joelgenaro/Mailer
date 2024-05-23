@@ -1,0 +1,91 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.transactions {
+  @include section;
+  &__container {
+    @include container(700px);
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  &__title {
+    @include title;
+    flex-grow: 1;
+  }
+  &__list {
+    &__title {
+      @include title(16px);
+      margin: 0 0 12px 0;
+      &__count {
+        @include subtitle;
+        margin-left: 4px;
+        display: inline-block;
+      }
+    }
+  }
+  &__payment {
+    @include card(0);
+    margin: 0 0 8px 0;
+    display: flex;
+    min-height: 94px;
+    align-items: center;
+    padding: 16px 20px;
+    @include mobile {
+      flex-direction: column;
+      align-items: initial;
+      height: auto;
+      padding: 16px;
+    }
+    &__details {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding-right: 32px;
+    }
+    &__icon {
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 500px;
+      background-color: #f5f5f5;
+      margin-right: 16px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      svg {
+        g {
+          fill: $color__black;
+        }
+      }
+    }
+    &__label {
+      @include title(16px);
+    }
+    &__subtext {
+      @include subtitle(14px);
+    }
+    &__state {
+      padding-right: 16px;
+      .badge {
+        height: 24px;
+        line-height: 20px;
+      }
+      @include mobile {
+        width: 100px;
+        order: 1;
+      }
+    }
+    &__amount {
+      @include title;
+      width: 100px;
+      text-align: right;
+    }
+    &__action {
+      margin-left: 15px;
+    }
+  }
+}

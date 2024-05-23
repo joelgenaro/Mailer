@@ -1,0 +1,12 @@
+// Active Admin's got SASS!
+@import "~@activeadmin/activeadmin/src/scss/mixins";
+@import "~@activeadmin/activeadmin/src/scss/base";
+
+// Active Admin Print Stylesheet
+// @import "~@activeadmin/activeadmin/src/scss/print";
+
+// Addons
+@import 'activeadmin_addons/src/stylesheets/all';
+
+// Extensions
+@import 'extensions';

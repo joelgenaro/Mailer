@@ -1,0 +1,10 @@
+# Database Config For Github Actions CI
+# From: https://www.pibit.nl/github/actions/rails/postgres/rspec/tutorial/example/2019/09/23/github-actions-with-rails-postgres-and-rspec/
+test:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: github-actions
+  pool: 20
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD"] %>

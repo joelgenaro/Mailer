@@ -1,0 +1,198 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.buy-subscription-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  outline: 0;
+  z-index: 9999;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+  width: 500px;
+  background-color: #fff;
+  @include tablet {
+    flex-direction: column;
+    width: 500px;
+  }
+  @include mobile {
+    width: 100%;
+    min-width: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: none;
+    box-shadow: none;
+    border-radius: 0;
+    overflow-y: scroll;
+  }
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999999;
+    pointer-events: auto;
+    @include tablet {
+      overflow-y: scroll;
+      height: 100%;
+    }
+    &--loading {
+      .buy-subscription-modal__submit {
+        &__text {
+          display: none;
+        }
+        &__spinner {
+          display: inline-block;
+        }
+      }
+    }
+  }
+  &__illustration {
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto;
+    @include tablet {
+      max-width: 140px;
+    }
+  }
+  &__title {
+    @include title(28px);
+    margin: 16px 0 8px 0;
+    @include tablet {
+      margin-top: 15px;
+    }
+  }
+  &__amount {
+    font-size: 64px;
+    margin: 0 0 16px 0;
+  }
+  &__subtitle {
+    @include subtitle;
+    margin: 0 0 24px 0;
+  }
+  &__duration {
+    font-size: 24px;
+    margin-left: 3px;
+    color: #333;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    padding: 40px 40px 30px 40px;
+    background-color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    @include tablet {
+      padding: 20px 30px;
+    }
+    @include mobile {
+      padding: 15px;
+      border-radius: 0;
+      width: 100%;
+    }
+    textarea {
+      height: 140px;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 44px;
+    width: 44px;
+    background-color: #ffffff;
+    border-radius: 32px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
+    }
+    &:before, &:after {
+      position: absolute;
+      left: 21px;
+      top: 10px;
+      content: ' ';
+      height: 25px;
+      width: 2px;
+      background-color: #333;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+  &__success,
+  &__error {
+    position: relative;
+    padding: .75rem 1.25rem;
+    border: 1px solid transparent;
+    font-family: $body__font;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  &__success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
+  &__error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+  &__info {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+    color: #777;
+  }
+  &__submit {
+    &__text {
+      display: inline-block;
+    }
+    &__spinner {
+      display: none;
+      position: relative;
+      top: -4px;
+    }
+  }
+  &__card {
+    padding: 25px 15px 15px 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    text-align: left;
+    margin: 15px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &__title {
+      position: absolute;
+      top: -23px;
+      left: 5px;
+      background: #fff;
+      padding: 10px;
+    }
+    &__details {
+      flex-grow: 1;
+    }
+    &__change-link {
+      font-size: 85%;
+    }
+  }
+}

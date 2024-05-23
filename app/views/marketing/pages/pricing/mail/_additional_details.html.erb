@@ -1,0 +1,85 @@
+<div class="pricing__container">
+  <div class="pricing__additional-details">
+    <h3 class="pricing__additional-details__heading"><%= t('marketing.pages.pricing.additional_details_title') %></h3>
+    <div class="pricing__additional-details__items">
+      <%
+        [
+          {
+            title: "Shredding of mail",
+            title_jp: "郵便物の廃棄",
+            detail: """
+              All plans offer free shredding of mail you no longer want. Once your documents have been scanned, 
+              you can request for the physical copies to be shredded and recycled. Secure disposal as an extra. 
+              <br/><br/>
+              If you would like us to dispose of certain private documents, we can dissolve on demand for an extra cost.
+            """,
+            detail_jp: """
+              全プランにおいて、ユーザー様が不要とみなされた郵便物の廃棄を無料で提供しています。書類をスキャンした後、原本をシュレッダーにかけてリサイクルするよう依頼することができます。
+              <br/><br/>
+              特定の個人文書の処分をご希望される場合は、別途料金でオンデマンド溶解処理も承ります。
+            """
+          },
+          {
+            title: "Cancelation policy",
+            title_jp: "解約について",
+            detail: """
+              Please complete the offboarding call for cancellation: https://calendly.com/cam-mailmate/book-a-call
+            """,
+            detail_jp: """
+              キャンセルポリシー：キャンセルのお手続きはお電話でのご連絡のみになります。こちらにてご予約ください。（https://calendly.com/cam-mailmate/book-a-call）
+            """
+          },
+          {
+            title: "Reactivation fees",
+            title_jp: "アカウントの復元",
+            detail: """
+              Reactivation fee: ¥10,000
+            """,
+            detail_jp: """
+              一度解約された後にアカウントを復元される場合には 10,000円の料金が発生いたします。
+            """
+          },
+          {
+            title: "Adding additional accounts",
+            title_jp: "同一アカウントへのユーザー追加",
+            detail: """
+              ¥1,500 for each additional user (recurring monthly) 
+            """,
+            detail_jp: """
+              ユーザー追加１名につき、毎月1,500円の追加料金が発生いたします。
+            """
+          },
+          {
+            title: "Content scan details",
+            title_jp: "開封スキャンに関する詳細",
+            detail: """
+              You won't be charged extra for scanning as long as your mailed documents are 20 pages or less.<br/>
+              + ¥15 per page for less than A4 docs over 20 pages<br/>
+              + ¥20 per page for odd shaped/larger than A4 over 20 pages
+            """,
+            detail_jp: """
+              開封スキャン対象の郵便書類が20ページ以内の場合、開封スキャンに追加料金は発生いたしません。<br/>
+            ・A4サイズ以内21ページ目以降は、1ページにつき+15円の追加料金<br/>
+            ・異形/A4サイズより大きい場合は、1ページにつき+20円の追加料金
+            """
+          },
+          {
+            title: "Mail opening policy",
+            title_jp: "開封スキャンポリシー",
+            detail: """
+              Within 24 hours. If requested before 2pm it will be done by the close of business on the same day.
+            """,
+            detail_jp: """
+              開封スキャンの依頼を頂いてから24時間以内に対応いたします。平日14時までにご依頼いただいた場合は、当日の営業終了時間までに対応いたします。
+            """
+          }
+        ].each do |item|
+      %>
+        <div class="pricing__additional-details__item">
+          <div class="pricing__additional-details__item__title"><%= item[I18n.locale == :ja ? :title_jp : :title] %></div>
+          <div class="pricing__additional-details__item__detail"><%= item[I18n.locale == :ja ? :detail_jp : :detail].html_safe %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

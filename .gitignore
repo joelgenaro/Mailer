@@ -1,0 +1,50 @@
+### Rails
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+/node_modules
+/yarn-error.log
+
+/public/assets
+/public/storage/*
+/public/system
+!/public/storage/.keep
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+# Ignore credentials
+.env
+
+# Ignore coverage reports
+coverage
+
+### Mac OS X
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon]
+# Thumbnails
+._*
+# Dumps
+dump.rdb
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# storage
+/storage

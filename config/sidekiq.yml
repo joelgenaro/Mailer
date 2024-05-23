@@ -1,0 +1,16 @@
+---
+:concurrency: 1
+:max_retries: 3
+
+# Set timeout to 8 on Heroku, longer if you manage your own systems.
+:timeout: 8
+
+:queues:
+  - critical
+  - mailers
+  - default
+  - action_mailbox_routing
+  - action_mailbox_incineration
+  - active_storage_analysis
+  - active_storage_purge
+  - low

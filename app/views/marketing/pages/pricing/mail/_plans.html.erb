@@ -1,0 +1,25 @@
+<div class="pricing__container">
+  <div class="pricing__header">
+    <h1 class="pricing__title"><%= t('marketing.pages.pricing.title') %></h1>
+  </div>
+  <div class="plans">
+    <div class="plans__left">
+      <div class="plans__plans">
+        <% pricing_plans.select { |i, p| i.in?([:mail_starter, :mail_basic]) }.each do |plan_name, plan| %>
+          <%= render 'marketing/pages/pricing/mail/plan', plan: plan, plan_name: plan_name, subscription_type: subscription_type %>
+        <% end %>
+      </div>
+    </div>
+    <div class="plans__right">
+      <div class="plans__plans">
+        <% pricing_plans.select { |i, p| i.in?([:mail_standard, :mail_pro]) }.each do |plan_name, plan| %>
+          <%= render 'marketing/pages/pricing/mail/plan', plan: plan, plan_name: plan_name, subscription_type: subscription_type %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing__processing-fee">
+    <span><%= t('marketing.pages.pricing.processing_fees') %></span>
+  </div>
+</div>

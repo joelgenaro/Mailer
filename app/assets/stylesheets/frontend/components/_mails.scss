@@ -1,0 +1,9 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.mails {
+  flex-grow: 1;
+  display: flex;
+  position: relative;
+  height: calc(100vh - 60px); // Account for header bar above container
+}

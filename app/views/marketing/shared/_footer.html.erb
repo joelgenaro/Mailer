@@ -1,0 +1,68 @@
+<footer class="footer <%= @layout_footer_overlapping_top ? 'footer--overlapping-top' : '' %> <%= @layout_footer_transparent_bg ? 'footer--transparent-bg' : '' %>">
+  <div class="footer__row">
+    <div class="footer__col footer__col__logo">
+      <%= image_tag 'marketing/shared/header/logo.png', class: 'footer__logo' %>
+    </div>
+
+    <div class="footer__col">
+      <h5 class="footer__title"><%= t('marketing.shared.footer.MAIL') %></h5>
+      <ul class="footer__list">
+        <li><%= link_to t('marketing.shared.footer.Features'), I18n.locale == :ja ? '/ja#features' : '/' %></li>
+        <li><%= link_to t('marketing.shared.footer.Pricing'), marketing_pricing_path('mail') %></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h5 class="footer__title"><%= t('marketing.shared.footer.COMPANY') %></h5>
+      <ul class="footer__list">
+        <li><%= link_to t('marketing.shared.footer.About'), marketing_about_path %></a></li>
+        <li><%= link_to t('marketing.shared.footer.FAQ'), marketing_faq_path %></li>
+        <li><%= link_to t('marketing.shared.footer.Blog'), marketing_blog_path %></li>
+        <li><%= link_to t('marketing.shared.footer.service_directory'), marketing_service_directory_path %></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h5 class="footer__title"><%= t('marketing.shared.footer.FOLLOW') %></h5>
+
+      <div class="footer__social__links">
+        <a href="https://www.linkedin.com/company/mailmatejp/" target="_blank" class="footer__social__links__link">
+          <%= inline_svg_tag('marketing/shared/footer/linkedin.svg') %>
+        </a>
+
+        <a href="https://www.instagram.com/mailmate.jp/" target="_blank" class="footer__social__links__link">
+          <%= inline_svg_tag('marketing/shared/footer/instagram.svg') %>
+        </a>
+
+        <a href="https://www.facebook.com/mailmate.jp" target="_blank" class="footer__social__links__link">
+          <%= inline_svg_tag('marketing/shared/footer/facebook.svg') %>
+        </a>
+
+        <a href="https://twitter.com/mailmatejp" target="_blank" class="footer__social__links__link">
+          <%= inline_svg_tag('marketing/shared/footer/twitter.svg') %>
+        </a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h5 class="footer__title"><%= t('marketing.shared.footer.language') %></h5>
+      <ul class="footer__list">
+        <% if I18n.locale == :ja %>
+          <li><%= link_to t('marketing.shared.footer.en_english'), '/' %></li>
+        <% else%>
+          <li><%= link_to t('marketing.shared.footer.jp_japanese'), '/ja' %></li>
+        <% end%>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__row footer__lower">
+    <p class="footer__lower__text" style="flex-grow: 1;">© <%= Time.current.year %> MailMate - All Rights Reserved</p>
+
+    <div class="footer__lower__links">
+      <%= link_to t('marketing.shared.footer.terms'), marketing_terms_of_service_path, class: "footer__lower__link" %>
+      <%= link_to t('marketing.shared.footer.privacy_policy'), marketing_privacy_policy_path, class: "footer__lower__link" %>
+    </div>
+
+    <p class="footer__lower__text"><%= t('marketing.shared.footer.email') %></p>
+  </div>
+</footer>

@@ -1,0 +1,69 @@
+<div class="home__features__assistant__container">
+
+  <div class="home__features__assistant__icon__unit"> 
+    <%= image_tag 'marketing/home/features-assistant-icon.png' %>
+    <p>Assistant</p>
+  </div>
+
+  <h2 class="home__features__assistant__heading"> 
+    What can your assistant do?
+  </h2>
+  <h3 class="home__features__assistant__subheading"> 
+    Our competent bilingual assistants will take care of a variety of personal, business, and translation tasks, quickly and efficiently.
+  </h3>
+  
+  <div class="home__features__assistant__cards-row">
+    <% 
+      [
+        { title: 'Vendor Research', icon: 'marketing/home/icon-vendor-research.svg' },
+        { title: 'Business Research', icon: 'marketing/home/icon-business-research.svg' },
+        { title: 'Basic Bookkeeping', icon: 'marketing/home/icon-bookkeeping.svg' },
+        { title: 'Event Planning', icon: 'marketing/home/icon-event-planning.svg' },
+        { title: 'Restaurant Booking', icon: 'marketing/home/icon-restaurant-booking.svg' },
+        { title: 'Travel Booking', icon: 'marketing/home/icon-travel-booking.svg' },
+        { title: 'Social Media', icon: 'marketing/home/icon-social-media.svg' },
+        { title: 'Data Entry', icon: 'marketing/home/icon-data-entry.svg' },
+        { title: 'Doc Translation', icon: 'marketing/home/icon-doc-translation.svg' },
+        { title: 'Live Translation', icon: 'marketing/home/icon-live-translation.svg' },
+        { title: 'Pay Bills', icon: 'marketing/home/icon-bookkeeping.svg' }
+      ].each do |item|
+    %>
+      <div class="home__features__assistant__cards-row__card">
+        <%= inline_svg_tag(item[:icon]) %>
+        <p><%= item[:title] %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="home__features__assistant__cards-row home__features__assistant__cards-row--offset">
+    <% 
+      [
+        { title: 'Social Media', icon: 'marketing/home/icon-social-media.svg' },
+        { title: 'Pay Bills', icon: 'marketing/home/icon-bookkeeping.svg' },
+        { title: 'Vendor Research', icon: 'marketing/home/icon-vendor-research.svg' },
+        { title: 'Business Research', icon: 'marketing/home/icon-business-research.svg' },
+        { title: 'Live Translation', icon: 'marketing/home/icon-live-translation.svg' },
+        { title: 'Data Entry', icon: 'marketing/home/icon-data-entry.svg' },
+        { title: 'Doc Translation', icon: 'marketing/home/icon-doc-translation.svg' },
+        { title: 'Event Planning', icon: 'marketing/home/icon-event-planning.svg' },
+        { title: 'Restaurant Booking', icon: 'marketing/home/icon-restaurant-booking.svg' },
+        { title: 'Travel Booking', icon: 'marketing/home/icon-travel-booking.svg' },
+        { title: 'Basic Bookkeeping', icon: 'marketing/home/icon-bookkeeping.svg' }
+      ].each do |item|
+    %>
+      <div class="home__features__assistant__cards-row__card">
+        <%= inline_svg_tag(item[:icon]) %>
+        <p><%= item[:title] %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="home__features__assistant__action">
+    <a href="<%= marketing_assistant_path %>" class="marketing-btn marketing-btn--primary marketing-btn--medium marketing-btn--icon--right">
+      View full list of tasks
+
+      <%= inline_svg_tag('marketing/common/buttons/icon-arrow.svg') %>
+    </a>
+  </div>
+
+</div>

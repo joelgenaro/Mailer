@@ -1,0 +1,86 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.header {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 30px;
+  @include mobile {
+    padding: 0 15px;
+  }
+  &__container {
+    @include container;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    position: relative;
+  }
+  &__logo {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 130px;
+    margin-right: 15px;
+    img {
+      height: 27px;
+    }
+  }
+  &__nav {
+    flex-grow: 1;
+    margin: 0 0 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__right {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+    }
+  }
+  &__link {
+    display: inline-block;
+    padding: 0 15px;
+    color: $body__color;
+    font-family: $title__font;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    &:hover {
+      color: $color__primary;
+    }
+  }
+  &__link__divider {
+    width: 2px;
+    background-color: $color_gray_200;
+    height: 16px;
+    border-radius: 1px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  &__hide-mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+  &__show-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include tablet {
+      display: block;
+    }
+  }
+  .btn-primary {
+    color: #fff;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    position: relative;
+    margin-left: 12px;
+  }
+}

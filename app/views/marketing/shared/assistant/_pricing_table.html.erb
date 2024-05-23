@@ -1,0 +1,90 @@
+<table class="pricing-table pricing-table--main table table-bordered">
+  <tbody>
+    <tr>
+      <th></th>
+      <% pricing_plans.each do |plan_name, plan| %>
+        <th><%= plan[:label] %></th>
+      <% end %>
+    </tr>
+    <tr>
+      <th></th>
+      <% pricing_plans.each do |plan_name, plan| %>
+        <td><%= plan[:description] %></td>
+      <% end %>
+    </tr>
+    <% pricing_plan_features.each do |feature| %>
+      <tr>
+        <th><%= feature[:label] %></th>
+        <% pricing_plans.each do |plan_name, plan| %>
+          <td><%= plan[:features][feature[:key]] %></td>
+        <% end %>
+      </tr>
+    <% end %>
+    <tr>
+      <th>Price</th>
+      <% pricing_plans.each do |plan_name, plan| %>
+        <td class="pricing-table__price"><%= humanized_money_with_symbol(plan[:price_int]) %></td>
+      <% end %>
+    </tr>
+    <tr>
+      <th></th>
+      <% pricing_plans.each do |plan_name, plan| %>
+        <td>
+          <%= button_to t('marketing.pages.pricing.get_started'), new_register_url, method: :post, params: {subscriptionName: plan_name,subscriptionType: 'assistant'}, class: "plan__btn marketing-btn marketing-btn--block" %>
+        </td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+<table class="pricing-table pricing-table--options table table-bordered">
+  <tbody>
+    <tr>
+      <th colspan="6">Options</th>
+    </tr>
+    <tr>
+      <th>Virtual Receptionist Service (Upcoming)</th>
+      <td class="pricing-table__sub-price"><%= humanized_money_with_symbol(30000) %></td>
+      <td class="pricing-table__sub-price"><%= humanized_money_with_symbol(30000) %></td>
+      <td class="pricing-table__sub-price"><%= humanized_money_with_symbol(30000) %></td>
+      <td class="pricing-table__sub-price"><%= humanized_money_with_symbol(30000) %></td>
+      <td class="pricing-table__sub-price"><%= humanized_money_with_symbol(30000) %></td>
+    </tr>
+    <tr>
+      <th>In-Person Support in Japan (i)</th>
+      <td>❌</td>
+      <td>❌</td>
+      <td>✅ + 40% Hourly Rate</td>
+      <td>✅ + 40% Hourly Rate</td>
+      <td>✅ + 40% Hourly Rate</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="pricing-table pricing-table--extra-info table table-bordered">
+  <tbody>
+    <tr>
+      <th colspan="2">Extra Information</th>
+    </tr>
+    <tr>
+      <th>Travel Package (Upcoming)</th>
+      <td>3 Hour Temporary Package for travelers to Japan. Think of it as an insurance package for your trip, or a friends trip. A bilingual assistant available by phone or email during your stay in Japan.</td>
+    </tr>
+    <tr>
+      <th>Add-on Hours Available</th>
+      <td>Busy month? We've got you covered. Once you've signed up to a plan, you can easily add more hours.</td>
+    </tr>
+    <tr>
+      <th>Pay Bills on Demand</th>
+      <td>Your VA can even take care of your bills for you. Processing fee: ¥500 + 3% of the amount of the bill.</td>
+    </tr>
+    <tr>
+      <th>Just Charge Me</th>
+      <td>With your permission, we can use your credit card to order or pay for things on your behalf.</td>
+    </tr>
+    <tr>
+      <th>Custom NDA</th>
+      <td>We take your data and privacy extremely seriously. All MailMate staff and virtual assistants sign confidentiality agreements. From the Business Basic plan and up, we're also able to review and sign an NDA in your company format.</td>
+    </tr>
+  </tbody>
+</table>

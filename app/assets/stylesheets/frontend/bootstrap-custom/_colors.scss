@@ -1,0 +1,46 @@
+// Custom
+
+$alert-colors: () !default;
+$alert-colors: map-merge(
+  (
+    "primary":    #D1EAE5,
+    "secondary":  #FFD4D0,
+    "success":    #D1EAE5,
+    "info":       #BFD1D4,
+    "warning":    #FFE19A,
+    "danger":     #F2BDBC,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $alert-colors
+);
+
+$badge-colors: () !default;
+$badge-colors: map-merge(
+  (
+    "primary":    $color__primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    #FFECC0,
+    "danger":     $danger,
+    "light":      #E5E5E5,
+    "dark":       $dark
+  ),
+  $badge-colors
+);
+
+$button-colors: () !default;
+$button-colors: map-merge(
+  (
+    "primary":    $color__primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $button-colors
+);

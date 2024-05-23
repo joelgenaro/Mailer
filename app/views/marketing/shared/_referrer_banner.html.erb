@@ -1,0 +1,30 @@
+<% 
+  show_banner = false
+  banner_text = nil
+  allowed_paths = [
+    '/', '/mail', '/assistant', '/about', '/faq', 
+    '/consultation', '/pricing/assistant', '/pricing/mail'
+  ]
+
+  # Currently we only show if 'cic' referrer and on allowed path
+  if cookies[:tkm_referrer] === 'cic' && allowed_paths.include?(request.path)
+    # Ensure is not an existing customer (if somehow they set the cookie themselves or wasn't cleared)
+    if !current_user || !current_user.subscriptions.exists?
+      show_banner = true
+      # Text is dependent on number of conversions
+      referrer = Growth::Referrer.find_by(code: 'cic')
+      if referrer.conversions <= 20
+        banner_text = "CIC Member Discount - 20% off your chosen plan!"
+      else
+        banner_text = "CIC Member Discount - 20% off first month!"
+      end
+    end
+  end
+
+  # Do it! (... or not)
+  if show_banner
+%>
+  <div class="referrer-banner">
+    <%= banner_text %>
+  </div>
+<% end %>

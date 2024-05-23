@@ -1,0 +1,64 @@
+<!-- Notice -->
+<% if !notice.blank? %>
+  <div id="layout__alerts__notice" class="rounded-md bg-blue-50 p-4">
+    <div class="flex max-w-7xl mx-auto">
+      <div class="ml-3">
+        <p class="text-sm font-medium text-blue-700">
+          <b>Notice:</b>  <%= notice %>
+        </p>
+      </div>
+      <div class="ml-auto pl-3">
+        <div class="-mx-1.5 -my-1.5">
+          <button id="layout__alerts__notice__dismiss-button" type="button" class="inline-flex bg-blue-50 rounded-md p-1.5 text-blue-500 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-50 focus:ring-blue-600">
+            <span class="sr-only">Dismiss</span>
+            <!-- Heroicon name: solid/x -->
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<!-- Alert -->
+<% if !alert.blank? %>
+  <div id="layout__alerts__alert" class="rounded-md p-4 bg-yellow-50">
+    <div class="flex max-w-7xl mx-auto">
+      <div class="ml-3">
+        <p class="text-sm font-medium text-yellow-700">
+          <b>Alert:</b> <%= alert %>
+        </p>
+      </div>
+      <div class="ml-auto pl-3">
+        <div class="-mx-1.5 -my-1.5">
+          <button id="layout__alerts__alert__dismiss-button" type="button" class="inline-flex bg-yellow-50 rounded-md p-1.5 text-yellow-500 hover:bg-yellow-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-yellow-50 focus:ring-yellow-600">
+            <span class="sr-only">Dismiss</span>
+            <!-- Heroicon name: solid/x -->
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<!-- JS -->
+<script>
+  // Alert dismiss buttons handlers
+  var noticeDismissButton = document.getElementById('layout__alerts__notice__dismiss-button');
+  if (noticeDismissButton) {
+    noticeDismissButton.addEventListener('click', function() { 
+      document.getElementById('layout__alerts__notice').style.display = 'none';
+    }, false);
+  }
+  var alertDismissButton = document.getElementById('layout__alerts__notice__dismiss-button');
+  if (alertDismissButton) {
+    alertDismissButton.addEventListener('click', function() { 
+      document.getElementById('layout__alerts__alert').style.display = 'none';
+    }, false);
+  }
+</script>

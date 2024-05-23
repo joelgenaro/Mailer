@@ -1,0 +1,59 @@
+version: '3'
+services:
+  # Postgres
+  postgres:
+    image: postgres
+    volumes:
+      - ./tmp/postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    restart: always
+  # Redis
+  redis:
+    image: 'redis:4.0-alpine'
+    command: redis-server --requirepass secret
+    volumes:
+      - ./tmp/redis:/data
+    restart: always
+  # Web
+  web:
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile.web
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    # command: tail -f /dev/null # Keeps container running
+    volumes:
+      - ./:/mailmate-web
+      - ./tmp/bundle:/bundle # Gem cache
+    ports:
+      - 3000:3000 # Server
+    depends_on:
+      - postgres
+      - redis
+    links:
+      - postgres
+      - redis
+    restart: always
+    stdin_open: true # Allows attaching for byebug
+    tty: true # Allows attaching for byebug
+  # Worker
+  worker:
+    build:
+      context: ./
+      dockerfile: ./docker/Dockerfile.web
+    command: sidekiq -C config/sidekiq.yml
+    volumes:
+      - ./:/mailmate-web
+      - ./tmp/bundle:/bundle # Gem cache
+    depends_on:
+      - postgres
+      - redis
+    links:
+      - postgres
+      - redis
+    restart: always
+  # Mailcatcher
+  mailcatcher:
+    image: schickling/mailcatcher
+    ports:
+      - 1080:1080

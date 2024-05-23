@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+
+}
+
+.sticky {
+  @apply fixed z-[9999] bg-white bg-opacity-80 transition;
+  backdrop-filter: blur(5px);
+}
+
+.sticky #navbarToggler span {
+  @apply bg-dark;
+}
+
+.sticky #navbarCollapse li a {
+  @apply text-dark hover:text-primary hover:opacity-100;
+}
+#navbarCollapse li .ud-menu-scroll.active {
+  @apply opacity-70;
+}
+.sticky #navbarCollapse li .ud-menu-scroll.active {
+  @apply text-primary opacity-100;
+}
+.sticky .loginBtn {
+  @apply text-dark hover:text-primary hover:opacity-100;
+
+}
+
+.signUpBtn {
+  @apply bg-primary text-white transition-all hover:bg-dark hover:text-white opacity-0;
+  display: none !important;
+}
+
+.sticky .signUpBtn {
+  @apply bg-primary text-white transition-all hover:bg-dark hover:text-white opacity-100;
+  display: block !important;
+}
+
+.navbarTogglerActive > span:nth-child(1) {
+  @apply top-[7px] rotate-45 transform;
+}
+.navbarTogglerActive > span:nth-child(2) {
+  @apply opacity-0;
+}
+.navbarTogglerActive > span:nth-child(3) {
+  @apply top-[-8px] rotate-[135deg];
+}
+
+.text-xxs {
+  font-size: 10px;
+}
+
+.this {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+}
+.line {
+  height: 70px;
+  border-left: 2px solid #000;
+  width: 0px;
+}
+
+
+.calendly-badge-widget {
+  right: 32px !important;
+  bottom: 32px !important;
+  font-size: 20px !important;
+  border-radius: 4px !important;
+}
+.calendly-badge-content {
+  font-size: 16px !important;
+  font-family: "Inter" !important;
+  font-weight: 400 !important;
+  padding: 4px 20px !important;
+}

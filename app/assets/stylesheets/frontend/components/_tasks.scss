@@ -1,0 +1,273 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.tasks {
+  @include section;
+  &__container {
+    @include container(700px);
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+
+    @include mobile {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    &__actions {
+      display: flex;
+    }
+  }
+  &__title {
+    @include title;
+    flex-grow: 1;
+  }
+  &__section {
+    margin: 40px 0 0 0;
+    &--hidden {
+      .tasks__section__list {
+        display: none;
+      }
+      .tasks__section__header__icon {
+        transform: rotate(0);
+      }
+    }
+    &--completed {
+      .tasks__section__header {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    &__header {
+      position: relative;
+      &__title {
+        @include title(16px);
+        margin: 0 0 12px 0;
+        position: relative;
+      }
+      &__count {
+        @include subtitle;
+        margin-left: 4px;
+        display: inline-block;
+      }
+      &__icon {
+        position: absolute;
+        right: 4px;
+        top: 50%;
+        margin-top: -3px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+
+  /* Time */
+  &__time {
+    display: flex;
+    padding: 24px;
+    background-color: $color__teal-200;
+    box-shadow: 0 1px 1px 0 rgba(60, 66, 87, 0.1);
+    border-radius: 6px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__time-details {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
+    }
+
+    &__actions {
+      display: flex;
+      @include mobile {
+        flex-direction: column;
+        .btn {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 5px;
+        }
+      }
+      &__usage-btn {
+        margin-left: auto;
+      }
+      .btn {
+        margin-right: 10px;
+      }
+    }
+
+    &__plan-details {
+      display: flex;
+      flex-direction: row;
+      flex-basis: 50%;
+      margin-left: 15px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &__detail-item {
+      margin: 5px 10px;
+
+      h5 {
+        font-size: 13px;
+        margin: 0px;
+        white-space: nowrap
+      }
+
+      p {
+        font-size: 13px;
+        margin: 0px;
+      }
+    }
+
+
+  }
+
+  /* Task */
+  &__task {
+    @include card(0);
+    @include mobile {
+      flex-direction: column;
+      align-items: initial;
+      height: auto;
+      padding: 16px;
+    }
+    &--complete {
+      background-color: #FBFBFB;
+      .tasks__task {
+        &__icon {
+          background-color: #fff;
+        }
+      }
+    }
+    .badge {
+      margin-left: 8px;
+      line-height: 22px;
+    }
+    &__body {
+      display: flex;
+      min-height: 94px;
+      align-items: center;
+      padding: 16px 20px;
+    }
+    &__details {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    &__actions {
+      display: flex;
+      @include mobile {
+        flex-direction: row;
+        margin-top: 10px;
+      }
+    }
+    &__filter {
+      position: relative;
+      margin-bottom: 15px;
+      &:after {
+        content: "▾";
+        display: inline-block;
+        margin-left: 5px;
+      }
+      &--active {
+        &:after {
+          transform: rotate(180deg);
+          position: relative;
+          top: 4px;
+        }
+      }
+    }
+    &__icon {
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 500px;
+      background-color: #f5f5f5;
+      margin-right: 16px;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+    &__label {
+      @include title(16px);
+      max-width: 430px;
+    }
+    &__subtext {
+      @include subtitle(14px);
+    }
+    &__state {
+      line-height: 24px;
+      padding-left: 10px;
+      padding-right: 10px;
+      @include mobile {
+        width: 100px;
+        order: 1;
+      }
+    }
+    &__edit {
+      margin-right: 5px;
+      @include mobile {
+        order: 2;
+        flex-grow: 1;
+        text-align: right;
+        margin-right: 0;
+      }
+    }
+    &__due-at,
+    &__time-taken {
+      span {
+        margin-right: 5px;
+      }
+    }
+    &__bill {
+      padding: 8px 20px;
+      border-top: 1px solid $color__grey-50;
+      display: flex;
+      align-items: center;
+      color: $color__black;
+      min-height: 58px;
+      &__left {
+        flex-grow: 1;
+      }
+      &__amount {
+        font-weight: 700;
+      }
+    }
+  }
+  &__modal_dialog{
+    border: none !important; 
+    border-radius: calc(5px * var(--ratio)); 
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3); 
+    z-index: 3; 
+    position: fixed;
+    width: 500px;
+    top: 20px;
+    @include mobile {
+      width: 100%;
+      position: absolute;
+    }
+  }
+  &__modal_backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.8;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+  }
+}

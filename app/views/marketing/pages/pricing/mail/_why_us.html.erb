@@ -1,0 +1,29 @@
+<div class="why-us why-us--2x2">
+  <div class="why-us__container">
+    <h1 class="why-us__title"><%= t('marketing.pages.pricing.why_us_title') %></h1>
+    <div class="why-us__list">
+      <% items.each do |item| %>
+        <div class="why-us__item">
+          <div class="why-us__item__icon"><%= inline_svg_tag item[:icon] %></div>
+          <h3 class="why-us__item__title"><%= item[I18n.locale == :ja ? :label_jp : :label] %></h3>
+          <p class="why-us__item__desc"><%= item[I18n.locale == :ja ? :text_jp : :text] %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="why-us__squiggle why-us__squiggle--1">
+    <%= inline_svg_tag 'marketing/shared/squiggle-red-1.svg' %>
+  </div>
+  <div class="why-us__squiggle why-us__squiggle--2">
+    <%= inline_svg_tag 'marketing/shared/squiggle-red-2.svg' %>
+  </div>
+  <div class="why-us__squiggle why-us__squiggle--3">
+    <%= inline_svg_tag 'marketing/shared/squiggle-red-3.svg' %>
+  </div>
+  <div class="why-us__squiggle why-us__squiggle--4">
+    <%= inline_svg_tag 'marketing/shared/squiggle-red-4.svg' %>
+  </div>
+  <div class="why-us__squiggle why-us__squiggle--5">
+    <%= inline_svg_tag 'marketing/shared/squiggle-red-5.svg' %>
+  </div>
+</div>

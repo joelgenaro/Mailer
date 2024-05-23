@@ -1,0 +1,26 @@
+<!-- Notice -->
+<% if !notice.blank? %>
+  <div class="alert alert-primary alert-dismissible fade show" role="alert" style="margin-bottom: 0px; border-radius: 0px;">
+    <center>
+      <%= notice %>
+    </center>
+  </div>
+<% end %>
+
+<!-- Alert -->
+<% if !alert.blank? %>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert" style="margin-bottom: 0px; border-radius: 0px;">
+    <center>
+      <%= alert %>
+    </center>
+  </div>
+<% end %>
+
+<!-- Error -->
+<% if !flash[:error].blank? %>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin-bottom: 0px; border-radius: 0px;">
+    <center>
+      <%= flash[:error] %>
+    </center>
+  </div>
+<% end %>

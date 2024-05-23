@@ -1,0 +1,70 @@
+<div class="page__mail__steps__container">
+
+  <h2 class="page__mail__steps__title">
+    <%= t('marketing.pages.mail.steps_title') %>
+  </h2>
+
+  <div class="page__mail__steps__unit">
+    <div class="page__mail__steps__unit__col">
+      <%= image_tag 'marketing/pages/mail/step-sign-up.png', style: 'max-width: 353px' %>
+    </div>
+
+    <div class="page__mail__steps__unit__col">
+      <p class="page__mail__steps__unit__badge"><%= t('marketing.pages.mail.steps_step_1_title') %></p>
+      <p class="page__mail__steps__unit__title"><%= t('marketing.pages.mail.steps_step_1_detail_1') %></p>
+      <p class="page__mail__steps__unit__subtitle"><%= t('marketing.pages.mail.steps_step_1_detail_2') %></p>
+    </div>
+  </div>
+
+  <div class="page__mail__steps__path page__mail__steps--hide-mobile" style="margin: -30px 0px -40px">
+    <%= inline_svg_tag('marketing/pages/mail/step-path-1.svg') %>
+  </div>
+
+  <div class="page__mail__steps__unit">
+    <div class="page__mail__steps__unit__col page__mail__steps--hide-desktop">
+      <%= image_tag 'marketing/pages/mail/step-redirect.png', style: 'max-width: 344px; align-self: flex-end;' %>
+    </div>
+
+    <div class="page__mail__steps__unit__col">
+      <p class="page__mail__steps__unit__badge"><%= t('marketing.pages.mail.steps_step_2_title') %></p>
+      <p class="page__mail__steps__unit__title"><%= t('marketing.pages.mail.steps_step_2_detail_1') %></p>
+      <p class="page__mail__steps__unit__subtitle"><%= t('marketing.pages.mail.steps_step_2_detail_2') %></p>
+    </div>
+
+    <div class="page__mail__steps__unit__col page__mail__steps--hide-mobile">
+      <%= image_tag 'marketing/pages/mail/step-redirect.png', style: 'max-width: 344px; align-self: flex-end;' %>
+    </div>
+  </div>
+
+  <div class="page__mail__steps__path page__mail__steps--hide-mobile" style="margin: -30px 0px -40px">
+    <%= inline_svg_tag('marketing/pages/mail/step-path-2.svg') %>
+  </div>
+
+  <div class="page__mail__steps__unit">
+    <div class="page__mail__steps__unit__col">
+      <%= image_tag 'marketing/pages/mail/step-check.png', style: 'max-width: 358px' %>
+    </div>
+
+    <div class="page__mail__steps__unit__col">
+      <p class="page__mail__steps__unit__badge"><%= t('marketing.pages.mail.steps_step_3_title') %></p>
+      <p class="page__mail__steps__unit__title"><%= t('marketing.pages.mail.steps_step_3_detail_1') %></p>
+      <p class="page__mail__steps__unit__subtitle"><%= t('marketing.pages.mail.steps_step_3_detail_2') %></p>
+    </div>
+  </div>
+
+  <div class="page__mail__steps__path page__mail__steps--hide-mobile" style="margin: -30px 0px 0px">
+    <%= inline_svg_tag('marketing/pages/mail/step-path-3.svg') %>
+  </div>
+
+  <div class="page__mail__steps__unit page__mail__steps__unit--centered page__mail__steps__unit--mobile-left">
+    <div class="page__mail__steps__unit__col page__mail__steps__unit__col--centered page__mail__steps__unit__col--mobile-left"">
+      <%= inline_svg_tag('marketing/pages/mail/step-done.svg', style: 'padding: 10px 0px 15px') %>
+      <p class="page__mail__steps__unit__badge page__mail__steps__unit__badge--shadow"><%= t('marketing.pages.mail.steps_step_4_title') %></p>
+      <p class="page__mail__steps__unit__title"><%= t('marketing.pages.mail.steps_step_4_detail_1') %></p>
+      <p class="page__mail__steps__unit__subtitle"><%= t('marketing.pages.mail.steps_step_4_detail_2') %></p>
+    </div>
+  </div>
+
+  <%= link_to t('marketing.pages.mail.steps_get_started'), marketing_pricing_path('mail'), class: "marketing-btn marketing-btn--secondary marketing-btn--medium", style: "margin: 30px 0px 40px" %>
+
+</div>

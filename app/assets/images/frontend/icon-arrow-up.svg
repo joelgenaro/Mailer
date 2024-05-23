@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="6px" viewBox="0 0 10 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons / Cap / Down</title>
+    <g id="App" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="TokyoMate-App---Assistant" transform="translate(-1031.000000, -568.000000)" fill-rule="nonzero">
+            <g id="Group-9" transform="translate(464.000000, 559.000000)">
+                <g id="Icon" transform="translate(560.000000, 0.000000)">
+                    <rect id="Path" x="0" y="0" width="24" height="24"></rect>
+                    <path d="M12.7091226,9.29358871 L16.7062718,13.2888396 C17.0979094,13.6802912 17.0979094,14.3149597 16.7062718,14.7064113 C16.5182008,14.894393 16.2631218,15 15.9971492,15 L8.00285082,15 C7.4489916,15 7,14.5512216 7,13.9976254 C7,13.7317792 7.10565719,13.4768213 7.2937282,13.2888396 L11.2908774,9.29358871 C11.682515,8.9021371 12.317485,8.9021371 12.7091226,9.29358871 L12.7091226,9.29358871 Z" id="Shape" fill="#000000"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,39 @@
+<div class="home__features__mail__container">
+
+  <div class="home__features__mail__icon__unit"> 
+    <%= image_tag 'marketing/home/features-mail-icon.png' %>
+    <p>Mail</p>
+  </div>
+
+  <h2 class="home__features__mail__heading"> 
+    What can Mail do to help?
+  </h2>
+  <h3 class="home__features__mail__subheading"> 
+    We receive your mail. Scan it. Translate it. Store it—then you can read it from anywhere.
+  </h3>
+  
+  <div class="home__features__mail__units">
+    <% 
+      [
+        { title: 'No more clutter', detail: 'We receive, store, and convert your mail to high-res PDFs.', icon: 'features-mail-units-clutter.png' },
+        { title: 'The right info with the right people', detail: 'Easily share important mail with your team members, lawyers, or accountants.', icon: 'features-mail-units-right-info.png' },
+        { title: 'Pay your bills', detail: 'We’ll deal with non-English speaking organizations & pay bills on your behalf.', icon: 'features-mail-units-bills.png' },
+      ].each do |item|
+    %>
+      <div class="home__features__mail__units__unit">
+        <div class="home__features__mail__units__unit__icon">
+          <%= image_tag('marketing/home/' + item[:icon]) %>
+        </div>
+        <p class="home__features__mail__units__unit__title"><%= item[:title] %></p>
+        <p class="home__features__mail__units__unit__detail"><%= item[:detail] %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <a href="<%= marketing_mail_path %>" class="marketing-btn marketing-btn--secondary marketing-btn--medium marketing-btn--icon--right" style="margin: 30px 0px 40px">
+    View all Mail Features
+
+    <%= inline_svg_tag('marketing/common/buttons/icon-arrow.svg') %>
+  </a>
+
+</div>

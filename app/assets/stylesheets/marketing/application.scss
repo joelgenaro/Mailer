@@ -1,0 +1,54 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Bootstrap (with customisations)
+@import "bootstrap-custom";
+
+// Components
+@import 'components/about';
+@import 'components/blog-post';
+@import 'components/blog-posts';
+@import 'components/buttons';
+@import 'components/comparison';
+@import 'components/errors';
+@import 'components/footer';
+@import 'components/generic-modal';
+@import 'components/blog-newsletter-sign-up-modal-with-pdf';
+@import 'components/header';
+@import 'components/highlight';
+@import 'components/home';
+@import 'components/nav-wizard';
+@import 'components/page';
+@import 'components/pages/mail';
+@import 'components/pages/assistant';
+@import 'components/pages/receptionist';
+@import 'components/plan';
+@import 'components/plans';
+@import 'components/pricing-dropdown';
+@import 'components/pricing';
+@import 'components/profile';
+@import 'components/referrer-banner';
+@import 'components/review';
+@import 'components/shortcode-templates';
+@import 'components/side-menu';
+@import 'components/signup-modal';
+@import 'components/testimonials';
+@import 'components/tick';
+@import 'components/viewport';
+@import 'components/why-us';
+@import "components/service-directory";
+@import 'components/newsletter';
+@import 'components/error-404';
+@import 'components/index';
+// hamburgers nav menu
+@import "hamburgers";
+
+// Body 
+html, body {
+  font-family: $body__font;
+  font-size: $body__font-size;
+  color: $body__color;
+  font-weight: $body__font-weight;
+  margin: 0;
+  background-color: #fff;
+}

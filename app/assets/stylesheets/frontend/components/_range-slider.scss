@@ -1,0 +1,17 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.range-slider {
+  margin: 20px 0 40px 0;
+  .input-range__slider,
+  .input-range__track--active {
+    background-color: $color__primary;
+    border-color: $color__primary;
+  }
+  .input-range__label--min,
+  .input-range__label--max {
+    .input-range__label-container {
+      left: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,302 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        consultation_request:
+          attributes:
+            first_name:
+              blank: "Please provide your first name"
+            last_name:
+              blank: "Please provide your last name"
+            email:
+              blank: "Please provide your email address"
+            phone:
+              blank: "Please provide your phone number"
+            business_type:
+              blank: "Please select a business type"
+        task:
+          attributes:
+            label:
+              blank: "Please enter some information about this task"
+        user:
+          attributes:
+            email:
+              taken: "Another account already exists with this email"
+            password:
+              too_short: "Please enter a password with at least 6 characters"
+            request_mail:
+              taken: "Another account already exists with this request mail address"
+  current_time_remaining:
+    one: '%{count} minute'
+    other: '%{count} minutes'
+    zero: '0 minutes'
+  time_remaining:
+    title_none: 'You have used all of your hours!'
+    title: '%{time} of tasks remaining'
+    text_none: 'Purchase more hours to add new tasks'
+    text: 'You have %{time} of task hours remaining this month'
+  user_mailer:
+    reminder_email:
+      unopened_mail:
+        one: "1 unopened item"
+        other: "%{count} unopened items"
+        zero: "0 unopened items"
+
+
+  frontend:
+    onboarding:
+      thanks_for_signing: "Thanks for signing up! You’re almost there. We just need these last details to activate your account."
+      first_name: First name
+      last_name: Last name
+      occupation: Occupation
+      phone_number: Phone number
+      format: "Format: CC-xxxxxxxx"
+      i_live_in_jp: I live in Japan
+      i_dont_live_in_jp: "I don’t live in Japan"
+      by_clicking_submit: By clicking submit, you state that all provided information is correct and grant MailMate permission to receive and process mail on your behalf.
+      complete_registration: Complete Registration
+      otice: "Thanks %{name}. Your account has been fully activated."
+    mails:
+      open_mail:
+        mail_is_requested_to_be_opened: "Your mail is requested to be opened. Your mail will be opened within 24 hours."
+      Search_your_inbox: "Search your mail..."  
+      Inbox: Inbox
+      MailInbox:
+        Mails: MAILS
+        Inbox: Inbox
+        All: All
+        Unopened: Unopened
+        Archived: Archived
+        Bills: BILLS
+        Unpaid: Unpaid
+        Paid: Paid
+        Folders: FOLDERS
+        Tags: TAGS
+        PostalMail:
+          StateHumanized:
+            unopened: Unopened
+            opening: Opening
+            opened: Opened
+          empty_inbox_message: "Nothing to see here! This inbox is currently empty."
+      MailInboxItem:
+        open_requested_alert: You've requested this mail to be opened and it will be updated soon.
+        unopened_alert: "This mail has not yet been opened."
+        open_it: "Open It"
+        unpaid_bill_alert: "This mail contains an unpaid bill for %{unpaid_bill}"
+        pay_bill: "Pay Bill"
+        pay_bill_with_due_date: "This mail contains an unpaid bill for %{unpaid_bill} due on %{due_date}"
+        paid_bill_info: "This bill has been paid. No further action required."
+        received_on: "Received On"
+        status: "Status"
+        forwarding: "Forwarding"
+        notes: "Notes"
+        edit_notes: "Edit Notes"
+        questions_button: "Question? Chat with the MailMate Team"
+        forward_mail: "Forward mail"  
+        save_notes: "Save Notes"
+      MailForwardRequestModal:
+        mail_forward_request: "Mail Forward Request"
+        body: "Enter the address you want to this mail to be forwarded to, including the recipient's full name. After we forward the mail, you will be informed. If we have any issues, we will contact you."
+        address: "Address to forward to..."
+        request_forward: "Request Forward"
+      PayBillModal:
+        pay_a_bill: "Pay A Bill"
+        processing_fee: "processing fee"
+        payment_card: "Payment Card"
+        change: "Change"
+        confirm_payment: "Confirm Payment"
+        processing_fee: "processing fee"
+      Folders:
+        search: Search your folders...
+        placeholder: Enter folder name
+        create: Create Folder
+        created_notice: Folder created
+        rename: Rename Folder
+        delete: Delete Folder
+        updated_notice: Folder updated
+        deleted_notice: Folder deleted
+      Tags:
+        search: Search your tags...
+        placeholder: Enter tag name
+        create: Create Tag
+        created_notice: Tag created
+        rename: Rename Tag
+        delete: Delete Tag
+        updated_notice: Tag updated
+        deleted_notice: Tag deleted
+    assistant:
+      up_sell:
+        heading: You're not subscribed to our virtual assistant service
+        description: Reduce hassle, save time & money, and ease language obstacles with MailMate Assistants.
+        action: Get access to MailMate Assistant
+    receptionist:
+      up_sell:
+        heading: You're not subscribed to our receptionist service
+        description: Want us to be your receptionist? Click below to find out more information about MailMate Receptionist.
+        action: Get access to MailMate Receptionist
+    settings:
+      sidebar:
+        general: General
+        billing: Billing
+        invoices: Invoices
+      account:
+        save_changes: Save Changes
+        account: Account
+        language: Language
+        email: Email
+        email_address: Email Address
+        password: Password
+        old_password: Old Password
+        new_password: New Password
+        confirm_password: Confirm Password
+        change_password: Change Password
+        your_virtual_addresses: Your Virtual Addresses
+        address_in_english: Address in English
+        address_in_japanese: Address in Japanese
+        auto_open_mail: Auto-Open Mail
+        would_you_like_us_to_automatically_open_all_mail: Would you like us to automatically open all mail received?
+        tick_this_option_and_well_open_all_mail_received: Tick this option and we will open all mail received for you upon receipt
+        your_payment_card: Your Payment Card
+        your_current_payment_card: Your current payment card
+        change_payment_card: Change Payment Card
+        automatically_pay_bills: Automatically Pay Bills
+        would_you_like_us_to_automatically_pay_any_bills: Would you like us to automatically pay any bills?
+        disabled_bills_are_not_paid_automatically: "Disabled: Bills are NOT paid automatically"
+        enable_auto_pay: Enable Auto Pay
+        maximum_amount_for_auto_billing: Maximum amount for auto-billing?
+        bills_above_this_threshold_will_have_to_be_paid_manually: Bills above this threshold will have to be paid manually.
+        update_threshold: Update Threshold
+        subscriptions: Subscriptions
+        plan_type: Plan Type
+        status: Status
+        actions: Actions
+        invoices: Invoices
+      invoices:
+        amount: Amount
+        status: Status
+        description: Description
+        note: Note
+        date_created: Date Created
+        action: Action
+        receipt: Receipt
+        detail: Detail
+    transactions:
+      transactions: Transactions
+      past_payments: Past Payments
+      succeed: Succeeded
+      partial_refund: Partial Refund
+      refund: Refund
+      failed: Failed
+      view: View
+      back_to_transactions: Back to Transactions
+      transaction_overview: Transaction Overview
+      created_at: Created At
+      state: State
+      total: Total
+      description: Description
+      card_type: Card Type
+      card_no: Card No.
+      attachments: Attachments
+      no_attachments: No Attachments
+    email:
+      subject:
+        unpaid_bill_yesterday_email: 'Urgent: A bill is now overdue!'
+        unpaid_bill_tomorrow_email: You have an unpaid bill due tomorrow!
+        unpaid_bill_three_days_email: You have an unpaid bill due in 3 days
+        unopened_mail_three_days_email: You have unopened mail!
+        unopened_mail_ten_days_email: 'You have not checked your mail in 10 days!'
+        opened_email: Your mail has been opened
+        updated_email: Your mail has received some updates
+        created_email: You've received mail
+        forwarded_email: Your mail was forwarded
+        shredded_email: Your mail has been shredded
+        email_forward_email: Forwarded mail
+        paid_email: Your bill has been paid
+        onboarding_email: Thank you for trying MailMate
+      body:
+        onboarding_email:
+          welcome_to_mailmate: Welcome to MailMate
+          your_account_is: Your account is all ready and setup to go.
+          so_what_do: So, what do I do next?
+          good_question_to: Good question! To get the maximum benefit from your MailMate Mail account, you’ll want to change your registered address for the services you use. Once you do this, we’ll take care of your mail for you, and you’ll be able to receive, search and open your physical mail from anywhere on Earth.
+          bonus_free_service: Bonus Free Service
+          take_a_photo_html: Take a photo of any of your bills, and email it to <a href="mailto:support@mailmate.jp">support@mailmate.jp</a>. We’ll help you contact the company (gas, power, water), and change the address.
+          if_you_have_html: If you have any questions, please contact <a href="mailto:support@mailmate.jp">support@mailmate.jp</a>. We’d love to help you redirect more of your mail to MailMate!
+          here_is_your: "Here is your personal address:"
+          heres_the_japanese: "Here's the Japanese version of the address:"
+          when_we_receive_html: When we receive and process your mail, you will receivea notification email, and your mail then becomes available and searchable online at <a href="https://mailmate.jp/app/mails">here</a>.
+          if_you_have_2: If you have any questions, please let us know.
+          the_mailmate_team: The MailMate Team
+          login_to_mailmate: Login to MailMate
+        unopened_mail_three_days_email:
+          header: You have unopened mail!
+          description: You have %{unopened_count} unopened items in your mailbox! Just a friendly reminder, incase any of it is important 😄
+        unopened_mail_ten_days_email:
+          header: You haven't checked your mail in 10 days!
+          description: "It's been 10 days since you last checked your mail!  You have %{unopened_count} in your mailbox. Better get to it, incase there's anything urgent!"
+        created_email:
+          header: You have mail 
+          description: "You have received mail on %{date}"
+        shredded_email:
+          header: You mail has been shredded.
+          description: Mail you received on %{date} has been shredded for you.
+        updated_email:
+          header: Your mail received some updates
+          description: An item you received in the mail has received has been updated by one of our assistants. To see more details, click the button below. To see more details, click the button below.
+        paid_email:
+          header: Your bill has been paid
+          description: A bill was paid on your behalf for the amount of %{amount} on %{datetime}.
+        opened_email:
+          header: Your mail has been opened
+          description: Mail you received on %{date} has been opened for you. Click below to view it.
+        unpaid_bill_yesterday_email:
+          header: "Urgent: A bill is now overdue."
+          description: An unpaid bill on your account is now overdue. If this bill is for an essential service, this could lead to disruptions. Please take action by clicking the button below.
+        unpaid_bill_tomorrow_email:
+          header: Unpaid bill due tomorrow!
+          description: You have an unpaid bill that is due tomorrow! Please use the button below to pay it.
+        unpaid_bill_three_days_email:
+          header: You have an unpaid bill.
+          description: You have an unpaid bill that is due within three days. Please use the button below to pay it.
+        email_forward_email:
+          header: You have a forwarded mail.
+          description: You have received mail on %{date}
+        forward_email:
+          header: Your mail was forwarded
+          description: "A mail was forwarded to the address: %{address} as requested. To see more details, click the button below."
+      footer:
+        view_mail_on_mailmate: View Mail on MailMate
+        view_bill_on_mailmate: View Bill On MailMate
+        pay_bill_on_mailmate: Pay Bill On Mailmate

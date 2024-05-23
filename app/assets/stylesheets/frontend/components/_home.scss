@@ -1,0 +1,323 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.home {
+  background-color: #fff;
+  &__hero {
+    @include section(90px, 30px);
+    background-color: #fff;
+    &__container {
+      @include container;
+      display: flex;
+      flex-direction: row;
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+    &__left {
+      width: 50%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding-top: 20px;
+      @include mobile {
+        width: 100%;
+        padding-top: 0;
+      }
+    }
+    &__right {
+      width: 50%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      @include mobile {
+        width: 100%;
+      }
+    }
+    &__video {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
+      @include tablet {
+        margin-top: 30px;
+        margin-bottom: 15px;
+      }
+    }
+    &__actions {
+      display: flex;
+      @include mobile {
+        flex-direction: column;
+      }
+      .btn {
+        margin: 0 10px 0 0;
+        &:last-child {
+          margin: 0;
+        }
+        @include mobile {
+          margin: 0 0 5px 0;
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+    &__title {
+      @include title;
+    }
+    &__subtitle {
+      @include subtitle;
+      margin-bottom: 20px;
+    }
+  }
+  &__features {
+    @include section(45px, 45px);
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 4px;
+    background-color: #EBE4E4;
+    @include tablet {
+      margin-left: 0;
+      margin-right: 0;
+      border-radius: 0;
+    }
+    &__container {
+      @include container;
+      @include postal_stripe(45px);
+      margin-bottom: -160px;
+      z-index: 1;
+    }
+    &__subsection {
+      padding-bottom: 60px;
+      &:last-child {
+        padding-bottom: 30px;
+      }
+    }
+    &__title {
+      @include title;
+      margin-bottom: 30px;
+    }
+    &__tiles {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 1fr;
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+      &--odd {
+        grid-auto-flow: dense;
+        .home__features__tile {
+          &:nth-child(n+4) {
+            grid-column-end: span 3;
+            padding-left: 50px;
+            padding-right: 50px;
+          }
+          @include tablet {
+            &:nth-child(n+5) {
+              grid-column-end: span 6;
+              padding-left: 50px;
+              padding-right: 50px;
+            }
+          }
+          @include mobile {
+            grid-column-end: span 6 !important;
+          }
+        }
+      }
+    }
+    &__tile {
+      background-color: #fff;
+      border-radius: 4px;
+      padding: 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      grid-column-end: span 2;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      @include tablet {
+        grid-column-end: span 3;
+      }
+      @include mobile {
+        grid-column-end: span 6;
+      }
+    }
+    &__icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 15px;
+    }
+    &__heading {
+      @include heading;
+      margin-bottom: 15px;
+    }
+    &__text {
+      //
+    }
+  }
+  &__get-started {
+    @include section;
+    background-color: #fff;
+    position: relative;
+    padding-top: 220px !important;
+    overflow: hidden;
+    &:before {
+      content: '';
+      background-image: image-url('home/postal-stamp@2x.png');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      position: absolute;
+      top: 160px;
+      right: 0;
+      width: 312px;
+      height: 162px;
+      @include tablet {
+        width: 200px;
+        height: 104px;
+      }
+      @include mobile {
+        display: none;
+      }
+    }
+    &__container {
+      @include container;
+      @include postal_stripe(60px);
+    }
+    &__title {
+      @include title;
+      margin-bottom: 30px;
+    }
+    &__item {
+      display: flex;
+      flex-direction: row;
+      &:nth-child(odd) {
+        .home__get-started__left {
+          order: 2;
+          @include mobile {
+            order: 1;
+          }
+        }
+        .home__get-started__right {
+          order: 1;
+          padding-left: 0;
+          padding-right: 75px;
+          @include tablet {
+            padding-right: 40px;
+          }
+          @include mobile {
+            order: 2;
+          }
+        }
+        .home__get-started__illustration {
+          left: 30px;
+          @include mobile {
+            left: 50px;
+          }
+        }
+      }
+      @include mobile {
+        flex-direction: column;
+        margin-bottom: 45px;
+        margin-left: -15px;
+        margin-right: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__left {
+      width: 45%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      @include mobile {
+        width: 100%;
+      }
+    }
+    &__right {
+      width: 55%;
+      flex-grow: 0;
+      flex-shrink: 0;
+      padding-left: 75px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include tablet {
+        padding-left: 40px;
+      }
+      @include mobile {
+        width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+    &__content {
+      display: flex;
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+    &__content-left {
+      width: 100px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      @include mobile {
+        width: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+      }
+    }
+    &__content-right {
+      flex-grow: 1;
+    }
+    &__number {
+      box-sizing: border-box;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      border: 2px solid $color__primary;
+      font-family: $title__font;
+      color: $color__primary;
+      margin: 3px auto 0 auto;
+      line-height: 0;
+      font-size: 34px;
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__illustration {
+      position: relative;
+      top: -20px;
+      left: -110px;
+      width: 120%;
+      height: 120%;
+      @include tablet {
+        left: -40px;
+      }
+      @include mobile {
+        top: 0;
+        left: -45px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__item-title {
+      @include title(36px);
+      margin-bottom: 15px;
+    }
+  }
+  &__cta {
+    @include section;
+    background-color: #fff;
+    text-align: center;
+    @include mobile {
+      padding-top: 0;
+    }
+    &__button {
+      height: 62px;
+      line-height: 60px;
+      font-size: 26px;
+      padding: 0 45px;
+    }
+  }
+}

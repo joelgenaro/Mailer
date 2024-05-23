@@ -1,0 +1,40 @@
+<%
+  content_for(:meta_title) { 'Receptionist | MailMate' }
+  content_for(:meta_description) { 'Receptionist services by MailMate' }
+%>
+
+<div class="page__receptionist">
+   <div class="page__receptionist__unit">
+     <div class="page__receptionist__unit__details">
+        <h4>Receptionist Standard Plan</h4>
+        <ul class="page__receptionist__unit__details__features">
+          <li> <%= inline_svg_tag 'marketing/shared/tick.svg' %> A Japanese telephone number for your business</li>
+          <li> <%= inline_svg_tag 'marketing/shared/tick.svg' %> A phone number with a Japan area code (03)</li>
+          <li> <%= inline_svg_tag 'marketing/shared/tick.svg' %> A live receptionist service, from 10 AM to 6 PM</li>
+          <li> <%= inline_svg_tag 'marketing/shared/tick.svg' %> Monthly plan includes up to 100 calls per month (additional fee of ¥200 for every call over 100 (starting with 101st)</li>
+          <li> <%= inline_svg_tag 'marketing/shared/tick.svg' %> Your business number answered in English and/or Japanese</li>
+          <li> <%= inline_svg_tag 'marketing/shared/tick.svg' %> Personalized introduction</li>
+          <li> <%= inline_svg_tag 'marketing/shared/tick.svg' %> Simple received-call-message relayed to your favourite communication tool (Slack, Line, Chatwork, Email)</li>
+        </ul>
+
+        <p>
+          Upon subscribing, you will be charged your first month's payment of ¥29,000 and will be billed ¥29,000 monthly thereafter.
+          <br /><br />
+          You will seperately be billed a one time setup fee of ¥50,000 soon after, when we are processing your account setup.
+        </p>
+     </div>
+
+    <div class="page__receptionist__unit__pricing">
+      <!-- There should be just one -->
+      <% Receptionist::PricingPlans.all.each do |plan_name, plan| %>
+        <span class="plan__price"><sup>¥</sup><%= plan[:price] %><sub>p/mo</sub></span>
+
+        <%= button_to t('marketing.pages.pricing.get_started'), new_register_url, method: :post, params: {subscriptionName: plan_name,subscriptionType: 'receptionist'}, class: "plan__btn marketing-btn marketing-btn--block" %>
+
+        <span class="plan__subtext">30-day money-back guarantee</span>
+
+        <p><strong>Later:</strong> One time setup fee ¥<%= plan[:setup_price] %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<%
+  content_for(:meta_title) { t('marketing.shared.meta_title.about') }
+  content_for(:meta_description) { t('marketing.shared.meta_description.about') }
+  @layout_footer_overlapping_top = true
+%>
+
+<div class="about_top_container">
+  <div class="about_intro_container">
+    <div class="about_intro_container_left">
+      <div class="about-us_container">ABOUT US</div>
+      <div class="about_intro_left__heading">The MailMate Story</div>
+      <div class="about_intro_left__text">
+        <%= t('marketing.pages.about.the_mailmate_story') %>
+      </div>
+      <div class="about_intro_left_image_container">
+        <img src="<%= image_url('marketing/pages/about/bubble_1.png') %>" alt="About MailMate">
+      </div>
+    </div>
+    <div class="about_intro_container_right">
+      <div class="about_intro_right_image_container">
+        <img src="<%= image_url('marketing/pages/about/bubble_2.png') %>" alt="About MailMate">
+      </div>
+      <div class="about_intro_right__heading">How it began</div>
+      <div class="about_intro_right__text">
+        <%= t('marketing.pages.about.how_it_began') %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="about_contact_container" style="margin-left: auto">
+  <div class="about_contact_heading"><%= t('marketing.pages.about.get_in_touch_with_us') %></div>
+  <div class="about_contact_content_container">
+    <div class="about_contact_container_left">
+      <div class="about_contact_container_left_content">
+        <div class="about_contact_container_left_content__heading"><%= t('marketing.pages.about.address_title') %></div>
+        <div class="about_contact_container_left_content__text"><%= t('marketing.pages.about.address_detail') %></div>
+      </div>
+      <div class="about_contact_container_left_content">
+        <div class="about_contact_container_left_content__heading"><%= t('marketing.pages.about.email_title') %></div>
+        <div class="about_contact_container_left_content__text_green"><%= t('marketing.pages.about.email_detail') %></div>
+      </div>
+    </div>
+    <div class="about_contact_container_right">
+      <div class="about_contact_container_right_content">
+        <div class="about_contact_container_right_content__heading"><%= t('marketing.pages.about.representative_title') %></div>
+        <div class="about_contact_container_right_content__text"><%= t('marketing.pages.about.representative_detail') %></div>
+      </div>
+      <div class="about_contact_container_right_content">
+        <div class="about_contact_container_right_content__heading"><%= t('marketing.pages.about.payment_methods_title') %></div>
+        <div class="about_contact_container_right_content__text"><%= t('marketing.pages.about.payment_methods_detail') %></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="home__cta__container">
+  <div class="home__cta__col" style="padding-right: 40px;">
+    <h4><%= t('marketing.pages.about.cta_title') %></h4>
+  </div>
+  <div class="home__cta__actions">
+    <%= link_to t('marketing.pages.about.cta_button'), marketing_request_consultation_path, class: "home__cta__button home__cta__button--white" %>
+  </div>
+</div>

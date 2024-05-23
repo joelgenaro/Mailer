@@ -1,0 +1,10 @@
+<h2 class="service-categories__header">Categories</h2>
+<div class="service-categories-container">
+  <% @service_categories.each do |category| %>
+    <div class="service-category <% if @category_slug === category.slug %> change_color <% end %>">
+      <%= link_to marketing_show_category_listings_path(category.slug) do %>
+        <%= category.title%> <img src="<%= image_url('Vector.png')%>" class="service-category__arrow" alt="arrow-right">
+      <% end %>
+    </div>
+  <% end %>
+</div>

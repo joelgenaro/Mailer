@@ -1,0 +1,93 @@
+@import './variables';
+
+@mixin tablet {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+
+@mixin title($font-size: $title__font-size) {
+  font-family: $title__font;
+  font-size: $font-size;
+  font-weight: $title__font-weight;
+  font-style: $title__font-style;
+  color: $title__color;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@mixin subtitle($font-size: $subtitle__font-size) {
+  font-family: $subtitle__font;
+  font-size: $font-size;
+  font-weight: $subtitle__font-weight;
+  font-style: $subtitle__font-style;
+  color: $subtitle__color;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@mixin heading {
+  font-family: $heading__font;
+  font-size: $heading__font-size;
+  font-weight: $heading__font-weight;
+  font-style: $heading__font-style;
+  color: $heading__color;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@mixin section($x: 60px, $x--mobile: 60px) {
+  padding: $x 30px;
+  @include tablet {
+    padding: $x--mobile 15px;
+  }
+}
+
+@mixin container($max-width: $container__max-width) {
+  width: 100%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  @include tablet {
+    max-width: 700px;
+  }
+}
+
+@mixin postal_stripe($x: 0) {
+  position: relative;
+  &:before {
+    content: '';
+    background-image: image-url('home/postalstripe.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    top: -$x;
+    left: 0;
+    width: 385px;
+    height: 16px;
+    @include mobile {
+      width: 191px;
+    }
+  }
+}
+
+@mixin card($padding: 25px 45px) {
+  background-color: #fff;
+  border-width: 0;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 -1px 0px rgba(0, 0, 0, 0.015);
+  padding: $padding;
+}
+
+@mixin well {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}

@@ -1,0 +1,25 @@
+<div class="blog-posts__post">
+  <a class="blog-posts__image" href="<%= marketing_blog_post_path(post.slug) %>">
+    <img src="<%= contentful_cover_image_url(post) %>" alt="<%= post.title %>">
+  </a>
+  <div class="blog-posts__inner">
+    <div class="blog-posts__meta">
+      <span class="blog-posts__categories"><%= contentful_categories(post.categories) %></span>
+      <span class="blog-posts__published-on"><%= post.published_on.strftime("%B #{post.published_on.day.ordinalize}, %Y") %></span>
+    </div>
+    <h1 class="blog-posts__post-title"><%= link_to post.title, marketing_blog_post_path(post.slug) %></h1>
+    <div class="blog-posts__description"><%= post.description.strip %></div>
+
+    <a class="blog-posts__link" href="<%= marketing_blog_post_path(post.slug) %>"><%= t('marketing.pages.blog.read_more') %></a>
+    <div class="blog-posts__author">
+      <div class="blog-posts__author-avatar">
+        <img src="<%= post.author.avatar.image_url %>" alt="<%= post.author.name %>">
+      </div>
+      <div class="blog-posts__author-info">
+        <span class="blog-posts__author-name"><%= link_to post.author.name, marketing_blog_author_path(post.author.slug) %></span>
+        <span class="blog-posts__author-position"><%= post.author.position %></span>
+      </div>
+    </div>
+    
+  </div>
+</div>

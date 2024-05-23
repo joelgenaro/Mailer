@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <%= render 'frontend/shared/head' %>
+  <body>
+    <div class="app">
+      <div class="app__container">
+        <%= render 'frontend/shared/admin_toolbar' if user_masquerade? %>
+        <%= render 'frontend/shared/failed_payment_banner' %>
+        <% if request.path == '/app/tasks' && current_user.subscribed_to?(:assistant) %>
+          <%= render 'frontend/tasks/task_nav_bar' %>
+        <% end %>
+        <div id="flash">
+          <%= render 'frontend/shared/alerts' %>
+        </div>
+        <div class="app__main" id="main">
+          <%= yield %>
+        </div>
+        <%= render 'frontend/shared/footer' %>
+      </div>
+
+      <div class="app__aside">
+        <%= render 'frontend/shared/sidebar' %>
+      </div>
+    </div>
+
+    <% if content_for?(:footer_scripts) %>
+      <%= yield(:footer_scripts) %>
+    <% end %>
+  </body>
+</html>

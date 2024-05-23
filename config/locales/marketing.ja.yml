@@ -1,0 +1,167 @@
+ja:
+  marketing: 
+    sign_up:
+      email_address: "メールドレス："
+      enter_your_email_address: "メールアドレス"
+      password: "パスワード："
+      enter_your_password: "パスワード"
+      create_an_account: 'アカウントの作成'
+      money_back_guarantee: 'アカウント作成後は、チェックアウトへリダイレクトされます。もしサービスにご満足いただけなかった場合は、30日間の返金保証をお付けしています。'  
+    shared:
+      meta_title:
+        home: "Mailmate｜私書箱サービス｜クラウド上で郵便物を管理"
+        about: "MailMateとは｜MailMate"
+        pricing: "料金プラン | MailMate"
+        blog: "ブログ | MailMate"
+        faq: "よくあるご質問 | MailMate"
+        service_directory: "パートナー企業一覧 | MailMate"
+        terms: "利用規約｜MailMate"
+        privacy: "プライバシーポリシー｜MailMate"
+        consultation: "お問い合わせ｜MailMate"
+
+      meta_description:
+        home: "「Mailmateの私書箱サービスで郵便物をデータ化・クラウド管理。私書箱の機能から法人登記用の住所までを備えた私書箱サービスでリモートワーカーやバーチャルオフィス利用者の課題を解決し、業務の効率化と柔軟な働き方を実現。"
+        about: "MailMateは郵便物をデジタル化。価値のある「時間」を創り、すべての人に柔軟な働き方を届けます。"
+        pricing: "全プラン、30日間無料お試し期間あり。MailMate(メールメイト)の料金プランについてはこちらのページをご覧ください。"
+        blog: "新しい働き方で価値のある「時間」を創るためのヒントを発信するMailMateの公式ブログです。郵便物管理から、DX情報、新しい働き方など役立つ情報を発信しています。"
+        faq: "MailMate(メールメイト)についてのよくある質問はこちらのページをご覧ください。"
+        service_directory: "MailMate(メールメイト)のパートナー企業一覧についてはこちらのページをご覧ください。"
+        terms: "MailMate(メールメイト)の利用規約についてはこちらのページをご覧ください。"
+        privacy: "MailMate(メールメイト)のプライバシーポリシー掲載ページです。"
+        consultation: "MailMate(メールメイト)へのお問い合わせページです。"
+      header:
+        home: ホーム
+        about: 会社概要
+        pricing: 料金プラン
+        assistant: Assistant
+        blog: ブログ
+        service_directory: その他便利サービス
+        faq: FAQ
+        login: ログイン
+      footer:
+        MAIL: 'MailMate'
+        Features: '機能一覧'
+        Pricing: '料金プラン'
+        COMPANY: '運営会社'
+        About: '会社概要'
+        FAQ: 'FAQ'
+        Blog: 'ブログ'
+        service_directory: その他便利サービス
+        FOLLOW: 'フォロー'
+        terms: '利用規約'
+        privacy_policy: 'プライバシーポリシー'
+        email: 'support@mailmate.jp'
+        language: '言語'
+        jp_english: '英語'
+        en_english: 'English'
+    pages:
+      mail: 
+        hero_title: あなたの郵便物をデジタル化。
+        hero_subtitle_html: 受け取り、OCRスキャン、簡易翻訳、保存を一括代行。<br /> 郵便物をメールのようにいつでも、どこからでも閲覧可能に。
+        hero_button_get_started: お申込へ
+        hero_button_request_consultation: お問い合わせ
+        how_helps_heading: MailMateのメリット
+        how_helps_subheading: 郵便物をメールのようにいつでも、どこからでも閲覧可能に
+        how_helps_no_more_clutter_title: 郵便物をスキャン
+        how_helps_no_more_clutter_detail: 郵便物はスキャンされ、ダウンロードや印刷可能な 高解像度のPDFとして配信されます。
+        how_helps_search_title: 検索とバックアップ
+        how_helps_search_detail: テキスト検索により、安全に保存された アーカイブ書類を簡単に 検索することができます。
+        how_helps_right_info_title: チーム共有
+        how_helps_right_info_detail: チームメンバーや弁護士、会計士などに 重要な郵便物を簡単に 共有することができます。
+        how_helps_pay_bills_title: 支払い代行
+        how_helps_pay_bills_detail: 請求書の支払いを代行します。
+        how_helps_everything_safe_title: クラウド上に保管
+        how_helps_everything_safe_detail: 郵便物をクラウド上に安全に保管できます。重要な書類を紛失することも無くなります。
+        how_helps_onboarding_title: 郵便物の転送
+        how_helps_onboarding_detail: 転送を希望する郵便物を速やかに ご指定の住所へと転送します。
+        how_helps_view_pricing: 料金プランへ
+        steps_title: 'クラウド郵便への３ステップ'
+        steps_step_1_title: 'Step 1'
+        steps_step_1_detail_1: 'NoリスクでMailMateをトライアル'
+        steps_step_1_detail_2: サービスに満足頂けない場合、30日間の返金保証があります。
+        steps_step_2_title: Step ２
+        steps_step_2_detail_1: MailMateが用意した住所に転送手続き
+        steps_step_2_detail_2: 必要に応じて、MailMate住所への転送手続きを サポートします。
+        steps_step_3_title: Step ３
+        steps_step_3_detail_1: オンライン上で郵便物を確認
+        steps_step_3_detail_2: ワンクリックで、郵便物の保管、スキャン、削除、支払い代行を依頼することができます。
+        steps_step_4_title: ステップ４
+        steps_step_4_detail_1: 郵便物にまつわる煩雑タスクを一括アウトソーシングして日常をシンプルに。
+        steps_step_4_detail_2: ワンクリックで支払い代行や、郵便物関連の簡易タスクをアシスタントに依頼できます。
+        steps_get_started: お申込へ
+        why_title: MailMateを選ぶ理由
+        why_item_1_title: 面倒な郵便周りを一括で代行支援
+        why_item_1_detail: 日々忙しいあなたの為に、私たちが煩雑な郵便タスクを代行します。スキャン、簡易翻訳、セキュアで検索可能な保管管理、セキュアな書類廃棄、そして支払い通知書の支払い代行まで。
+        why_item_2_title: 優れたカスタマーサポート
+        why_item_2_detail: MailMateのカスタマーサポートのチームは、優秀なスタッフで構成されています。
+        why_item_3_title: セキュリティ重視
+        why_item_3_detail: セキュリティは私たちの最優先事項です。お客様の郵便物はすべて24時間365日監視され、依頼された場合はセキュアに書類廃棄します。郵便物は電子化された後、256ビットの暗号化レベルの技術で暗号化されます。
+        why_item_4_title: かつてない柔軟性をもたらす
+        why_item_4_detail: オフィスにいても、世界中を旅していても、ビーチでカクテルを飲んでいても、すべての郵便物と書類をいつでもアクセス＆対応可能になります。
+        testimonials_subheading: ''
+        testimonials_item_1_quote_html: "
+          駐在員として東京を拠点に10年も過ごしていると、多くの重要書類のやり取りが発生し、国外へ出た後もこれらは消えることはない。MailMateがこのサービスを（やっと）日本に導入してくれたおかげで、心配事が解消されました。手続きは簡単で、全てオンラインで完結し、様々な選択肢があります。日本に届く郵便物は、タイムリーかつセキュアに、現在居住中の韓国の私の手元に届いています。
+        "
+        testimonials_item_1_author: "スポーツシューズ＆アパレル業界 代表取締役社長 ポール・ハーディスティ氏"
+        testimonials_item_2_quote_html: "
+          MailMateは、日本国外にいる私の日本での投資やビジネス取引を管理する上で、本当に貴重な存在です。
+          <br /><br />
+          彼らのサービスは、電子化された郵便物の転送を遥かに超える、それ以上の価値があります。日本での郵便でのやり取り、公共料金、自治体などからの通知、日本国外にいるときの支払い通知書などの対応、そして理解できない郵便物の翻訳までもしてくれます。以前、不動産管理会社、秘書、翻訳家などに依頼していたサービスをそれらのほんの一部の料金で、私のコンシェルジュのよう機能を果たしております。
+        "
+        testimonials_item_2_author: "貿易会社 アジア太平洋地域担当マネージングディレクター"
+        combo_title: "いつどこにいても郵便物を確認、かつてない柔軟性をもたらします。"
+        combo_detail: "オフィスにいても、世界中を旅していても、すべての郵便物と書類をいつでもアクセス＆対応可能になります。郵便物の検索から、チームメイトへの共有、支払い代行までMailMateで一括管理することができます。"
+      pricing:
+        title: MailMate 料金プラン
+        get_started: お申し込みへ
+        money_back_guarantee: 30日間返金保証
+        whats_included: 含まれるもの
+        processing_fees: "* 支払い代行：支払額が5万円未満の場合は500円＋支払額の3％、5万円以上は一律で支払額の4％の手数料が発生"
+        why_us_title: MailMateを選ぶ理由
+        feature_list_comparison: 料金プラン詳細比較
+        additional_details_title: その他詳細
+        testimonials_title: お客様の声
+        testimonials_quote_1_html: "
+          駐在員として東京を拠点に10年も過ごしていると、多くの重要書類のやり取りが発生し、国外へ出た後もこれらは消えることはない。MailMateがこのサービスを（やっと）日本に導入してくれたおかげで、心配事が解消されました。手続きは簡単で、全てオンラインで完結し、様々な選択肢があります。日本に届く郵便物は、タイムリーかつセキュアに、現在居住中の韓国の私の手元に届いています。
+        "
+        testimonials_author_1_html: "
+          スポーツシューズ＆アパレル業界 <br />
+          代表取締役社長 ポール・ハーディスティ氏
+        "
+        testimonials_quote_2_html: "
+          MailMateは、日本国外にいる私の日本での投資やビジネス取引を管理する上で、本当に貴重な存在です。
+          <br /><br />
+          彼らのサービスは、電子化された郵便物の転送を遥かに超える、それ以上の価値があります。日本での郵便でのやり取り、公共料金、自治体などからの通知、日本国外にいるときの支払い通知書などの対応、そして理解できない郵便物の翻訳までもしてくれます。以前、不動産管理会社、秘書、翻訳家などに依頼していたサービスをそれらのほんの一部の料金で、私のコンシェルジュのよう機能を果たしております。        
+        "
+        testimonials_author_2_html: "
+          貿易会社<br />
+          アジア太平洋地域担当マネージングディレクター
+        "
+      about:
+        the_mailmate_story: MailMate は、「日本で紙の郵便物をデジタル化する」というシンプルな発想で設立されました。みなさんが紙の管理より重要なことにもっと集中できるように、誰でもできる郵便物のオンライン管理プラットフォームを構築しました
+        how_it_began: 2019年に設立されたメールメイトは、日本の郵便物に対する初のテックソリューションで、ユーザーは日本、または世界のどこからでも、自身に送られた郵便物にアクセスできます。私たちはあなたの痛みがわかりました　-私たちは地元のコンビニで自分の請求書を支払い、メールボックスにある数多くの書類の処理作業を案内してきました（そのほとんどはそもそも関連性のないものでしたが）。そして今日、私たちはその解決策が見つかりました。MAILMATEです!
+        get_in_touch_with_us: お問い合わせはこちら
+        address_title: 本社
+        address_detail: 〒812-0039 福岡県福岡市博多区冷泉町2-9 クレアランドマーク 305
+        email_title: 連絡先
+        email_detail: contact@mailmate.jp
+        representative_title: 代表取締役
+        representative_detail: ジョン・クロス
+        payment_methods_title: 利用可能な決済方法
+        payment_methods_detail: クレジットカード決済、または銀行振込
+        cta_title: さあ始めてみませんか？
+        cta_button: お問い合わせ
+      consultation:
+        title: お問い合わせフォーム
+        subtitle: 
+        detail:
+        first_name: 名
+        last_name: 姓
+        phone: 電話番号
+        email: メールアドレス
+        business_type: ビジネスタイプ
+        select_one: 選択してください・・・
+        submit: 送信
+      blog:
+        blogPost: 'blogPostJapanese'
+        read_more: 記事を読む

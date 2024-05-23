@@ -1,0 +1,77 @@
+.blog-newsletter-sign-up-modal-with-pdf {
+  &-modal {
+    width: 49%;
+    max-width: 650px;
+    min-width: 300px;
+    @media (max-width: 700px) {
+      width: 100%;
+    }
+  }
+  &-body {
+    padding: 0;
+    hr {
+      width: 100%;
+    }
+    &-form-container {
+      display: flex;
+      padding-left: 32px;
+      padding-top: 15px;
+      @media only screen and (max-width: 700px) {
+        flex-wrap: wrap;
+        padding-left: 0;
+        padding-top: 0;
+      }
+      //padding-right: 34px;
+    }
+    &-form {
+      width: 70%;
+      @media only screen and (max-width: 700px) {
+        margin: auto;
+        width: 85%;
+      }
+    }
+    &-image{
+      width: 30%;
+      padding-left: 34px;
+      min-width: 220px;
+      height: 250px;
+      @media only screen and (max-width: 700px) {
+        order: -1;
+        width: 80%;
+        margin: auto;
+      }
+        & img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &-text {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #8D8D94;
+    padding-left: 32px;
+    padding-bottom: 24px;
+    @media only screen and (max-width: 700px) {
+      padding-left: 0;
+    }
+  }
+
+  &__success {
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: $color__teal-100;
+    color: $color__teal-600;
+    padding-bottom: 10px;
+  }
+}
+.form-group--align-left {
+  text-align: left;
+}

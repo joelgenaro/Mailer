@@ -1,0 +1,27 @@
+<div class="<%= pricing_plan_classes(plan, 'mail') %>">
+  <span class="plan__title"><%= plan[I18n.locale == :ja ? :title_jp : :title] %></span>
+  <span class="plan__price"><sup>¥</sup><%= number_with_delimiter(plan[:price]) %><sub><%= I18n.locale == :ja ? '円／月' : 'p/mo' %></sub></span>
+
+  <% if !plan[:configuration][:require_consultation] || params[:allow_signup] %>
+    <%= button_to t('marketing.pages.pricing.get_started'), new_register_url, method: :post, params: {subscriptionName: plan_name,subscriptionType: subscription_type}, class: "plan__btn marketing-btn marketing-btn--block" %>
+  <% else %>
+    <%= button_to 'Request Consultation', marketing_request_consultation_path, method: :get, class: "plan__btn marketing-btn marketing-btn--block" %>
+  <% end %>
+
+  <span class="plan__subtext"><%= t('marketing.pages.pricing.money_back_guarantee') %></span>
+  <p class="plan__desc"><%= plan[:content][I18n.locale == :ja ? :description_jp : :description] %></p>
+
+  <span class="plan__features-title"><%= t('marketing.pages.pricing.whats_included') %></span>
+  <ul class="plan__features">
+    <% plan[:content][I18n.locale == :ja ? :whats_included_jp : :whats_included].each do |item| %>
+      <li>
+        <%= inline_svg_tag 'marketing/shared/tick.svg' %>
+        <span><%= item %></span>
+      </li>
+    <% end %>
+  </ul>
+
+  <% if plan[:content][:most_popular].present? %>
+    <span class="plan__most-popular">Most Popular</span>
+  <% end %>
+</div>

@@ -1,0 +1,161 @@
+/*!
+ * Load Awesome v1.1.0 (http://github.danielcardoso.net/load-awesome/)
+ * Copyright 2015 Daniel Cardoso <@DanielCardoso>
+ * Licensed under MIT
+ */
+.loader,
+.loader > div {
+    position: relative;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.loader {
+    display: block;
+    font-size: 0;
+    color: darken(#647787, 15%);
+}
+
+.loader > div {
+    display: inline-block;
+    float: none;
+    background-color: currentColor;
+    border: 0 solid currentColor;
+}
+
+.loader {
+    width: 54px;
+    height: 18px;
+}
+
+.loader > div {
+    width: 10px;
+    height: 10px;
+    margin: 4px;
+    border-radius: 100%;
+    -webkit-animation: ball-pulse-sync .6s infinite ease-in-out;
+       -moz-animation: ball-pulse-sync .6s infinite ease-in-out;
+         -o-animation: ball-pulse-sync .6s infinite ease-in-out;
+            animation: ball-pulse-sync .6s infinite ease-in-out;
+}
+
+.loader > div:nth-child(1) {
+    -webkit-animation-delay: -.14s;
+       -moz-animation-delay: -.14s;
+         -o-animation-delay: -.14s;
+            animation-delay: -.14s;
+}
+
+.loader > div:nth-child(2) {
+    -webkit-animation-delay: -.07s;
+       -moz-animation-delay: -.07s;
+         -o-animation-delay: -.07s;
+            animation-delay: -.07s;
+}
+
+.loader > div:nth-child(3) {
+    -webkit-animation-delay: 0s;
+       -moz-animation-delay: 0s;
+         -o-animation-delay: 0s;
+            animation-delay: 0s;
+}
+
+.loader--sm {
+    width: 40px;
+    height: 14px;
+}
+
+.loader--sm > div {
+    width: 6px;
+    height: 6px;
+    margin: 3px;
+}
+
+.loader--2x {
+    width: 108px;
+    height: 36px;
+}
+
+.loader--2x > div {
+    width: 20px;
+    height: 20px;
+    margin: 8px;
+}
+
+.loader--3x {
+    width: 162px;
+    height: 54px;
+}
+
+.loader--3x > div {
+    width: 30px;
+    height: 30px;
+    margin: 12px;
+}
+
+/*
+ * Animation
+ */
+@-webkit-keyframes ball-pulse-sync {
+    33% {
+        -webkit-transform: translateY(100%);
+                transform: translateY(100%);
+    }
+    66% {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+@-moz-keyframes ball-pulse-sync {
+    33% {
+        -moz-transform: translateY(100%);
+             transform: translateY(100%);
+    }
+    66% {
+        -moz-transform: translateY(-100%);
+             transform: translateY(-100%);
+    }
+    100% {
+        -moz-transform: translateY(0);
+             transform: translateY(0);
+    }
+}
+@-o-keyframes ball-pulse-sync {
+    33% {
+        -o-transform: translateY(100%);
+           transform: translateY(100%);
+    }
+    66% {
+        -o-transform: translateY(-100%);
+           transform: translateY(-100%);
+    }
+    100% {
+        -o-transform: translateY(0);
+           transform: translateY(0);
+    }
+}
+@keyframes ball-pulse-sync {
+    33% {
+        -webkit-transform: translateY(100%);
+           -moz-transform: translateY(100%);
+             -o-transform: translateY(100%);
+                transform: translateY(100%);
+    }
+    66% {
+        -webkit-transform: translateY(-100%);
+           -moz-transform: translateY(-100%);
+             -o-transform: translateY(-100%);
+                transform: translateY(-100%);
+    }
+    100% {
+        -webkit-transform: translateY(0);
+           -moz-transform: translateY(0);
+             -o-transform: translateY(0);
+                transform: translateY(0);
+    }
+}

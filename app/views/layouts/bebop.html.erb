@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @layout_meta_title ? (@layout_meta_title + ' | ') : '' %>Bebop</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  </head>
+
+  <body>
+    <!-- Alerts -->
+    <%= render partial: 'layouts/bebop/alerts' %>
+    
+    <!-- Header -->
+    <%= render partial: 'layouts/bebop/header' %>
+
+    <!-- Content -->
+    <main>
+      <%= yield %>
+    </main>
+    
+  </body>
+</html>

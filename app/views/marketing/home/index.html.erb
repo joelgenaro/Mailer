@@ -1,0 +1,21 @@
+<%
+  content_for(:meta_title) { 'MailMate: Secure Virtual Mail, Addresses and Assistants' }
+  content_for(:meta_description) { 'Making it easier to work, live and do business in Japan. Digital virtual address services in Japan & experienced bilingual assistants, available immediately.' }
+  @layout_footer_overlapping_top = true
+%>
+
+<div id="home" class="home">
+  <%= render 'hero' %>
+
+  <%= render 'features_assistant' %>
+
+  <%= render 'features_mail' %>
+
+  <%= render 'combo_package' %>
+
+  <%= render 'testimonials' %>
+
+  <%= render 'investors_and_partners' %>
+
+  <%= render 'cta' %>
+</div>

@@ -1,0 +1,53 @@
+<div class="page__mail__why">
+  <div class="page__mail__why__container">
+    <div class="page__mail__why__squiggle page__mail__why__squiggle--hide-mobile" style="top: 100px; left: 0px;">
+      <%= inline_svg_tag('marketing/pages/mail/why-squiggle-1.svg') %>
+    </div>
+
+    <div class="page__mail__why__squiggle" style="top: 0px; right: 0px;">
+      <%= inline_svg_tag('marketing/pages/mail/why-squiggle-2.svg') %>
+    </div>
+
+     <div class="page__mail__why__squiggle" style="bottom: -5px; right: 150px;">
+      <%= image_tag('marketing/pages/mail/why-squiggle-3.png', style: 'height: 104px') %>
+    </div>
+    
+    <h3 class="page__mail__why__title"><%= t('marketing.pages.mail.why_title') %></h3>
+
+    <div class="page__mail__why__units">
+      <%
+        [
+          {
+            icon: 'why-time.svg',
+            title: 'marketing.pages.mail.why_item_1_title',
+            detail: 'marketing.pages.mail.why_item_1_detail',
+          },
+          {
+            icon: 'why-support.svg',
+            title: 'marketing.pages.mail.why_item_2_title',
+            detail: 'marketing.pages.mail.why_item_2_detail',
+          },
+          {
+            icon: 'why-security.svg',
+            title: 'marketing.pages.mail.why_item_3_title',
+            detail: 'marketing.pages.mail.why_item_3_detail',
+          },
+           {
+            icon: 'why-flexibility.svg',
+            title: 'marketing.pages.mail.why_item_4_title',
+            detail: 'marketing.pages.mail.why_item_4_detail',
+          }
+        ].each do |item|
+      %>
+        <div class="page__mail__why__unit">
+          <div class="page__mail__why__unit__icon">
+            <%= inline_svg_tag('marketing/pages/mail/' + item[:icon]) %>
+          </div>
+
+          <h4 class="page__mail__why__unit__title"><%= t(item[:title]) %></h4>
+          <p class="page__mail__why__unit__detail"><%= t(item[:detail]) %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

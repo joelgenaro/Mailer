@@ -1,0 +1,21 @@
+// Tailwind CSS
+// - https://tailwindui.com/components
+// - https://nerdcave.com/tailwind-cheat-sheet
+// - https://github.com/aniftyco/awesome-tailwindcss
+// - https://tailblocks.cc/
+// - https://lofiui.co/
+// - https://hypercolor.dev/
+// - https://github.com/tailwindlabs/headlessui
+@import "\@tailwindcss/postcss7-compat/base";
+@import "\@tailwindcss/postcss7-compat/components";
+@import "\@tailwindcss/postcss7-compat/utilities";
+
+html, body {
+  @apply bg-gray-100;
+}
+
+@layer components {
+  .btn-blue {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+}

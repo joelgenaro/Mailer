@@ -1,0 +1,55 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.time-usage {
+  @include section;
+  &__container {
+    @include container(960px);
+  }
+  &__back-btn {
+    margin-bottom: 32px;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  &__title {
+    @include title;
+    flex-grow: 1;
+  }
+  &__content {
+    @include card(0);
+    padding: 10px;
+    color: $color__grey-700;
+
+    table {
+      width: 100%;
+      background-color: transparent;
+      border: 1px solid $color__grey-100;
+      border-collapse: collapse;
+
+      td, thead th {
+        border-bottom-width: 2px;
+      }
+      thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid $color__grey-100;
+      }
+      td, th {
+        padding: 5px 10px;
+        vertical-align: top;
+        border: 1px solid $color__grey-100;
+      }
+
+      .time-usage__content__table__tr__time_allocation {
+        &__minus {
+          background-color: $color__orange-100;
+        }
+        &__plus {
+          background-color: $color__teal-100;
+        }
+      }
+    }
+  }
+}

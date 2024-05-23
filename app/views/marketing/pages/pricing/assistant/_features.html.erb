@@ -1,0 +1,24 @@
+<div class="pricing__features">
+  <div class="pricing__features__container">
+    <h1 class="pricing__features__title">Features that work the way you do</h1>
+    <div class="pricing__features__list">
+      <% features.each do |feature| %>
+        <div class="pricing__feature">
+          <div class="pricing__feature__header">
+            <div class="pricing__feature__icon">
+              <%= inline_svg_tag feature[:icon] %>
+            </div>
+            <h3 class="pricing__feature__title"><%= feature[:label] %></h3>
+          </div>
+          <p class="pricing__feature__desc"><%= feature[:text] %></p>
+          <% if feature[:disclaimer].present? %>
+            <p class="pricing__feature__disclaimer"><%= feature[:disclaimer] %></p>
+          <% end %>
+          <% if feature[:business].present? %>
+            <span class="pricing__feature__business">Business</span>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

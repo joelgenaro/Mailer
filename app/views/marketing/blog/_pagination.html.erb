@@ -1,0 +1,12 @@
+<div class="blog-posts__pagination">
+  <% unless contentful_on_first_page?(posts) %>
+    <div class="blog-posts__pagination-prev">
+      <%= link_to 'Prev Page', contentful_prev_page_path(posts) %>
+    </div>
+  <% end %>
+  <% unless contentful_on_last_page?(posts) %>
+    <div class="blog-posts__pagination-next">
+      <%= link_to 'Next Page', contentful_next_page_path(posts) %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,9 @@
+overwrite: true
+schema: "http://localhost:3000/boxm293/bebop/graphql"
+generates:
+  app/javascript/bebop/graphql/types.ts:
+    plugins:
+      - typescript
+    config:
+      typesPrefix: I
+
